@@ -1,2 +1,3 @@
 # PyShare
-Lecture notes blablabla
+
+## Lecture 1: Hello world
