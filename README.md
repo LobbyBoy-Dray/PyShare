@@ -9,5 +9,6 @@
 * **python_run.pdf**：python交互式环境和脚本运行介绍
 * **（9.28）Lecture_1_revised.pdf**：笔记修订版，增加“`int()`与`eval()`比较”、“继续符号”、“科学计数法”的内容
 * **（9.28）L1_Exercises**：习题
+* **（10.11）L1_Solution**：习题参考答案
 
 在线练习：https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=2
