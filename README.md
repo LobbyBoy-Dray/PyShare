@@ -15,6 +15,6 @@
 ## Lecture 2: Data Structures & Control Flow
 
 * **Lecture_2.pdf**：笔记
-* **Python官方文档**：[数据结构](https://docs.python.org/3.6/tutorial/datastructures.html), [控制流程](https://docs.python.org/3.6/tutorial/controlflow.html)
+* **Python官方文档**：[数据结构](https://docs.python.org/3.6/tutorial/datastructures.html)，[控制流程](https://docs.python.org/3.6/tutorial/controlflow.html)
 
 
