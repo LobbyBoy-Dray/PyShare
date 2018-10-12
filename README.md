@@ -12,3 +12,7 @@
 * **（10.11）L1_Solution**：习题参考答案
 
 在线练习：https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=2
+
+## Lecture 2: Data Structures & Control Flow
+
+* **Lecture_2.pdf**：笔记
