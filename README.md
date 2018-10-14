@@ -4,7 +4,7 @@
 
 * 简介
 * 语法
-* 编辑器推荐。
+* 编辑器推荐
 
 参考材料：[Mastering Markdown from Github](https://guides.github.com/features/mastering-markdown/)
 
