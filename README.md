@@ -2,7 +2,6 @@
 
 ## Markdown
 
-Markdown：
 * 简介
 * 语法
 * 编辑器推荐。
