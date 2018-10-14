@@ -1,5 +1,11 @@
 # PyShare
 
+## Markdown
+
+Markdown简介、语法、编辑器推荐。
+
+参考材料：[Mastering Markdown from Github](https://guides.github.com/features/mastering-markdown/)
+
 ## Lecture 1: Hello world
 
 * **Lecture_1.pdf**：笔记
