@@ -8,6 +8,12 @@
 
 参考材料：[Mastering Markdown from Github](https://guides.github.com/features/mastering-markdown/)
 
+## Git & Github
+
+* 简单介绍git与github的基本使用方法。
+
+参考视频：[DANIEL SHIFFMAN](https://www.bilibili.com/video/av4857819?from=search&seid=5402638418024823626)
+
 ## Lecture 1: Hello world
 
 * **Lecture_1.pdf**：笔记
