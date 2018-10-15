@@ -194,10 +194,198 @@ Issues  is a place to leave a comment about the project. It can be some one who 
 
 点进去后可以关闭这个issue。对于别人发起的issue，你看到了这些问题可以去逐个修复，修复完成后就可以一个个的close掉。
 
-## 7. git与使用命令行
+## 7. Git与使用命令行
 
+### 1) Git概述
 
+你可以在Github上使用Git进行版本管理，也可以在自己的电脑上（本地）使用Git进行版本管理，并与Github进行交互，但前提是你的电脑上已经安装了Git。
 
+Mac系统自带Git，但Win不一定。在命令行中键入`git`并回车，如果没有报错（如下图），则你的电脑已经安装Git；如果报错，则需要在Git官网根据自己的电脑类型下载相应安装包：
 
+![Alt text](./31.png)
+
+[Git for Win](https://git-scm.com/download/win)
+
+强烈推荐使用命令行（Command Line）操作Git而非GUI界面，因为使用命令行操作可以加深对于Git的理解。
+
+Git的基本操作命令如下（不用全部记住，浏览一下就好）：
+
+![Alt text](./32.png)
+
+可以发现，Git命令均以`git`开头。
+
+### 2) 基本Linux命令
+
+Win系统下，`ls`命令无法使用，等价命令为`dir`。
+
+推荐一款Win的终端替代软件——cmder，免费，颜值高，功能强大，解决`ls`在Win下无法使用的问题等等。下载地址为：[Download](http://cmder.net/)
+
+必须知道的四个命令：
+
+* `cd`：切换当前工作目录至xxx，`cd ..`表示返回上一层目录；
+* `pwd`：显示当前工作目录；
+* `ls`：显示当前工作目录中所有文件的名称，`ls -a`显示包括隐藏文件的名称；
+* `clear`：清除屏幕（历史记录）。
+
+![Alt text](./33.png)
+
+### 3) 初次使用Git
+
+初次使用Git需要设置姓名和邮箱，告诉Git你是谁：
+
+* `git config –global user.name "你的姓名"`
+* `git config –global user.email "你的邮箱"`
 
 ## 8. Clone
+
+`git clone`: Clone a repository into a new directory.
+
+Clone命令将一个GitHub上的Repo克隆（download）到本地，变为本地仓库。
+
+Clone一个Repo需要给到该Repo的url，查看方法如下：
+
+![Alt text](./34.png)
+
+因此要Clone该Repo（Lyrics）到我的桌面，步骤为：
+
+* 打开终端；
+* cd到桌面；
+* 找到该Repo的链接：https://github.com/LobbyBoy-Dray/Lyrics.git；
+* `git clone https://github.com/LobbyBoy-Dray/Lyrics.git`；
+
+![Alt text](./35.png)
+
+## 9. Status & Add & Commit
+
+`git status`: Show the working tree status.
+
+### 1) 一些概念
+
+![Alt text](./36.png)
+
+根据上图理解以下概念：
+
+* `working tree`：工作区，即Repo文件夹。在上例中，working tree就是Lyrics这个文件夹，包括里面的所有文件夹和文件。每当你修改了其中的某个文件，working tree的状态就会改变；
+* `stage`：缓存区，一个中转站；
+* `local repository`：本地仓库，也叫版本库，存储着各种不同的版本，即History。
+
+回到上面的例子，对于刚刚clone下来的Lyrics仓库，cd进去后，键入`git status`：
+
+![Alt text](./37.png)
+
+因为对刚刚clone下来的Lyrics仓库，我还没有做任何改动，所以会显示`nothing to commit, working tree clean`。
+
+PS: 建议大家没事就输一下这个命令来查看你当前工作区的状态。
+
+### 2) 本地修改
+
+两处变化：
+
+* 修改Lyrics中的`That girl.md`文件（加了两句英文歌词）；
+* 增加了一个文件，名为`That girl_2.md`。
+
+此时，再次键入`git status`：
+
+![Alt text](./38.png)
+
+上图说明了两点，也是Git帮你发现的两个改变：
+
+* 工作区中的`That girl.md`文件被修改，该文件的状态变为**modified**，且该修改还**not staged**；
+* 工作区中的`That girl_2.md`是个新文件，刚才还不在工作区里，所以被Git标记为**untracked**，说明该文件虽然在工作区里，但是没有加入到git库中，不参与版本控制。
+
+可见，工作区中的文件有三种类型：
+
+* `untracked`：未跟踪状态，一般是新建的文件或文件夹。虽然该文件在工作区中，但并没有加入到Git库中，不参与版本控制，需要进行后续一些操作将其入库；
+* `unmodified`：未修改状态，比如Lyrics中的readme文件，我没有修改它，所以它是未修改状态。这样的文件已经入库，参与版本控制，但没有被修改，git status命令也不会显示这些文件；
+* `modified`：修改状态，说明该入库的文件已经被修改。
+
+### 3) 进入缓存区
+
+工作区发生变化，即出现`untracked`或`modified`文件时，Git会提示你将他们提交到**缓存区**，即**stage**。
+
+使用`git add .`将所有改动，包括提交到缓存区；使用`git add 文件名`将特定的改动文件提交到缓存区。这里我使用前一种命令，将一个`untracked`文件和一个`modified`文件提交到stage中，并使用`git status`查看状态：
+
+![Alt text](./39.png)
+
+可见，字体颜色由红变绿，说明改动被成功提交至缓存区。此时上述两个文件来到了一个新的状态——**staged**，暂存状态。
+
+处于该状态下的修改，仅仅为“暂存”，并没有最终生成新的版本。还需要再进行一步`git commit`，将修改最终同步到库中。
+
+因此，可以将缓存区理解为临时保存你的改动的区域，这样做的优点是防止失误提交。
+
+如果“后悔了”，可以use `git reset HEAD <file>..." to unstage`将修改移出缓存区，回到第一步中的工作区成为`untracked`状态或`modified`状态。
+
+### 4) 提交修改
+
+使用`git commit -a -m "这里写一些注释"`来完成最终提交。
+
+![Alt text](./40.png)
+
+在最终提交完毕后，那些staged状态的文件，最终会转化为unmodified状态，回到工作区，其历史版本信息则被保存在local repository中。
+
+在commit后，使用`git status`再次查看状态，可以发现，`nothing to commit, working tree clean`，一切重归于好。
+
+### 5) 查看修改日志
+
+使用`git log`：
+
+![Alt text](./41.png)
+
+可以看到，除了刚刚的修改被记录了下来，早上在Github上操作的修改也被记录了下来，这是因为Clone的效果，Clone把一切信息都复制了下来。
+
+## 10. Push/Pull
+
+### 1) Push
+
+此时，你想把刚刚在本地对Repo的修改同步到Github上，需要使用`git push`命令。
+
+![Alt text](./42.png)
+
+`push`：推。如果你本地代码有更新，那么就需要把本地代码推到远程仓库（remote repository），这样本地仓库（local repository）跟远程仓库就可以保持同步了。
+
+一般直接使用`git push origin master`，意思是将本地代码“推”到远程仓库的master分支上。
+
+![Alt text](./43.png)
+
+### 2) Pull
+
+`pull`：拉。如果别人提交代码到远程仓库，这个时候你需要把远程仓库的最新代码同步到自己本地电脑上的Repo中。
+
+常用命令：`git pull origin master`
+
+一般在push前都会先pull一下，这样不容易产生冲突。
+
+## 11. Init
+
+如果想要在本地电脑从零开始创建一个Repo，再将其上传至github，就要使用`git init`命令。
+
+**举例：在本地新建名为Poem的Repo**
+
+首先，在桌面新建名为Poem的文件夹，并在其中新建名为`love_story.txt`的文件，输入一些内容并保存。
+
+![Alt text](./44.png)
+
+打开终端，cd到Poem文件夹（在进行任何git操作前，都要先切换到仓库目录，也就是要cd到项目文件夹的目录下），键入`git status`查看Repo的状态：
+
+![Alt text](./45.png)
+
+系统会提示`Not a git repository`，意思就是当前目录还不是一个Repo——肯定的啊，不是随便在自己电脑上建一个文件夹它就是Git仓库的，需要手动设置，标定它成为Repo。
+
+在根目录下使用`git init`：
+
+![Alt text](./46.png)
+
+可以看到，Poem文件夹已经被初始化一个Git仓库了。
+
+此后，对该Repo的操作与上文提到的对Clone下来的Repo的操作方式一模一样。
+
+**为什么clone下来的文件夹不需要init？**
+
+因为clone操作可以看做**高级复制**，clone下来的项目本身已经被git处理好了，已经是一个git仓库了，所以不需执行`git init`命令。
+
+
+
+
+
+
+
