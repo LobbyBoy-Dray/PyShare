@@ -1,3 +1,36 @@
+> **目录**
+> 
+> 1. Git & Github
+> 	* Git
+> 	* Github
+> 	* 两者关系
+> 2. Repository
+> 	* Create a repo
+> 	* Create a new file in github
+> 	* Modify a file in github
+> 	* Upload a new file in github
+> 3. Branch
+> 	* 创建分支
+> 	* 合并分支
+> 4. Fork
+> 5. Pull Request
+> 6. Issue
+> 7. Git与使用命令
+> 	* Git概述
+> 	* 基本Linux命令
+> 	* 初次使 Git
+> 8. Clone
+> 9. Status & Add & Commit
+> 	* 一些概念
+> 	* 本地修改
+> 	* 进入缓存区
+> 	* 提交修改
+> 	* 查看修改日志
+> 10. Push/Pull
+> 	* Push
+> 	* Pull
+> 11. Init
+
 ## 1. Git & Github
 
 Git与Github是两个不同的概念。
@@ -76,13 +109,13 @@ Github使用Git进行版本控制，同时提供其他强大功能。
 
 ![Alt text](./11.png)
 
-### 3) Upload a new file in github
+### 4) Upload a new file in github
 
 从本地上传文件至github：
 
 ![Alt text](./12.png)
 
-## 3. Branches
+## 3. Branch
 
 分支。主要用于项目的团队开发，也可以用于个人work on different aspects of the project。
 
