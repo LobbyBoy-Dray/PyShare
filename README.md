@@ -10,7 +10,7 @@
 
 ## Git & Github
 
-* 简单介绍git与github的基本使用方法。
+* Git与github的基本使用方法
 
 参考视频：[DANIEL SHIFFMAN](https://www.bilibili.com/video/av4857819?from=search&seid=5402638418024823626)
 
