@@ -410,7 +410,52 @@ PS: 建议大家没事就输一下这个命令来查看你当前工作区的状�
 
 可以看到，Poem文件夹已经被初始化一个Git仓库了。
 
-此后，对该Repo的操作与上文提到的对Clone下来的Repo的操作方式一模一样。
+此时`git status`：
+
+![Alt text](./47.png)
+
+上图说明，该Repo中的所有文件都没有被tracked，处于untracked状态，因此需要add并commit：
+
+`git add .`: 将所有文件放入缓存区；
+`git commit -a -m "xxxxxx"`：提交修改；
+
+接下来使用`git push origin master`命令上传到Github，发现出现错误：
+
+![Alt text](./48.png)
+
+这是因为，这个刚刚创建的本地仓库，并没有和远程仓库——即github上的Repo建立关联（not associated）。使用`git remote`或`git remote -v`查看与本地仓库关联的远程仓库：
+
+![Alt text](./49.png)
+
+发现的确该本地Repo还没有关联任何远程Repo。
+
+此时需要打开Github，新建一个同名的Repo，注意此时不用选中Initialize this repository with a readme。
+
+![Alt text](./50.png)
+
+新建后转到如下页面：
+
+![Alt text](./51.png)
+
+拿到远程仓库链接后，使用`git remote add origin 链接`命令，将本地仓库与远程仓库连接起来：
+
+![Alt text](./52.png)
+
+此时再使用`git remote`和`git remote -v`查看，发现已经关联完毕。
+
+最后使用`git push origin master`命令将该Repo上传到Github，成功：
+
+![Alt text](./53.png)
+
+总结一下步骤（以Poem为例）：
+
+1. cd到Poem下；
+2. `git init`；
+3. 在github上创建Repo，拿到远程仓库链接；
+4. `git remote add origin 链接`；
+5. `git add .`；
+6. `git commit -a -m "注释"`；
+7. `git push origin master`；
 
 **为什么clone下来的文件夹不需要init？**
 
