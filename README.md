@@ -31,7 +31,10 @@
 * **Lecture_2.pdf**：笔记
 * **L2_Exercises**：习题
 * **在线练习**：
-	* [Click here](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=4)
+	* [List](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=10)
+	* [Tuples, Sets, and Dictionaries](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=14)
+	* [Selections](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=4)
+	* [Loops](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=5)
 * **Python官方文档**：[数据结构](https://docs.python.org/3.6/tutorial/datastructures.html)，[控制流程](https://docs.python.org/3.6/tutorial/controlflow.html)
 
 
