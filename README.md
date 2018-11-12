@@ -30,6 +30,7 @@
 
 * **Lecture_2.pdf**：笔记
 * **L2_Exercises**：习题
+* **L2_Solution**：习题参考答案
 * **在线练习**：
 	* [List](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=10)
 	* [Tuples, Sets, and Dictionaries](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=14)
