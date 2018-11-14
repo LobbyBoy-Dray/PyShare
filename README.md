@@ -42,5 +42,8 @@
 ## Lecture 3: Function & OOP & Exceptions & Files
 
 * **Lecture_3.pdf**：笔记
-
-
+* **L3_Exercises**：习题
+* **在线练习**：
+	* [Functions](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=6)
+	* [Objects and Classes](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=7)
+	* [Files and Exception Handling](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=13)
