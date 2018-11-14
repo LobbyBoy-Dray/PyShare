@@ -36,6 +36,7 @@
 	* [Tuples, Sets, and Dictionaries](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=14)
 	* [Selections](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=4)
 	* [Loops](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=5)
+* **Lecture_2_online_quiz.pdf**：在线练习-重点梳理
 * **Python官方文档**：[数据结构](https://docs.python.org/3.6/tutorial/datastructures.html)，[控制流程](https://docs.python.org/3.6/tutorial/controlflow.html)
 
 ## Lecture 3: Function & OOP & Exceptions & Files
