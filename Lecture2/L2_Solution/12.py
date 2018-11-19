@@ -65,7 +65,7 @@ def printAyear(year, firstWeekday):
 
 
 # 执行
-year = 2018							# 2018年
-firstWeekday = 1					# 2018年1月1日是星期一
+year = 2018				# 2018年
+firstWeekday = 1			# 2018年1月1日是星期一
 printAyear(year, firstWeekday)		# 显示日历
 
