@@ -47,3 +47,9 @@
 	* [Functions](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=6)
 	* [Objects and Classes](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=7)
 	* [Files and Exception Handling](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=13)
+
+## Lecture 4: Mid-review & html & XPath & Requests
+
+* **Mid_review**：前三章回顾
+* **Supplement**：补充内容，包括“生成器与迭代器”与“函数式编程”
+* **Web_crawler**：爬虫相关，包括“HTTP协议、“HTML初步”、“XPath语法”、“Requests库”
