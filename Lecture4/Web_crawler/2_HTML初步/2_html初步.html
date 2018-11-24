@@ -1,0 +1,1538 @@
+<html>
+                 <head>
+                   <meta charset="UTF-8">
+                   <meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1">
+                   <style id="style">
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.woff') format('woff'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+body {
+  font-size: 16px;
+  padding: 15px;
+  font-family: helvetica, arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+body .katex {
+  font: 400 1.2em 'KaTeX_Main';
+  line-height: 1.2em;
+  white-space: initial;
+  text-indent: 0;
+}
+body .katex .mfrac>.vlist>span:nth-child(2) {
+  top: 0 !important;
+}
+body .katex-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  margin: -5px;
+  border-radius: 5px;
+}
+body .flowchart-error,
+body .sequence-error .chart-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-pack: left;
+  -moz-box-pack: left;
+  -o-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+}
+li label.taskListItem {
+  margin-left: -1.8em;
+}
+li label.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+li.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+div.math-rendered {
+  text-align: center;
+}
+.math-failed {
+  background-color: rgba(255,0,0,0.1);
+  color: #d90000;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+sup {
+  position: relative;
+  top: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+sub {
+  position: relative;
+  bottom: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+a {
+  color: #2bac8f;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: -5px;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -ms-transition: 0.1s;
+  transition: 0.1s;
+}
+a img {
+  vertical-align: sub;
+}
+a:hover {
+  color: #2eb899;
+  text-decoration: underline;
+  background-color: rgba(255,201,92,0.3);
+}
+a:visited {
+  color: #2bac8f;
+}
+hr {
+  border-top: none;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 15px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  word-wrap: break-word;
+}
+h1 {
+  font-size: 2.55em;
+  padding-bottom: 0.3em;
+  line-height: 1.2em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.44em;
+}
+h1:first-child {
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.75em;
+  padding-bottom: 0.3em;
+  line-height: 1.225em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.57em;
+}
+h2:first-child {
+  margin-top: 0;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.43em;
+  margin: 1em 0 0.66em;
+}
+h4 {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  margin: 1em 0 0.8em;
+}
+h5 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+}
+h6 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+  color: #777;
+}
+p {
+  line-height: 1.6em;
+  margin: 0 0 1em;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+img {
+  max-width: 100%;
+}
+strong,
+b {
+  font-weight: bold;
+}
+em,
+i {
+  font-style: italic;
+}
+s,
+del,
+strike {
+  text-decoration: line-through;
+}
+u {
+  text-decoration: underline;
+}
+blockquote {
+  border-left: solid 4px #3fb399;
+  margin: 0 0 1em;
+  padding: 0 25px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ul li {
+  display: list-item;
+}
+ul li.taskListItem {
+  list-style: none;
+}
+ul li p {
+  margin: 0;
+}
+ul>li>ul,
+ul>li>ol {
+  margin: 0;
+}
+ul>li>ul {
+  list-style-type: circle;
+}
+ul>li>ul>li>ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ol li {
+  display: list-item;
+}
+ol li p {
+  margin: 0;
+}
+ol>li>ul,
+ol>li>ol {
+  margin: 0;
+}
+code {
+  padding: 0.2em 0.4em;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  font-size: 1em;
+  text-decoration: none;
+  margin-right: 2px;
+}
+pre {
+  padding: 0.5rem !important;
+  border: solid 1px #d1d1d1;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 0 0 1rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  line-height: 1.4em;
+}
+pre code {
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+pre.CodeMirror {
+  height: initial;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.CodeMirror>code {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-x: auto;
+}
+pre.mermaid svg {
+  max-width: 100% !important;
+}
+pre>span.filename {
+  margin: -0.5rem 100% 0.5rem -0.5rem;
+  padding: 0.125rem 0.375rem;
+  background-color: #777;
+  color: #fff;
+}
+pre>span.filename:empty {
+  display: none;
+}
+pre>span.lineNumber {
+  display: none;
+  font-size: 1em;
+  padding: 0.5rem 0;
+  margin: -0.5rem 0.5rem -0.5rem -0.5rem;
+  border-right: 1px solid;
+  text-align: right;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+pre>span.lineNumber.CodeMirror-gutters {
+  position: initial;
+  top: initial;
+  left: initial;
+  min-height: 0 !important;
+}
+pre>span.lineNumber>span {
+  display: block;
+  padding: 0 0.5em 0;
+}
+table {
+  display: block;
+  width: 100%;
+  margin: 0 0 1em;
+  overflow-x: auto;
+}
+table thead tr {
+  background-color: #fff;
+}
+table thead th {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 1px 0 2px 1px;
+  border-color: #d0d0d0;
+  font-weight: bold;
+}
+table thead th:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+table tbody tr:nth-child(2n + 1) {
+  background-color: #f9f9f9;
+}
+table tbody tr:nth-child(2n) {
+  background-color: #fff;
+}
+table tbody td {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 0 0 1px 1px;
+  border-color: #d0d0d0;
+}
+table tbody td:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+kbd {
+  background-color: #fafbfc;
+  border: solid 1px #d0d0d0;
+  border-bottom-color: #888;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 0 #959da5;
+  box-shadow: inset 0 -1px 0 #959da5;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1;
+  padding: 3px 5px;
+}
+.admonition.note,
+.admonition.hint,
+.admonition.danger,
+.admonition.caution,
+.admonition.error,
+.admonition.attention {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  position: relative;
+  margin: 1.5625em 0;
+  padding: 0 1.2rem;
+  border-left: 0.4rem solid #448aff;
+  border-radius: 0.2rem;
+  overflow: auto;
+}
+html .admonition>:last-child {
+  margin-bottom: 1.2rem;
+}
+.admonition .admonition {
+  margin: 1em 0;
+}
+.admonition p {
+  margin-top: 0.5em;
+}
+.admonition.note>.admonition-title:before,
+.admonition.hint>.admonition-title:before,
+.admonition.danger>.admonition-title:before,
+.admonition.caution>.admonition-title:before,
+.admonition.error>.admonition-title:before,
+.admonition.attention>.admonition-title:before {
+  position: absolute;
+  left: 1.2rem;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+/* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+/* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+/* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+/* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.admonition.note>.admonition-title,
+.admonition.hint>.admonition-title,
+.admonition.danger>.admonition-title,
+.admonition.caution>.admonition-title,
+.admonition.error>.admonition-title,
+.admonition.attention>.admonition-title {
+  margin: 0 -1.2rem;
+  padding: 0.8rem 1.2rem 0.8rem 4rem;
+  border-bottom: 0.1rem solid rgba(68,138,255,0.1);
+  background-color: rgba(68,138,255,0.1);
+  font-weight: 700;
+}
+.admonition>.admonition-title:last-child {
+  margin-bottom: 0;
+}
+.admonition.note {
+  border-left-color: #0288d1;
+}
+.admonition.note>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(2,136,209,0.2);
+  background-color: rgba(2,136,209,0.2);
+}
+.admonition.note>.admonition-title:before {
+  color: #0288d1;
+  content: "note";
+}
+.admonition.hint {
+  border-left-color: #009688;
+}
+.admonition.hint>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(0,150,136,0.2);
+  background-color: rgba(0,150,136,0.2);
+}
+.admonition.hint>.admonition-title:before {
+  color: #009688;
+  content: "info_outline";
+}
+.admonition.danger {
+  border-left-color: #c2185b;
+}
+.admonition.danger>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(194,24,91,0.2);
+  background-color: rgba(194,24,91,0.2);
+}
+.admonition.danger>.admonition-title:before {
+  color: #c2185b;
+  content: "block";
+}
+.admonition.caution {
+  border-left-color: #ffa726;
+}
+.admonition.caution>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(255,167,38,0.2);
+  background-color: rgba(255,167,38,0.2);
+}
+.admonition.caution>.admonition-title:before {
+  color: #ffa726;
+  content: "warning";
+}
+.admonition.error {
+  border-left-color: #d32f2f;
+}
+.admonition.error>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(211,47,47,0.2);
+  background-color: rgba(211,47,47,0.2);
+}
+.admonition.error>.admonition-title:before {
+  color: #d32f2f;
+  content: "error_outline";
+}
+.admonition.attention {
+  border-left-color: #455a64;
+}
+.admonition.attention>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(69,90,100,0.2);
+  background-color: rgba(69,90,100,0.2);
+}
+.admonition.attention>.admonition-title:before {
+  color: #455a64;
+  content: "priority_high";
+}
+dl {
+  margin: 2rem 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  width: 100%;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -o-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid #d0d0d0;
+  background-color: #fff;
+}
+dt {
+  border-top: 1px solid #d0d0d0;
+  font-weight: bold;
+  text-align: right;
+  overflow: hidden;
+  -webkit-flex-basis: 20%;
+  flex-basis: 20%;
+  padding: 0.4rem 0.9rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd {
+  border-top: 1px solid #d0d0d0;
+  -webkit-flex-basis: 80%;
+  flex-basis: 80%;
+  padding: 0.4rem 0.9rem;
+  min-height: 2.5rem;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd + dd {
+  margin-left: 20%;
+}
+pre.fence {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.fence .chart,
+pre.fence .flowchart,
+pre.fence .mermaid,
+pre.fence .sequence {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #fff;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+pre.fence .chart canvas,
+pre.fence .flowchart canvas,
+pre.fence .mermaid canvas,
+pre.fence .sequence canvas,
+pre.fence .chart svg,
+pre.fence .flowchart svg,
+pre.fence .mermaid svg,
+pre.fence .sequence svg {
+  max-width: 100% !important;
+}
+body[data-theme="dark"] {
+  color: #f9f9f9;
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="dark"] a:hover {
+  background-color: rgba(90,214,186,0.2) !important;
+}
+body[data-theme="dark"] code {
+  color: #ea6730;
+  border-color: #3d4450;
+  background-color: #363a3e;
+}
+body[data-theme="dark"] pre {
+  border-color: #474f5c;
+}
+body[data-theme="dark"] pre code {
+  background-color: transparent;
+}
+body[data-theme="dark"] label.taskListItem {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table thead tr {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n) {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] kbd {
+  background-color: #444b59;
+  color: #f9f9f9;
+}
+body[data-theme="dark"] dl {
+  border-color: #444b59;
+  background-color: #282b2e;
+}
+body[data-theme="dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dark"] dd {
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="solarized-dark"] {
+  color: #93a1a1;
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table thead tr {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n) {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] dl {
+  border-color: #444b59;
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] dd {
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="monokai"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="monokai"] table thead tr {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n + 1) {
+  background-color: #272822;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n) {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="monokai"] dl {
+  border-color: #444b59;
+  background-color: #23241f;
+}
+body[data-theme="monokai"] dt {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] dd {
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="dracula"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table thead tr {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n + 1) {
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n) {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="dracula"] dl {
+  border-color: #444b59;
+  background-color: #242631;
+}
+body[data-theme="dracula"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] dd {
+  border-color: #444b59;
+  background-color: #282a36;
+}
+/*# sourceMappingURL=browser/components/markdown.css.map */
+
+body {
+  font-family: 'Lato','helvetica','arial','sans-serif';
+  font-size: 14px;
+  false
+}
+@media print {
+  body {
+    padding-bottom: initial;
+  }
+}
+code {
+  font-family: 'Monaco','Consolas','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+  background-color: rgba(0,0,0,0.04);
+}
+.lineNumber {
+  display: block !important;
+  font-family: 'Monaco','Consolas','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+}
+
+.clipboardButton {
+  color: rgba(147,147,149,0.8);;
+  fill: rgba(147,147,149,1);;
+  border-radius: 50%;
+  margin: 0px 10px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.clipboardButton:hover {
+  transition: 0.2s;
+  color: #939395;
+  fill: #939395;
+  background-color: rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  border: none;
+}
+
+h1 {
+  padding-bottom: 4px;
+  margin: 1em 0 8px;
+}
+
+h2 {
+  padding-bottom: 0.2em;
+  margin: 1em 0 0.37em;
+}
+
+body p {
+  white-space: normal;
+}
+
+@media print {
+  body[data-theme="dark"] {
+    color: #000;
+    background-color: #fff;
+  }
+  .clipboardButton {
+    display: none
+  }
+}
+
+
+</style>
+                   <link rel="stylesheet" href="css/dracula.css"><link rel="stylesheet" href="css/katex.min.css"><link rel="stylesheet" href="css/codemirror.css">
+                 </head>
+                 <body><h1 data-line="0" id="2-HTML%E5%88%9D%E6%AD%A5">2. HTML初步</h1>
+<blockquote data-line="2">
+<p data-line="2">HTML是一种语言，但不是编程语言，而是一种表示网页信息的符号标记语言。互联网中形形色色的网页就是用HTML撰写的，HTML是网页的基础。</p>
+<p data-line="4">HTML全称为Hypertext Markup Language，译为“超文本标记语言”。Web浏览器会读取使用HTML语言撰写的文档，并于渲染后以网页的形式显示出它们。</p>
+<p data-line="6">注意，浏览器的“渲染”是指，浏览器不会显示HTML语言本身，而是根据HTML语言(标记)来解析页面内容，并将解析结果显示在电脑屏幕上。</p>
+</blockquote>
+<hr />
+<p data-line="10"><h3>目录</h3></p>
+
+<ul>
+<li data-line="14"><a href="#1-%E7%BD%91%E9%A1%B5%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84">1. 网页的基本结构</a>
+<ul>
+<li data-line="15"><a href="#1-%E6%A6%82%E8%A7%88">1) 概览</a></li>
+<li data-line="16"><a href="#2-%E6%A0%87%E8%AE%B0">2) 标记</a></li>
+<li data-line="17"><a href="#3-%E5%B1%9E%E6%80%A7">3) 属性</a></li>
+<li data-line="18"><a href="#4-%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E">4) 结构说明</a></li>
+</ul>
+</li>
+<li data-line="19"><a href="#2-%E5%B8%B8%E7%94%A8%E6%A0%87%E8%AE%B0">2. 常用标记</a>
+<ul>
+<li data-line="20"><a href="#1-p-%E6%AE%B5%E8%90%BD">1) p (段落)</a></li>
+<li data-line="21"><a href="#2-br-%E6%8D%A2%E8%A1%8C">2) br (换行)</a></li>
+<li data-line="22"><a href="#3-img-%E5%9B%BE%E7%89%87">3) img (图片)</a></li>
+<li data-line="23"><a href="#4-a-%E9%93%BE%E6%8E%A5">4) a (链接)</a></li>
+<li data-line="24"><a href="#5-div-%E5%9D%97%E5%8C%BA%E5%9F%9F--span-%E8%A1%8C%E5%8C%BA%E5%9F%9F">5) div (块区域) &amp; span (行区域)</a></li>
+<li data-line="25"><a href="#6-hx-%E6%A0%87%E9%A2%98">6) hx (标题)</a></li>
+<li data-line="26"><a href="#7-table-%E8%A1%A8%E6%A0%BC">7) table (表格)</a>
+<ul>
+<li data-line="27"><a href="#a-%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E8%A1%A8%E6%A0%BC%E7%BB%93%E6%9E%84">a. 最简单的表格结构</a></li>
+<li data-line="28"><a href="#b-%E8%B7%A8%E8%A1%8C--%E8%B7%A8%E5%88%97">b. 跨行 &amp; 跨列</a></li>
+<li data-line="29"><a href="#c-%E5%AE%8C%E6%95%B4%E7%9A%84%E8%A1%A8%E6%A0%BC%E7%BB%93%E6%9E%84">c. 完整的表格结构</a></li>
+</ul>
+</li>
+<li data-line="30"><a href="#8-ol-%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8--ul-%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">8) ol (有序列表) &amp; ul (无序列表)</a></li>
+<li data-line="31"><a href="#9-hr-%E6%A8%AA%E7%BA%BF">9) hr (横线)</a></li>
+</ul>
+</li>
+<li data-line="32"><a href="#3-CSS%E7%AE%80%E4%BB%8B">3. CSS简介</a>
+<ul>
+<li data-line="33"><a href="#1-%E4%BB%80%E4%B9%88%E6%98%AFCSS-">1) 什么是CSS ?</a></li>
+<li data-line="34"><a href="#2-CSS%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F">2) CSS的使用方式</a>
+<ul>
+<li data-line="35"><a href="#a-%E5%86%85%E8%81%94%E5%BC%8F">a. 内联式</a></li>
+<li data-line="36"><a href="#b-%E5%B5%8C%E5%85%A5%E5%BC%8F">b. 嵌入式</a></li>
+<li data-line="37"><a href="#c-%E5%A4%96%E9%83%A8%E5%BC%8F">c. 外部式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<hr />
+<h2 data-line="43" id="1-%E7%BD%91%E9%A1%B5%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84">1. 网页的基本结构</h2>
+<h3 data-line="45" id="1-%E6%A6%82%E8%A7%88">1) 概览</h3>
+<p data-line="47">几乎所有的网页代码均可抽象为以下的简单结构：</p>
+<pre class="code CodeMirror" data-line="49">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span></span>
+        <code class="html">&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset = &quot;UTF-8&quot;&gt;
+		&lt;title&gt;......&lt;/title&gt;
+		......
+	&lt;/head&gt;
+	&lt;body&gt;
+		......	
+	&lt;/body&gt;
+&lt;/html&gt;
+</code>
+      </pre><h3 data-line="63" id="2-%E6%A0%87%E8%AE%B0">2) 标记</h3>
+<blockquote data-line="65">
+<p data-line="65">标记 = 标签 = 元素 = tag</p>
+</blockquote>
+<p data-line="67">上图代码中，一个个带有<code>&lt;&gt;</code>的东西被称为“标记”，这也是为什么html是一种标记语言——html使用标记来描述网页，一个html文档包含了html标记和文本内容，html标记是帮助浏览器解析怎样组织、怎样显示文本内容的工具，所以在你的浏览器里并不会显示html标记，而只会显示经过html标记组织后的文本内容。</p>
+<p data-line="69"><strong>标记(tag)</strong>：又可称为标签、元素，可分为双端标记和单端标记——</p>
+<ul>
+<li data-line="71">双端标记：需要配对使用的标记，占html标记的绝大多数，如上图中的<code>&lt;html&gt;...&lt;/html&gt;</code>、<code>&lt;title&gt;...&lt;/title&gt;</code>等等，他们将文本内容包裹在两个标记之间。注意结束标签中多一个斜杠<code>/</code>；</li>
+<li data-line="72">单端标记：不需配对使用的标记，少量，如上图中的<code>&lt;meta&gt;</code>。</li>
+</ul>
+<h3 data-line="74" id="3-%E5%B1%9E%E6%80%A7">3) 属性</h3>
+<p data-line="76">属性(property)，即“标签的属性”，定义标签的特征。如上图中的单端标记<code>&lt;meta&gt;</code>就拥有一个属性<code>charset</code>，其属性值为<code>&quot;UTF-8&quot;</code>，即<code>charset = &quot;UTF-8&quot;</code>。</p>
+<p data-line="78">当标签有多个属性时，<code>属性=属性值</code>之间用空格隔开即可。</p>
+<p data-line="80">绝大多数html标签支持<code>style</code>属性，该属性能够定义元素的显示效果，之后会有具体实例。</p>
+<h3 data-line="82" id="4-%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E">4) 结构说明</h3>
+<blockquote data-line="84">
+<p data-line="84">首先，html标记语言，<strong>对大小写不敏感</strong>，可以全部大写，也可以全部小写，也可以大小写混用。</p>
+<p data-line="86">其次，缩进不是必须的，但有缩进有助于观察网页结构，快速得到层次关系，及时发现错误。</p>
+<p data-line="88">最后，html代码撰写完毕后，需保存至扩展名为html的文档中，再用浏览器打开，即可看到网页效果。</p>
+</blockquote>
+<p data-line="90">网页的所有内容均被包裹在<code>&lt;html&gt;</code>标签中，即<code>&lt;html&gt;...all contents...&lt;/html&gt;</code>；<code>&lt;html&gt;</code>是双端标签，其开始标签与结束标签分别位于网页的最开始和最结尾处。</p>
+<p data-line="92"><code>&lt;html&gt;</code>标签内的网页内容，又由<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>两大部分构成，分别是<strong>网页的头部</strong>和<strong>网页的主体</strong>：</p>
+<ul>
+<li data-line="94"><strong>head</strong>：用于设置网页标题、网页编码等影响<strong>全局</strong>方面的内容，其中的内容不会在浏览器中显示；</li>
+<li data-line="95"><strong>body</strong>：主要包含将要显示的网页内容。</li>
+</ul>
+<p data-line="97"><strong>关于第一行的<code>&lt;!doctype html&gt;</code>声明</strong>：</p>
+<ul>
+<li data-line="99">位于html文档的最前端，在<code>&lt;html&gt;</code>标签前；</li>
+<li data-line="100">严格来说，它不算做html标签，仅仅是一个声明，告知浏览器该网页使用了哪种html版本；</li>
+<li data-line="101">对网页本身没有任何影响，但有助于浏览器正常显示网页，因此最好每次都加上。</li>
+</ul>
+<h2 data-line="103" id="2-%E5%B8%B8%E7%94%A8%E6%A0%87%E8%AE%B0">2. 常用标记</h2>
+<blockquote data-line="105">
+<p data-line="105">四大常用标签：<code>p</code>，<code>br</code>，<code>img</code>，<code>a</code></p>
+</blockquote>
+<p data-line="107"><img src="attachments/ee3c645d.png" alt="tu1.png" /></p>
+<h3 data-line="109" id="1-p-%E6%AE%B5%E8%90%BD">1) p (段落)</h3>
+<p data-line="111"><code>&lt;p&gt;...&lt;/p&gt;</code>是双端标记，表示“段落”，是Paragraph的简写。在此标记之间的内容，自动与此标记前后的内容分行，以示一段，如上图效果所示。</p>
+<p data-line="113">上图同样说明，在html代码中，回车换行是无法使网页本身产生换行的效果的，需要使用如<code>&lt;p&gt;</code>、<code>&lt;br&gt;</code>这样的标签来实现。</p>
+<h3 data-line="115" id="2-br-%E6%8D%A2%E8%A1%8C">2) br (换行)</h3>
+<p data-line="117"><code>&lt;br&gt;</code>是单端标记，表示“换行”，是Break的简写，效果如上图所示。</p>
+<h3 data-line="119" id="3-img-%E5%9B%BE%E7%89%87">3) img (图片)</h3>
+<p data-line="121"><code>&lt;img&gt;</code>是单端标记，表示“图片”，是image的简写，基本格式为<code>&lt;img src=&quot;图片位置&quot; alt=&quot;图片说明&quot;&gt;</code>：</p>
+<ul>
+<li data-line="123"><code>src</code>：图片位置，可以是互联网上的图片地址，也可以是本地的图片地址；</li>
+<li data-line="124"><code>alt</code>：图片说明，文字，用于描述图片，不是必须的属性，但对其进行填充是良好的网页制作规范。</li>
+</ul>
+<pre class="code CodeMirror" data-line="128">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span><span class="CodeMirror-linenumber">20</span><span class="CodeMirror-linenumber">21</span><span class="CodeMirror-linenumber">22</span><span class="CodeMirror-linenumber">23</span><span class="CodeMirror-linenumber">24</span><span class="CodeMirror-linenumber">25</span><span class="CodeMirror-linenumber">26</span><span class="CodeMirror-linenumber">27</span><span class="CodeMirror-linenumber">28</span><span class="CodeMirror-linenumber">29</span><span class="CodeMirror-linenumber">30</span></span>
+        <code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+		&lt;title&gt;大学官网&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;a name=&quot;Head&quot;&gt;&lt;p&gt;大学官网列表&lt;/p&gt;&lt;/a&gt;
+
+		&lt;img src=&quot;./pic/njtu.png&quot; alt = &quot;北交logo&quot;&gt;
+		&lt;a href=&quot;http://www.njtu.edu.cn/&quot; target=&quot;_self&quot;&gt;北京交通大学&lt;/a&gt;&lt;br&gt;
+
+		&lt;img src=&quot;./pic/pku.png&quot; alt = &quot;北大logo&quot;&gt;
+		&lt;a href=&quot;https://www.pku.edu.cn/&quot;&gt;北京大学&lt;/a&gt;&lt;br&gt;
+
+		&lt;img src=&quot;./pic/th.png&quot; alt = &quot;清华logo&quot;&gt;	
+		&lt;a href=&quot;http://www.tsinghua.edu.cn/&quot;&gt;清华大学&lt;/a&gt;&lt;br&gt;
+
+		&lt;img src=&quot;./pic/zju.png&quot; alt = &quot;浙大logo&quot;&gt;		
+		&lt;a href=&quot;http://www.zju.edu.cn/&quot;&gt;浙江大学&lt;/a&gt;&lt;br&gt;
+
+		&lt;img src=&quot;./pic/tju.png&quot; alt = &quot;天大logo&quot;&gt;			
+		&lt;a href=&quot;http://www.tju.edu.cn/&quot;&gt;天津大学&lt;/a&gt;&lt;br&gt;
+
+		&lt;img src=&quot;./pic/nk.png&quot; alt = &quot;南开logo&quot;&gt;			
+		&lt;a href=&quot;http://www.nankai.edu.cn/&quot;&gt;南开大学&lt;/a&gt;&lt;br&gt;
+
+		&lt;p&gt;&lt;a href=&quot;file:///Users/draymondgao/Desktop/temp.html#Head&quot;&gt;回到开始&lt;/a&gt;&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code>
+      </pre><p data-line="161">上图代码的效果如下：</p>
+<p data-line="163"><img src="attachments/5f8c1a27.png" alt="tu2.png" /></p>
+<p data-line="165">另外，从上述代码可知，这里<code>&lt;img&gt;</code>引用的图片为本地图片文件，且图片的存放位置为<strong>与该html文件同级的文件夹中的一个名为pic的文件夹里</strong>：</p>
+<p data-line="167"><img src="attachments/4f6e49f9.png" alt="tu3.png" /></p>
+<h3 data-line="169" id="4-a-%E9%93%BE%E6%8E%A5">4) a (链接)</h3>
+<p data-line="171"><code>&lt;a&gt;</code>是双端标记，表示“超链接”，是Anchor的简写，基本格式为<code>&lt;a href=&quot;链接地址&quot;&gt;链接入口&lt;/a&gt;</code>：</p>
+<ul>
+<li data-line="173">链接入口：可以是文字，可以是图片，用于提示用户——点击这里，就可以实现跳转；</li>
+<li data-line="174">链接地址：使用<code>a</code>的<code>href</code>属性设置，表示将要跳转至的网站的地址；</li>
+</ul>
+<pre class="code CodeMirror" data-line="178">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span></span>
+        <code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;大学官网&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;大学官网列表&lt;/p&gt;
+		&lt;a href=&quot;http://www.njtu.edu.cn/&quot;&gt;北京交通大学&lt;/a&gt;&lt;br&gt;
+		&lt;a href=&quot;https://www.pku.edu.cn/&quot;&gt;北京大学&lt;/a&gt;&lt;br&gt;
+		&lt;a href=&quot;http://www.tsinghua.edu.cn/&quot;&gt;清华大学&lt;/a&gt;&lt;br&gt;
+		&lt;a href=&quot;http://www.zju.edu.cn/&quot;&gt;浙江大学&lt;/a&gt;&lt;br&gt;
+		&lt;a href=&quot;http://www.tju.edu.cn/&quot;&gt;天津大学&lt;/a&gt;&lt;br&gt;
+		&lt;a href=&quot;http://www.nankai.edu.cn/&quot;&gt;南开大学&lt;/a&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code>
+      </pre><p data-line="197">效果如下(带下划线的文字即“链接入口”，而跳转到的网站地址，如https://www.pku.edu.cn/即“链接地址”)：</p>
+<p data-line="199"><img src="attachments/94148da0.png" alt="tu4.png" /></p>
+<p data-line="201"><strong>其他属性</strong>：</p>
+<ul>
+<li data-line="203"><code>target</code>：表示在何处打开该超链接——值可以取：<code>_blank</code>(在一个空白窗口打开网页)，<code>_self</code>(在当前窗口打开网页)等；</li>
+<li data-line="204"><code>name</code>：表示“书签”(bookmark)，使用<code>name</code>属性来定义一个书签，在之后某处可以再设置一个超链接<code>a</code>，并将其<code>href</code>属性值设置为<code>#书签名</code>，这样在点击这个超链接后，就可以返回到书签的位置了；例如，“回到开始”：</li>
+</ul>
+<pre class="code CodeMirror" data-line="208">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span></span>
+        <code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;大学官网&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;a name=&quot;Head&quot;&gt;&lt;p&gt;大学官网列表&lt;/p&gt;&lt;/a&gt;
+	  
+		&lt;a href=&quot;http://www.njtu.edu.cn/&quot; target=&quot;_self&quot;&gt;北京交通大学&lt;/a&gt;&lt;br&gt;
+		&lt;a href=&quot;https://www.pku.edu.cn/&quot;&gt;北京大学&lt;/a&gt;&lt;br&gt;
+		&lt;a href=&quot;http://www.tsinghua.edu.cn/&quot;&gt;清华大学&lt;/a&gt;&lt;br&gt;
+		&lt;a href=&quot;http://www.zju.edu.cn/&quot;&gt;浙江大学&lt;/a&gt;&lt;br&gt;
+		&lt;a href=&quot;http://www.tju.edu.cn/&quot;&gt;天津大学&lt;/a&gt;&lt;br&gt;
+		&lt;a href=&quot;http://www.nankai.edu.cn/&quot;&gt;南开大学&lt;/a&gt;&lt;br&gt;
+	  
+		&lt;p&gt;&lt;a href=&quot;#Head&quot;&gt;回到开始&lt;/a&gt;&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code>
+      </pre><h3 data-line="230" id="5-div-%E5%9D%97%E5%8C%BA%E5%9F%9F-span-%E8%A1%8C%E5%8C%BA%E5%9F%9F">5) div (块区域) &amp; span (行区域)</h3>
+<p data-line="232"><code>&lt;div&gt;</code>是双端标记，用于“分区”，其中的内容自动与上下文<strong>分行</strong>显示，类似于<code>&lt;p&gt;</code>，但是在段前段后距上与<code>&lt;p&gt;</code>略有不同。</p>
+<p data-line="234"><code>&lt;span&gt;</code>也是双端标记，用于“标记范围”，没有像<code>&lt;div&gt;</code>那样的分行显示效果，即默认情况下其内部的内容与前后文内容在同一行显示。</p>
+<p data-line="236">例：</p>
+<pre class="code CodeMirror" data-line="238">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span><span class="CodeMirror-linenumber">20</span><span class="CodeMirror-linenumber">21</span><span class="CodeMirror-linenumber">22</span><span class="CodeMirror-linenumber">23</span><span class="CodeMirror-linenumber">24</span><span class="CodeMirror-linenumber">25</span><span class="CodeMirror-linenumber">26</span><span class="CodeMirror-linenumber">27</span><span class="CodeMirror-linenumber">28</span><span class="CodeMirror-linenumber">29</span><span class="CodeMirror-linenumber">30</span><span class="CodeMirror-linenumber">31</span><span class="CodeMirror-linenumber">32</span><span class="CodeMirror-linenumber">33</span><span class="CodeMirror-linenumber">34</span><span class="CodeMirror-linenumber">35</span><span class="CodeMirror-linenumber">36</span><span class="CodeMirror-linenumber">37</span><span class="CodeMirror-linenumber">38</span><span class="CodeMirror-linenumber">39</span><span class="CodeMirror-linenumber">40</span><span class="CodeMirror-linenumber">41</span><span class="CodeMirror-linenumber">42</span></span>
+        <code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+    &lt;title&gt;大学官网&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;a name=&quot;Head&quot;&gt;&lt;p&gt;大学官网列表&lt;/p&gt;&lt;/a&gt;
+
+    &lt;img src=&quot;./pic/njtu.png&quot; alt = &quot;北交logo&quot;&gt;
+    &lt;a href=&quot;http://www.njtu.edu.cn/&quot; target=&quot;_self&quot;&gt;北京交通大学&lt;/a&gt;&lt;br&gt;
+
+    &lt;div&gt;
+      【1】北京交通大学（Beijing Jiaotong University）是中华人民共和国教育部直属，由中华人民共和国教育部、北京市、中国铁路总公司共建，位列“211工程”、“985工程优势学科创新平台”、“世界一流学科建设高校”，入选“高等学校创新能力提升计划”、“高等学校学科创新引智计划”、“卓越工程师教育培养计划”、“国家建设高水平大学公派研究生项目“、”海外高层次人才引进计划”，是北京高科大学联盟、中俄交通大学联盟成员高校。
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      【2】北京交通大学作为交通大学的三个源头之一，历史渊源可追溯到1896年，前身是清政府创办的北京铁路管理传习所，是中国第一所专门培养管理人才的高等学校，是中国近代铁路管理、电信教育的发祥地。1921年参与合并组建交通大学。1923年交通大学改组后，更名为北京交通大学。1970年恢复使用“北方交通大学”校名。2000年与原北京电力高等专科学校合并。2003年恢复使用“北京交通大学”校名。
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      【3】截至2017年8月，学校建有东西两个校区和威海校区，总建筑面积1032443.37平方米，共拥有教学、科研仪器设备资产12.8亿元；学校设有14个学院，设有研究生院以及远程与继续教育学院；学校设有59个本科专业，15个博士后科研流动站，21个一级学科博士点，33个一级学科硕士点；全日制在校生25569人，教职工2992人，其中专任教师1878人；学校形成了以信息、管理等学科为优势，以交通科学与技术为特色，工、管、经、理、文、法、哲等多学科协调发展的完备的学科培养体系。
+    &lt;/div&gt;
+
+    &lt;img src=&quot;./pic/pku.png&quot; alt = &quot;北大logo&quot;&gt;
+    &lt;a href=&quot;https://www.pku.edu.cn/&quot;&gt;北京大学&lt;/a&gt;&lt;br&gt;
+
+    &lt;img src=&quot;./pic/th.png&quot; alt = &quot;清华logo&quot;&gt;	
+    &lt;a href=&quot;http://www.tsinghua.edu.cn/&quot;&gt;清华大学&lt;/a&gt;&lt;br&gt;
+
+    &lt;img src=&quot;./pic/zju.png&quot; alt = &quot;浙大logo&quot;&gt;		
+    &lt;a href=&quot;http://www.zju.edu.cn/&quot;&gt;浙江大学&lt;/a&gt;&lt;br&gt;
+
+    &lt;img src=&quot;./pic/tju.png&quot; alt = &quot;天大logo&quot;&gt;			
+    &lt;a href=&quot;http://www.tju.edu.cn/&quot;&gt;天津大学&lt;/a&gt;&lt;br&gt;
+
+    &lt;img src=&quot;./pic/nk.png&quot; alt = &quot;南开logo&quot;&gt;			
+    &lt;a href=&quot;http://www.nankai.edu.cn/&quot;&gt;南开大学&lt;/a&gt;&lt;br&gt;
+
+    &lt;p&gt;&lt;a href=&quot;#Head&quot;&gt;回到开始&lt;/a&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+      </pre><p data-line="283">效果如下(可以将上述代码中的div换成span，体会div与sapn在显示效果上的差异)：</p>
+<p data-line="285"><img src="attachments/d79b3d75.png" alt="tu5.png" /></p>
+<p data-line="287">上述两个标签多与<code>style</code>属性配合使用，用于设置其控制的区域中文本的显示效果。</p>
+<h3 data-line="289" id="6-hx-%E6%A0%87%E9%A2%98">6) hx (标题)</h3>
+<p data-line="291"><code>h</code>是header的简写，x可以为1, 2, 3…6，即<code>h1</code>, <code>h2</code>, …, <code>h6</code>，分别代表一级标题，二级标题……</p>
+<p data-line="293">标题默认独占一行，且前后有一定的行距。</p>
+<pre class="code CodeMirror" data-line="295">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span><span class="CodeMirror-linenumber">20</span><span class="CodeMirror-linenumber">21</span><span class="CodeMirror-linenumber">22</span><span class="CodeMirror-linenumber">23</span><span class="CodeMirror-linenumber">24</span><span class="CodeMirror-linenumber">25</span><span class="CodeMirror-linenumber">26</span><span class="CodeMirror-linenumber">27</span><span class="CodeMirror-linenumber">28</span><span class="CodeMirror-linenumber">29</span><span class="CodeMirror-linenumber">30</span><span class="CodeMirror-linenumber">31</span><span class="CodeMirror-linenumber">32</span><span class="CodeMirror-linenumber">33</span><span class="CodeMirror-linenumber">34</span><span class="CodeMirror-linenumber">35</span><span class="CodeMirror-linenumber">36</span><span class="CodeMirror-linenumber">37</span><span class="CodeMirror-linenumber">38</span><span class="CodeMirror-linenumber">39</span><span class="CodeMirror-linenumber">40</span><span class="CodeMirror-linenumber">41</span></span>
+        <code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+		&lt;title&gt;大学官网&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;a name=&quot;Head&quot;&gt;&lt;h1&gt;大学官网列表&lt;/h1&gt;&lt;/a&gt;
+
+		&lt;h2&gt;&lt;a href=&quot;http://www.njtu.edu.cn/&quot; target=&quot;_self&quot;&gt;1. 北京交通大学&lt;/a&gt;&lt;/h2&gt;
+		&lt;img src=&quot;./pic/njtu.png&quot; alt = &quot;北交logo&quot;&gt;
+		&lt;div&gt;
+			【1】北京交通大学（Beijing Jiaotong University）是中华人民共和国教育部直属，由中华人民共和国教育部、北京市、中国铁路总公司共建，位列“211工程”、“985工程优势学科创新平台”、“世界一流学科建设高校”，入选“高等学校创新能力提升计划”、“高等学校学科创新引智计划”、“卓越工程师教育培养计划”、“国家建设高水平大学公派研究生项目“、”海外高层次人才引进计划”，是北京高科大学联盟、中俄交通大学联盟成员高校。
+		&lt;/div&gt;
+
+		&lt;div&gt;
+			【2】北京交通大学作为交通大学的三个源头之一，历史渊源可追溯到1896年，前身是清政府创办的北京铁路管理传习所，是中国第一所专门培养管理人才的高等学校，是中国近代铁路管理、电信教育的发祥地。1921年参与合并组建交通大学。1923年交通大学改组后，更名为北京交通大学。1970年恢复使用“北方交通大学”校名。2000年与原北京电力高等专科学校合并。2003年恢复使用“北京交通大学”校名。
+		&lt;/div&gt;
+
+		&lt;div&gt;
+			【3】截至2017年8月，学校建有东西两个校区和威海校区，总建筑面积1032443.37平方米，共拥有教学、科研仪器设备资产12.8亿元；学校设有14个学院，设有研究生院以及远程与继续教育学院；学校设有59个本科专业，15个博士后科研流动站，21个一级学科博士点，33个一级学科硕士点；全日制在校生25569人，教职工2992人，其中专任教师1878人；学校形成了以信息、管理等学科为优势，以交通科学与技术为特色，工、管、经、理、文、法、哲等多学科协调发展的完备的学科培养体系。
+		&lt;/div&gt;
+
+		&lt;h2&gt;&lt;a href=&quot;https://www.pku.edu.cn/&quot;&gt;2. 北京大学&lt;/a&gt;&lt;/h2&gt;
+		&lt;img src=&quot;./pic/pku.png&quot; alt = &quot;北大logo&quot;&gt;
+
+		&lt;h2&gt;&lt;a href=&quot;http://www.tsinghua.edu.cn/&quot;&gt;3. 清华大学&lt;/a&gt;&lt;/h2&gt;
+		&lt;img src=&quot;./pic/th.png&quot; alt = &quot;清华logo&quot;&gt;	
+
+		&lt;h2&gt;&lt;a href=&quot;http://www.zju.edu.cn/&quot;&gt;4. 浙江大学&lt;/a&gt;&lt;/h2&gt;
+		&lt;img src=&quot;./pic/zju.png&quot; alt = &quot;浙大logo&quot;&gt;		
+
+		&lt;h2&gt;&lt;a href=&quot;http://www.tju.edu.cn/&quot;&gt;5. 天津大学&lt;/a&gt;&lt;/h2&gt;
+		&lt;img src=&quot;./pic/tju.png&quot; alt = &quot;天大logo&quot;&gt;			
+
+		&lt;h2&gt;&lt;a href=&quot;http://www.nankai.edu.cn/&quot;&gt;6. 南开大学&lt;/a&gt;&lt;/h2&gt;
+		&lt;img src=&quot;./pic/nk.png&quot; alt = &quot;南开logo&quot;&gt;			
+
+		&lt;p&gt;&lt;a href=&quot;#Head&quot;&gt;### 回到开始 ###&lt;/a&gt;&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code>
+      </pre><p data-line="339">效果如下：</p>
+<p data-line="341"><img src="attachments/6a964ee1.png" alt="tu6.png" /></p>
+<h3 data-line="343" id="7-table-%E8%A1%A8%E6%A0%BC">7) table (表格)</h3>
+<h4 data-line="345" id="a-%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E8%A1%A8%E6%A0%BC%E7%BB%93%E6%9E%84">a. 最简单的表格结构</h4>
+<p data-line="347"><code>&lt;table&gt;</code>→<code>&lt;tr&gt;</code>→<code>&lt;td&gt;</code>。即，表格由行(table row, 简写为tr)组成，每个行中又包含一个一个的单元格(table data, 简写td)：</p>
+<p data-line="349">Table标记有border属性，即设置表格边框宽度，如果省略该属性，则表格将没有边框，</p>
+<pre class="code CodeMirror" data-line="351">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span><span class="CodeMirror-linenumber">20</span><span class="CodeMirror-linenumber">21</span><span class="CodeMirror-linenumber">22</span></span>
+        <code class="html">&lt;table border=&quot;1&quot;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;姓名&lt;/td&gt;
+        &lt;td&gt;学号&lt;/td&gt;
+        &lt;td&gt;成绩&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Bill&lt;/td&gt;
+        &lt;td&gt;1400011987&lt;/td&gt;
+        &lt;td&gt;86&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Lucy&lt;/td&gt;
+        &lt;td&gt;1400015783&lt;/td&gt;
+        &lt;td&gt;93&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Jane&lt;/td&gt;
+        &lt;td&gt;1400019842&lt;/td&gt;
+        &lt;td&gt;87&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+      </pre><p data-line="376">效果如下：</p>
+<p data-line="378"><img src="attachments/9b6ea6aa.png" alt="tu7.png" /></p>
+<h4 data-line="380" id="b-%E8%B7%A8%E8%A1%8C-%E8%B7%A8%E5%88%97">b. 跨行 &amp; 跨列</h4>
+<p data-line="382"><strong>跨列</strong></p>
+<pre class="code CodeMirror" data-line="384">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span><span class="CodeMirror-linenumber">20</span><span class="CodeMirror-linenumber">21</span><span class="CodeMirror-linenumber">22</span><span class="CodeMirror-linenumber">23</span><span class="CodeMirror-linenumber">24</span><span class="CodeMirror-linenumber">25</span><span class="CodeMirror-linenumber">26</span><span class="CodeMirror-linenumber">27</span></span>
+        <code class="html">&lt;table border=&quot;1&quot;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;姓名&lt;/td&gt;
+        &lt;td&gt;学号&lt;/td&gt;
+        &lt;td&gt;成绩&lt;/td&gt;
+    &lt;/tr&gt;     
+
+    &lt;tr&gt;
+        &lt;td&gt;Bill&lt;/td&gt;
+        &lt;td&gt;1400011987&lt;/td&gt;
+        &lt;td&gt;86&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Lucy&lt;/td&gt;
+        &lt;td&gt;1400015783&lt;/td&gt;
+        &lt;td&gt;93&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Jane&lt;/td&gt;
+        &lt;td&gt;1400019842&lt;/td&gt;
+        &lt;td&gt;87&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan=&quot;2&quot;&gt;平均&lt;/td&gt;
+        &lt;td&gt;87&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+      </pre><p data-line="414">效果如下：</p>
+<p data-line="416"><img src="attachments/ab47bfa7.png" alt="tu8.png" /></p>
+<p data-line="418">在上述代码的最后一个<code>&lt;tr&gt;</code>中，虽然只有两个<code>&lt;td&gt;</code>，但第一个<code>&lt;td&gt;</code>中的<code>colspan</code>属性值被设置为2，也就是横向横跨两列。</p>
+<p data-line="420"><strong>跨行</strong></p>
+<pre class="code CodeMirror" data-line="422">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span><span class="CodeMirror-linenumber">20</span><span class="CodeMirror-linenumber">21</span><span class="CodeMirror-linenumber">22</span><span class="CodeMirror-linenumber">23</span><span class="CodeMirror-linenumber">24</span><span class="CodeMirror-linenumber">25</span><span class="CodeMirror-linenumber">26</span></span>
+        <code class="html">&lt;table border=&quot;1&quot;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;姓名&lt;/td&gt;
+        &lt;td&gt;学号&lt;/td&gt;
+        &lt;td&gt;成绩&lt;/td&gt;
+        &lt;td&gt;等级&lt;/td&gt;
+    &lt;/tr&gt;     
+
+    &lt;tr&gt;
+        &lt;td&gt;Bill&lt;/td&gt;
+        &lt;td&gt;1400011987&lt;/td&gt;
+        &lt;td&gt;82&lt;/td&gt;
+        &lt;td rowspan=&quot;2&quot;&gt;良好&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Lucy&lt;/td&gt;
+        &lt;td&gt;1400015783&lt;/td&gt;
+        &lt;td&gt;83&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Jane&lt;/td&gt;
+        &lt;td&gt;1400019842&lt;/td&gt;
+        &lt;td&gt;99&lt;/td&gt;
+        &lt;td&gt;优秀&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+      </pre><p data-line="451">效果如下：</p>
+<p data-line="453"><img src="attachments/dcf9cac0.png" alt="tu9.png" /></p>
+<p data-line="455">第三个<code>&lt;tr&gt;</code>中，虽然只有三个<code>&lt;td&gt;</code>，但是由于上一个<code>&lt;tr&gt;</code>的最后一个<code>&lt;td&gt;</code>设置了<code>rowspan</code>为2，也就是向下横跨2行，因此出现上图的显示效果。</p>
+<h4 data-line="457" id="c-%E5%AE%8C%E6%95%B4%E7%9A%84%E8%A1%A8%E6%A0%BC%E7%BB%93%E6%9E%84">c. 完整的表格结构</h4>
+<p data-line="459">完整的表格结构由标题<code>&lt;caption&gt;</code>, 表头<code>&lt;thead&gt;</code>, 表尾<code>&lt;tfoot&gt;</code>, 主体<code>&lt;tbody&gt;</code>构成：</p>
+<pre class="code CodeMirror" data-line="461">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span><span class="CodeMirror-linenumber">20</span><span class="CodeMirror-linenumber">21</span><span class="CodeMirror-linenumber">22</span><span class="CodeMirror-linenumber">23</span><span class="CodeMirror-linenumber">24</span><span class="CodeMirror-linenumber">25</span><span class="CodeMirror-linenumber">26</span><span class="CodeMirror-linenumber">27</span><span class="CodeMirror-linenumber">28</span><span class="CodeMirror-linenumber">29</span><span class="CodeMirror-linenumber">30</span><span class="CodeMirror-linenumber">31</span><span class="CodeMirror-linenumber">32</span><span class="CodeMirror-linenumber">33</span><span class="CodeMirror-linenumber">34</span><span class="CodeMirror-linenumber">35</span><span class="CodeMirror-linenumber">36</span><span class="CodeMirror-linenumber">37</span><span class="CodeMirror-linenumber">38</span></span>
+        <code class="html">&lt;table border=&quot;1&quot;&gt;
+    &lt;caption&gt;成绩单&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;姓名&lt;/th&gt;
+            &lt;th&gt;学号&lt;/th&gt;
+            &lt;th&gt;成绩&lt;/th&gt;
+        &lt;/tr&gt;     
+    &lt;/thead&gt;
+
+    &lt;tfoot&gt;
+    	&lt;tr&gt;
+    		&lt;td colspan=&quot;3&quot;&gt;Date: 2018.11.16&lt;/td&gt;
+    	&lt;/tr&gt;
+    &lt;/tfoot&gt;
+
+    &lt;tbody&gt;
+	    &lt;tr&gt;
+	        &lt;td&gt;Bill&lt;/td&gt;
+	        &lt;td&gt;1400011987&lt;/td&gt;
+	        &lt;td&gt;86&lt;/td&gt;
+	    &lt;/tr&gt;
+	    &lt;tr&gt;
+	        &lt;td&gt;Lucy&lt;/td&gt;
+	        &lt;td&gt;1400015783&lt;/td&gt;
+	        &lt;td&gt;93&lt;/td&gt;
+	    &lt;/tr&gt;
+	    &lt;tr&gt;
+	        &lt;td&gt;Jane&lt;/td&gt;
+	        &lt;td&gt;1400019842&lt;/td&gt;
+	        &lt;td&gt;87&lt;/td&gt;
+	    &lt;/tr&gt;
+	    &lt;tr&gt;
+	        &lt;td colspan=&quot;2&quot;&gt;平均&lt;/td&gt;
+	        &lt;td&gt;87&lt;/td&gt;
+	    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+      </pre><p data-line="502">效果如下：</p>
+<p data-line="504"><img src="attachments/bd5741fa.png" alt="tu10.png" /></p>
+<h3 data-line="506" id="8-ol-%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8-ul-%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">8) ol (有序列表) &amp; ul (无序列表)</h3>
+<p data-line="508">有序列表(order list, 简写为ol)，用阿拉伯数字对每行进行编号；</p>
+<p data-line="510">无序列表(unorder list, 简写为ul)，用圆点对每行进行编号。</p>
+<pre class="code CodeMirror" data-line="512">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span></span>
+        <code class="html">&lt;ol&gt;
+	&lt;li&gt;北京交通大学&lt;/li&gt;
+	&lt;li&gt;北京大学&lt;/li&gt;
+	&lt;li&gt;清华大学&lt;/li&gt;
+	&lt;li&gt;浙江大学&lt;/li&gt;
+	&lt;li&gt;天津大学&lt;/li&gt;
+	&lt;li&gt;南开大学&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;北京交通大学&lt;/li&gt;
+	&lt;li&gt;北京大学&lt;/li&gt;
+	&lt;li&gt;清华大学&lt;/li&gt;
+	&lt;li&gt;浙江大学&lt;/li&gt;
+	&lt;li&gt;天津大学&lt;/li&gt;
+	&lt;li&gt;南开大学&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+      </pre><p data-line="532">效果如下：</p>
+<p data-line="534"><img src="attachments/c9c7b904.png" alt="tu11.png" /></p>
+<h3 data-line="536" id="9-hr-%E6%A8%AA%E7%BA%BF">9) hr (横线)</h3>
+<p data-line="538"><code>&lt;hr&gt;</code>是单端标签，用于产生横线。</p>
+<pre class="code CodeMirror" data-line="540">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span><span class="CodeMirror-linenumber">20</span><span class="CodeMirror-linenumber">21</span><span class="CodeMirror-linenumber">22</span><span class="CodeMirror-linenumber">23</span><span class="CodeMirror-linenumber">24</span><span class="CodeMirror-linenumber">25</span><span class="CodeMirror-linenumber">26</span><span class="CodeMirror-linenumber">27</span><span class="CodeMirror-linenumber">28</span><span class="CodeMirror-linenumber">29</span><span class="CodeMirror-linenumber">30</span><span class="CodeMirror-linenumber">31</span><span class="CodeMirror-linenumber">32</span><span class="CodeMirror-linenumber">33</span><span class="CodeMirror-linenumber">34</span><span class="CodeMirror-linenumber">35</span><span class="CodeMirror-linenumber">36</span><span class="CodeMirror-linenumber">37</span><span class="CodeMirror-linenumber">38</span><span class="CodeMirror-linenumber">39</span><span class="CodeMirror-linenumber">40</span><span class="CodeMirror-linenumber">41</span><span class="CodeMirror-linenumber">42</span><span class="CodeMirror-linenumber">43</span><span class="CodeMirror-linenumber">44</span><span class="CodeMirror-linenumber">45</span><span class="CodeMirror-linenumber">46</span><span class="CodeMirror-linenumber">47</span><span class="CodeMirror-linenumber">48</span><span class="CodeMirror-linenumber">49</span><span class="CodeMirror-linenumber">50</span><span class="CodeMirror-linenumber">51</span><span class="CodeMirror-linenumber">52</span><span class="CodeMirror-linenumber">53</span><span class="CodeMirror-linenumber">54</span><span class="CodeMirror-linenumber">55</span><span class="CodeMirror-linenumber">56</span><span class="CodeMirror-linenumber">57</span><span class="CodeMirror-linenumber">58</span><span class="CodeMirror-linenumber">59</span><span class="CodeMirror-linenumber">60</span><span class="CodeMirror-linenumber">61</span><span class="CodeMirror-linenumber">62</span><span class="CodeMirror-linenumber">63</span><span class="CodeMirror-linenumber">64</span><span class="CodeMirror-linenumber">65</span><span class="CodeMirror-linenumber">66</span><span class="CodeMirror-linenumber">67</span><span class="CodeMirror-linenumber">68</span><span class="CodeMirror-linenumber">69</span><span class="CodeMirror-linenumber">70</span><span class="CodeMirror-linenumber">71</span><span class="CodeMirror-linenumber">72</span><span class="CodeMirror-linenumber">73</span></span>
+        <code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+		&lt;title&gt;大学官网&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;a name=&quot;Head&quot;&gt;&lt;h1&gt;大学官网列表&lt;/h1&gt;&lt;/a&gt;
+
+		&lt;ul&gt;
+			&lt;li&gt;北京交通大学&lt;/li&gt;
+			&lt;li&gt;北京大学&lt;/li&gt;
+		&lt;/ul&gt;
+
+		&lt;hr&gt;&lt;br&gt;
+
+		&lt;table border=&quot;1&quot;&gt;
+		    &lt;thead&gt;
+		        &lt;tr&gt;
+		            &lt;th&gt;学校名称&lt;/th&gt;
+		            &lt;th&gt;学校Logo&lt;/th&gt;
+		            &lt;th&gt;学校简介&lt;/th&gt;
+		        &lt;/tr&gt;     
+		    &lt;/thead&gt;
+
+		    &lt;tfoot&gt;
+		    	&lt;tr&gt;
+		    		&lt;td colspan=&quot;3&quot;&gt;Date: 2018.11.16&lt;/td&gt;
+		    	&lt;/tr&gt;
+		    &lt;/tfoot&gt;
+
+		    &lt;tbody&gt;
+			    &lt;tr&gt;
+			        &lt;td nowrap=&quot;nowrap&quot;&gt;
+			        	&lt;h2&gt;&lt;a href=&quot;http://www.njtu.edu.cn/&quot; target=&quot;_blank&quot;&gt;北京交通大学&lt;/a&gt;&lt;/h2&gt;
+			        &lt;/td&gt;
+			        &lt;td&gt;
+			        	&lt;img src=&quot;./pic/njtu.png&quot; alt = &quot;北交logo&quot;&gt;
+			        &lt;/td&gt;
+			        &lt;td&gt;
+			        	&lt;div&gt;
+							【1】北京交通大学（Beijing Jiaotong University）是中华人民共和国教育部直属，由中华人民共和国教育部、北京市、中国铁路总公司共建，位列“211工程”、“985工程优势学科创新平台”、“世界一流学科建设高校”，入选“高等学校创新能力提升计划”、“高等学校学科创新引智计划”、“卓越工程师教育培养计划”、“国家建设高水平大学公派研究生项目“、”海外高层次人才引进计划”，是北京高科大学联盟、中俄交通大学联盟成员高校。
+						&lt;/div&gt;
+
+						&lt;div&gt;
+							【2】北京交通大学作为交通大学的三个源头之一，历史渊源可追溯到1896年，前身是清政府创办的北京铁路管理传习所，是中国第一所专门培养管理人才的高等学校，是中国近代铁路管理、电信教育的发祥地。1921年参与合并组建交通大学。1923年交通大学改组后，更名为北京交通大学。1970年恢复使用“北方交通大学”校名。2000年与原北京电力高等专科学校合并。2003年恢复使用“北京交通大学”校名。
+						&lt;/div&gt;
+					&lt;/td&gt;
+			    &lt;/tr&gt;
+			    &lt;tr&gt;
+			        &lt;td nowrap=&quot;nowrap&quot;&gt;
+			        	&lt;h2&gt;&lt;a href=&quot;https://www.pku.edu.cn/&quot; target=&quot;_blank&quot;&gt;北京大学&lt;/a&gt;&lt;/h2&gt;
+			        &lt;/td&gt;
+			        &lt;td&gt;
+			        	&lt;img src=&quot;./pic/pku.png&quot; alt = &quot;北大logo&quot;&gt;
+			        &lt;/td&gt;
+			        &lt;td&gt;
+			        	&lt;div&gt;
+							【1】北京大学（Peking University）简称“北大”，诞生于1898年，初名京师大学堂，是中国近代第一所国立大学，也是最早以“大学”之名创办的学校，其成立标志着中国近代高等教育的开端。北大是中国近代以来唯一以国家最高学府身份创立的学校，最初也是国家最高教育行政机关，行使教育部职能，统管全国教育。北大催生了中国最早的现代学制，开创了中国最早的文科、理科、社科、农科、医科等大学学科，是近代以来中国高等教育的奠基者。
+						&lt;/div&gt;
+
+						&lt;div&gt;
+							【2】北大由教育部直属，中央直管副部级建制，是国家双一流、211工程、985工程、2011计划重点建设的全国重点大学，九校联盟、中国大学校长联谊会、京港大学联盟、亚洲大学联盟、东亚研究型大学协会、国际研究型大学联盟、环太平洋大学联盟、东亚四大学论坛、国际公立大学论坛、中俄综合性大学联盟重要成员。
+						&lt;/div&gt;
+					&lt;/td&gt;
+			    &lt;/tr&gt;
+		    &lt;/tbody&gt;
+		&lt;/table&gt;
+
+		&lt;p&gt;&lt;a href=&quot;#Head&quot;&gt;### 回到开始 ###&lt;/a&gt;&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+
+</code>
+      </pre><p data-line="616">效果如下：</p>
+<p data-line="618"><img src="attachments/85526a28.png" alt="tu12.png" /></p>
+<h2 data-line="620" id="3-CSS%E7%AE%80%E4%BB%8B">3. CSS简介</h2>
+<h3 data-line="622" id="1-%E4%BB%80%E4%B9%88%E6%98%AFCSS">1) 什么是CSS ?</h3>
+<p data-line="624">CSS，全称为Cascading Style Sheets，译为“层叠样式表”。CSS定义如何显示html元素，因此常常配合html使用。</p>
+<p data-line="626">上文提及，绝大多数html标签均支持<code>style</code>属性，<code>style</code>属性可以对标签中的内容进行修饰，基本结构为：<code>&lt;标签名 style=&quot;属性1:属性值1;属性2:属性值2;&quot;&gt;......&lt;/标签名&gt;</code>。</p>
+<p data-line="628">常见的style的属性有：颜色(color), 字体(font), 边框(border), 背景(background), 宽度(width), 高度 (height)等。、</p>
+<p data-line="630">上面放在style属性中的值，就是CSS。</p>
+<p data-line="632">当然，在html中使用CSS样式，除了上述将CSS样式代码写入现有的html标签中外，还有其他的方式。</p>
+<h3 data-line="634" id="2-CSS%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F">2) CSS的使用方式</h3>
+<h4 data-line="636" id="a-%E5%86%85%E8%81%94%E5%BC%8F">a. 内联式</h4>
+<p data-line="638">将CSS样式代码直接写入现有的html标签，即直接使用style属性改变样式。</p>
+<p data-line="640">如：<code>&lt;p style=&quot;font-size:20px; color:red&quot;&gt;这是一个很普通的句子。&lt;/p&gt;</code>，表示将<code>&lt;p&gt;</code>中的文本内容字体大小设置为20px，颜色设置为红色。</p>
+<h4 data-line="642" id="b-%E5%B5%8C%E5%85%A5%E5%BC%8F">b. 嵌入式</h4>
+<p data-line="644">将CSS样式代码写在<code>&lt;style type=&quot;text/css&quot;&gt;...&lt;/style&gt;</code>之间，而这个部分将放在<code>&lt;head&gt;</code>标签下。</p>
+<h4 data-line="646" id="c-%E5%A4%96%E9%83%A8%E5%BC%8F">c. 外部式</h4>
+<p data-line="648">将CSS样式代码写入一个单独的外部文件，该文件以<code>.css</code>为后缀，然后在<code>&lt;head&gt;</code>标签内使用<code>&lt;link&gt;</code>标签将该CSS文件链接到html文档内。如<code>&lt;link rel=&quot;StyleSheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;</code>。</p>
+<hr />
+<p data-line="652">By DraymondG</p>
+</body>
+              </html>

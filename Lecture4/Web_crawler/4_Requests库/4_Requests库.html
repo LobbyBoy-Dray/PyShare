@@ -1,0 +1,1312 @@
+<html>
+                 <head>
+                   <meta charset="UTF-8">
+                   <meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1">
+                   <style id="style">
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.woff') format('woff'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+body {
+  font-size: 16px;
+  padding: 15px;
+  font-family: helvetica, arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+body .katex {
+  font: 400 1.2em 'KaTeX_Main';
+  line-height: 1.2em;
+  white-space: initial;
+  text-indent: 0;
+}
+body .katex .mfrac>.vlist>span:nth-child(2) {
+  top: 0 !important;
+}
+body .katex-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  margin: -5px;
+  border-radius: 5px;
+}
+body .flowchart-error,
+body .sequence-error .chart-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-pack: left;
+  -moz-box-pack: left;
+  -o-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+}
+li label.taskListItem {
+  margin-left: -1.8em;
+}
+li label.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+li.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+div.math-rendered {
+  text-align: center;
+}
+.math-failed {
+  background-color: rgba(255,0,0,0.1);
+  color: #d90000;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+sup {
+  position: relative;
+  top: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+sub {
+  position: relative;
+  bottom: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+a {
+  color: #2bac8f;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: -5px;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -ms-transition: 0.1s;
+  transition: 0.1s;
+}
+a img {
+  vertical-align: sub;
+}
+a:hover {
+  color: #2eb899;
+  text-decoration: underline;
+  background-color: rgba(255,201,92,0.3);
+}
+a:visited {
+  color: #2bac8f;
+}
+hr {
+  border-top: none;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 15px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  word-wrap: break-word;
+}
+h1 {
+  font-size: 2.55em;
+  padding-bottom: 0.3em;
+  line-height: 1.2em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.44em;
+}
+h1:first-child {
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.75em;
+  padding-bottom: 0.3em;
+  line-height: 1.225em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.57em;
+}
+h2:first-child {
+  margin-top: 0;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.43em;
+  margin: 1em 0 0.66em;
+}
+h4 {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  margin: 1em 0 0.8em;
+}
+h5 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+}
+h6 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+  color: #777;
+}
+p {
+  line-height: 1.6em;
+  margin: 0 0 1em;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+img {
+  max-width: 100%;
+}
+strong,
+b {
+  font-weight: bold;
+}
+em,
+i {
+  font-style: italic;
+}
+s,
+del,
+strike {
+  text-decoration: line-through;
+}
+u {
+  text-decoration: underline;
+}
+blockquote {
+  border-left: solid 4px #3fb399;
+  margin: 0 0 1em;
+  padding: 0 25px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ul li {
+  display: list-item;
+}
+ul li.taskListItem {
+  list-style: none;
+}
+ul li p {
+  margin: 0;
+}
+ul>li>ul,
+ul>li>ol {
+  margin: 0;
+}
+ul>li>ul {
+  list-style-type: circle;
+}
+ul>li>ul>li>ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ol li {
+  display: list-item;
+}
+ol li p {
+  margin: 0;
+}
+ol>li>ul,
+ol>li>ol {
+  margin: 0;
+}
+code {
+  padding: 0.2em 0.4em;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  font-size: 1em;
+  text-decoration: none;
+  margin-right: 2px;
+}
+pre {
+  padding: 0.5rem !important;
+  border: solid 1px #d1d1d1;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 0 0 1rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  line-height: 1.4em;
+}
+pre code {
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+pre.CodeMirror {
+  height: initial;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.CodeMirror>code {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-x: auto;
+}
+pre.mermaid svg {
+  max-width: 100% !important;
+}
+pre>span.filename {
+  margin: -0.5rem 100% 0.5rem -0.5rem;
+  padding: 0.125rem 0.375rem;
+  background-color: #777;
+  color: #fff;
+}
+pre>span.filename:empty {
+  display: none;
+}
+pre>span.lineNumber {
+  display: none;
+  font-size: 1em;
+  padding: 0.5rem 0;
+  margin: -0.5rem 0.5rem -0.5rem -0.5rem;
+  border-right: 1px solid;
+  text-align: right;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+pre>span.lineNumber.CodeMirror-gutters {
+  position: initial;
+  top: initial;
+  left: initial;
+  min-height: 0 !important;
+}
+pre>span.lineNumber>span {
+  display: block;
+  padding: 0 0.5em 0;
+}
+table {
+  display: block;
+  width: 100%;
+  margin: 0 0 1em;
+  overflow-x: auto;
+}
+table thead tr {
+  background-color: #fff;
+}
+table thead th {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 1px 0 2px 1px;
+  border-color: #d0d0d0;
+  font-weight: bold;
+}
+table thead th:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+table tbody tr:nth-child(2n + 1) {
+  background-color: #f9f9f9;
+}
+table tbody tr:nth-child(2n) {
+  background-color: #fff;
+}
+table tbody td {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 0 0 1px 1px;
+  border-color: #d0d0d0;
+}
+table tbody td:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+kbd {
+  background-color: #fafbfc;
+  border: solid 1px #d0d0d0;
+  border-bottom-color: #888;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 0 #959da5;
+  box-shadow: inset 0 -1px 0 #959da5;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1;
+  padding: 3px 5px;
+}
+.admonition.note,
+.admonition.hint,
+.admonition.danger,
+.admonition.caution,
+.admonition.error,
+.admonition.attention {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  position: relative;
+  margin: 1.5625em 0;
+  padding: 0 1.2rem;
+  border-left: 0.4rem solid #448aff;
+  border-radius: 0.2rem;
+  overflow: auto;
+}
+html .admonition>:last-child {
+  margin-bottom: 1.2rem;
+}
+.admonition .admonition {
+  margin: 1em 0;
+}
+.admonition p {
+  margin-top: 0.5em;
+}
+.admonition.note>.admonition-title:before,
+.admonition.hint>.admonition-title:before,
+.admonition.danger>.admonition-title:before,
+.admonition.caution>.admonition-title:before,
+.admonition.error>.admonition-title:before,
+.admonition.attention>.admonition-title:before {
+  position: absolute;
+  left: 1.2rem;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+/* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+/* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+/* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+/* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.admonition.note>.admonition-title,
+.admonition.hint>.admonition-title,
+.admonition.danger>.admonition-title,
+.admonition.caution>.admonition-title,
+.admonition.error>.admonition-title,
+.admonition.attention>.admonition-title {
+  margin: 0 -1.2rem;
+  padding: 0.8rem 1.2rem 0.8rem 4rem;
+  border-bottom: 0.1rem solid rgba(68,138,255,0.1);
+  background-color: rgba(68,138,255,0.1);
+  font-weight: 700;
+}
+.admonition>.admonition-title:last-child {
+  margin-bottom: 0;
+}
+.admonition.note {
+  border-left-color: #0288d1;
+}
+.admonition.note>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(2,136,209,0.2);
+  background-color: rgba(2,136,209,0.2);
+}
+.admonition.note>.admonition-title:before {
+  color: #0288d1;
+  content: "note";
+}
+.admonition.hint {
+  border-left-color: #009688;
+}
+.admonition.hint>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(0,150,136,0.2);
+  background-color: rgba(0,150,136,0.2);
+}
+.admonition.hint>.admonition-title:before {
+  color: #009688;
+  content: "info_outline";
+}
+.admonition.danger {
+  border-left-color: #c2185b;
+}
+.admonition.danger>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(194,24,91,0.2);
+  background-color: rgba(194,24,91,0.2);
+}
+.admonition.danger>.admonition-title:before {
+  color: #c2185b;
+  content: "block";
+}
+.admonition.caution {
+  border-left-color: #ffa726;
+}
+.admonition.caution>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(255,167,38,0.2);
+  background-color: rgba(255,167,38,0.2);
+}
+.admonition.caution>.admonition-title:before {
+  color: #ffa726;
+  content: "warning";
+}
+.admonition.error {
+  border-left-color: #d32f2f;
+}
+.admonition.error>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(211,47,47,0.2);
+  background-color: rgba(211,47,47,0.2);
+}
+.admonition.error>.admonition-title:before {
+  color: #d32f2f;
+  content: "error_outline";
+}
+.admonition.attention {
+  border-left-color: #455a64;
+}
+.admonition.attention>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(69,90,100,0.2);
+  background-color: rgba(69,90,100,0.2);
+}
+.admonition.attention>.admonition-title:before {
+  color: #455a64;
+  content: "priority_high";
+}
+dl {
+  margin: 2rem 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  width: 100%;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -o-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid #d0d0d0;
+  background-color: #fff;
+}
+dt {
+  border-top: 1px solid #d0d0d0;
+  font-weight: bold;
+  text-align: right;
+  overflow: hidden;
+  -webkit-flex-basis: 20%;
+  flex-basis: 20%;
+  padding: 0.4rem 0.9rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd {
+  border-top: 1px solid #d0d0d0;
+  -webkit-flex-basis: 80%;
+  flex-basis: 80%;
+  padding: 0.4rem 0.9rem;
+  min-height: 2.5rem;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd + dd {
+  margin-left: 20%;
+}
+pre.fence {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.fence .chart,
+pre.fence .flowchart,
+pre.fence .mermaid,
+pre.fence .sequence {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #fff;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+pre.fence .chart canvas,
+pre.fence .flowchart canvas,
+pre.fence .mermaid canvas,
+pre.fence .sequence canvas,
+pre.fence .chart svg,
+pre.fence .flowchart svg,
+pre.fence .mermaid svg,
+pre.fence .sequence svg {
+  max-width: 100% !important;
+}
+body[data-theme="dark"] {
+  color: #f9f9f9;
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="dark"] a:hover {
+  background-color: rgba(90,214,186,0.2) !important;
+}
+body[data-theme="dark"] code {
+  color: #ea6730;
+  border-color: #3d4450;
+  background-color: #363a3e;
+}
+body[data-theme="dark"] pre {
+  border-color: #474f5c;
+}
+body[data-theme="dark"] pre code {
+  background-color: transparent;
+}
+body[data-theme="dark"] label.taskListItem {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table thead tr {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n) {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] kbd {
+  background-color: #444b59;
+  color: #f9f9f9;
+}
+body[data-theme="dark"] dl {
+  border-color: #444b59;
+  background-color: #282b2e;
+}
+body[data-theme="dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dark"] dd {
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="solarized-dark"] {
+  color: #93a1a1;
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table thead tr {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n) {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] dl {
+  border-color: #444b59;
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] dd {
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="monokai"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="monokai"] table thead tr {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n + 1) {
+  background-color: #272822;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n) {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="monokai"] dl {
+  border-color: #444b59;
+  background-color: #23241f;
+}
+body[data-theme="monokai"] dt {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] dd {
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="dracula"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table thead tr {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n + 1) {
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n) {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="dracula"] dl {
+  border-color: #444b59;
+  background-color: #242631;
+}
+body[data-theme="dracula"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] dd {
+  border-color: #444b59;
+  background-color: #282a36;
+}
+/*# sourceMappingURL=browser/components/markdown.css.map */
+
+body {
+  font-family: 'Lato','helvetica','arial','sans-serif';
+  font-size: 14px;
+  false
+}
+@media print {
+  body {
+    padding-bottom: initial;
+  }
+}
+code {
+  font-family: 'Monaco','Consolas','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+  background-color: rgba(0,0,0,0.04);
+}
+.lineNumber {
+  display: block !important;
+  font-family: 'Monaco','Consolas','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+}
+
+.clipboardButton {
+  color: rgba(147,147,149,0.8);;
+  fill: rgba(147,147,149,1);;
+  border-radius: 50%;
+  margin: 0px 10px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.clipboardButton:hover {
+  transition: 0.2s;
+  color: #939395;
+  fill: #939395;
+  background-color: rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  border: none;
+}
+
+h1 {
+  padding-bottom: 4px;
+  margin: 1em 0 8px;
+}
+
+h2 {
+  padding-bottom: 0.2em;
+  margin: 1em 0 0.37em;
+}
+
+body p {
+  white-space: normal;
+}
+
+@media print {
+  body[data-theme="dark"] {
+    color: #000;
+    background-color: #fff;
+  }
+  .clipboardButton {
+    display: none
+  }
+}
+
+
+</style>
+                   <link rel="stylesheet" href="css/dracula.css"><link rel="stylesheet" href="css/katex.min.css"><link rel="stylesheet" href="css/codemirror.css">
+                 </head>
+                 <body><h1 data-line="0" id="4-Requests%E5%BA%93">4. Requests库</h1>
+<blockquote data-line="2">
+<p data-line="2"><a href="http://docs.python-requests.org/en/master/api/">英文API</a><br />
+<a href="http://requests-docs-cn.readthedocs.io/zh_CN/latest/index.html">中文API</a></p>
+</blockquote>
+<hr />
+<p data-line="7"><h3>目录</h3></p>
+
+<ul>
+<li data-line="11"><a href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E7%88%AC%E8%99%AB">1. 什么是爬虫</a></li>
+<li data-line="12"><a href="#2-%E4%BB%80%E4%B9%88%E6%98%AFRequests">2. 什么是Requests</a></li>
+<li data-line="13"><a href="#3-%E5%AE%89%E8%A3%85requests%E5%BA%93">3. 安装requests库</a></li>
+<li data-line="14"><a href="#4-Requests%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">4. Requests的基本使用方法</a>
+<ul>
+<li data-line="15"><a href="#1-GET%E8%AF%B7%E6%B1%82-GET-Method">1) GET请求 (GET Method)</a></li>
+<li data-line="16"><a href="#2-%E6%9E%84%E5%BB%BA%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2-Query-String">2) 构建查询字符串 (Query String)</a></li>
+<li data-line="17"><a href="#3-%E5%AE%9A%E5%88%B6%E8%AF%B7%E6%B1%82%E5%A4%B4-Request-Headers">3) 定制请求头 (Request Headers)</a></li>
+<li data-line="18"><a href="#4-%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81-Status-Code">4) 响应状态码 (Status Code)</a></li>
+<li data-line="19"><a href="#5-%E5%93%8D%E5%BA%94%E5%A4%B4%E4%BF%A1%E6%81%AF-Response-Headers">5) 响应头信息 (Response Headers)</a></li>
+<li data-line="20"><a href="#6-%E6%99%AE%E9%80%9A%E5%93%8D%E5%BA%94%E5%86%85%E5%AE%B9">6) 普通响应内容</a></li>
+<li data-line="21"><a href="#7-%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%93%8D%E5%BA%94%E5%86%85%E5%AE%B9">7) 二进制响应内容</a></li>
+<li data-line="22"><a href="#8-Json%E5%93%8D%E5%BA%94%E5%86%85%E5%AE%B9">8) Json响应内容</a></li>
+<li data-line="23"><a href="#9-POST%E8%AF%B7%E6%B1%82">9) POST请求</a></li>
+<li data-line="24"><a href="#10-%E9%87%8D%E5%AE%9A%E5%90%91%E4%B8%8E%E8%AF%B7%E6%B1%82%E5%8E%86%E5%8F%B2">10) 重定向与请求历史</a></li>
+<li data-line="25"><a href="#11-%E8%B6%85%E6%97%B6">11) 超时</a></li>
+</ul>
+</li>
+<li data-line="26"><a href="#4-Requests%E7%9A%84%E9%AB%98%E7%BA%A7%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">4. Requests的高级使用方法</a>
+<ul>
+<li data-line="27"><a href="#1-Cookie%E5%A4%84%E7%90%86">1) Cookie处理</a></li>
+<li data-line="28"><a href="#2-%E4%BC%9A%E8%AF%9D%E7%BB%B4%E6%8C%81-Session">2) 会话维持 (Session)</a></li>
+<li data-line="29"><a href="#3-SSL%E8%AF%81%E4%B9%A6%E9%AA%8C%E8%AF%81">3) SSL证书验证</a></li>
+</ul>
+</li>
+<li data-line="30"><a href="#5-%E5%BB%BA%E8%AE%AE">5. 建议</a></li>
+</ul>
+
+<hr />
+<h2 data-line="36" id="1-%E4%BB%80%E4%B9%88%E6%98%AF%E7%88%AC%E8%99%AB">1. 什么是爬虫</h2>
+<blockquote data-line="38">
+<p data-line="38">A Web crawler, sometimes called a spider or spiderbot and often shortened to crawler, is an Internet bot that systematically browses the World Wide Web, typically for the purpose of Web indexing (web spidering). —— From Wiki</p>
+</blockquote>
+<p data-line="40">网络爬虫，是一种按照一定规则，自动地抓取网络中特定信息的程序或脚本。</p>
+<p data-line="42">往大了说，像百度、谷歌这样的搜索引擎，其实质就是爬虫；往小了说，用Python脚本获取百度首页的html文档，也算作爬虫。因此，广义上讲，将Web作为数据源进行信息采集工作的程序，都可以称之为“爬虫”。</p>
+<h2 data-line="44" id="2-%E4%BB%80%E4%B9%88%E6%98%AFRequests">2. 什么是Requests</h2>
+<p data-line="46">无论是大型搜索引擎还是小型网络爬虫，其最基本且必备的功能是——<strong>根据URL下载网页</strong>。下载网页的实质是，<strong>向服务器发送HTTP请求，客户端获取响应</strong>。因此，使用Python编写网络，实质就是使用Python发送HTTP请求。</p>
+<p data-line="48">官方文档对于Requests库的基本描述：<em>Requests允许你发送纯天然，植物饲养的 HTTP/1.1 请求，无需手工劳动。</em></p>
+<p data-line="50">例：使用requests对<a href="https://www.baidu.com/">百度首页</a>发起HTTP请求，获得百度首页的html文档：</p>
+<pre class="code CodeMirror" data-line="52">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span></span>
+        <code class="python">import requests
+
+url = &quot;https://www.baidu.com/&quot;
+res = requests.get(url)         # GET请求，返回Response对象
+print(res.url)                  # 任何重定向后获得的最终url
+print(res.status_code)          # 状态码
+print(res.encoding)             # 编码方式
+print(res.text)                 # 响应实体
+
+res.encoding = &quot;utf-8&quot;          # 重新设置编码方式
+print(res.text)                 # 不再是乱码
+</code>
+      </pre><h2 data-line="66" id="3-%E5%AE%89%E8%A3%85requests%E5%BA%93">3. 安装requests库</h2>
+<p data-line="68">requests库是第三方库，因此需要手动安装。</p>
+<p data-line="70"><code>pip3 install requests</code></p>
+<h2 data-line="72" id="4-Requests%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">4. Requests的基本使用方法</h2>
+<h3 data-line="74" id="1-GET%E8%AF%B7%E6%B1%82-GET-Method">1) GET请求 (GET Method)</h3>
+<p data-line="76">使用<code>requests</code>的<code>get</code>方法发送GET请求：</p>
+<pre class="code CodeMirror" data-line="78">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span></span>
+        <code class="python">import requests
+
+url = &quot;http://httpbin.org/get&quot;
+r = requests.get(url)
+</code>
+      </pre><p data-line="85"><code>get</code>方法返回一个Response对象，即请求对应的响应。这个Response对象包含着我们所想要的一切信息，不只包括——响应状态码，响应头信息，响应实体……</p>
+<p data-line="87">想要发送其他类型的请求？只需把<code>get</code>方法换成对应类型的方法即可，如下：</p>
+<pre class="code CodeMirror" data-line="89">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span></span>
+        <code class="python">r = requests.put('http://httpbin.org/put', data = {'key':'value'})
+r = requests.delete('http://httpbin.org/delete')
+r = requests.head('http://httpbin.org/get')
+r = requests.options('http://httpbin.org/get')
+</code>
+      </pre><h3 data-line="96" id="2-%E6%9E%84%E5%BB%BA%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2-Query-String">2) 构建查询字符串 (Query String)</h3>
+<p data-line="98">一个url的查询字符串(query string)就是url中<code>?</code>后面的一个个以<code>&amp;</code>间隔的键值对。例如<code>http://httpbin.org/get?name=sam&amp;age=20</code>中<code>name=sam&amp;age=20</code>就是其查询字符串。</p>
+<p data-line="100">查询字符串是通过url向服务器传递信息的一种方式。如果你想传递<code>key1=value1</code>和<code>key2=value2</code>到<code>http://httpbin.org/get</code>，那么必须构造<code>http://httpbin.org/get?key1=value1&amp;key2=value2</code>，并访问之。</p>
+<p data-line="102">除了手动构造外，<code>requests</code>提供<code>params</code>关键字参数，以一个字符串字典来提供这些参数。如下：</p>
+<pre class="code CodeMirror" data-line="104">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span></span>
+        <code class="python">payload = {'key1': 'value1', 'key2': 'value2'}
+r = requests.get(&quot;http://httpbin.org/get&quot;, params=payload)
+</code>
+      </pre><p data-line="109"><code>print(r.url)</code>后会发现打印出<code>http://httpbin.org/get?key2=value2&amp;key1=value1</code>，说明通过<code>params</code>参数，查询字符串被构造并纳入raw url中。</p>
+<p data-line="111">注意，字典里值为<code>None</code>的键都不会被添加到url的查询字符串里。</p>
+<h3 data-line="113" id="3-%E5%AE%9A%E5%88%B6%E8%AF%B7%E6%B1%82%E5%A4%B4-Request-Headers">3) 定制请求头 (Request Headers)</h3>
+<p data-line="115">传递一个<code>dict</code>给<code>headers</code>参数即可。下例中，在GET请求的头部增添了<code>User-Agent</code>字段：</p>
+<pre class="code CodeMirror" data-line="117">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span></span>
+        <code class="python">import requests
+
+url = &quot;http://httpbin.org/get&quot;
+headers = {
+  'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10\_12\_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36'
+}
+r = requests.get(url, headers = headers)
+</code>
+      </pre><p data-line="127">注意：</p>
+<ul>
+<li data-line="129">如果请求被<strong>重定向</strong>到别的主机，定制的header就会被删除；</li>
+<li data-line="130">所有的header值必须是<code>string</code>、<code>bytestring</code>或者<code>unicode</code>。</li>
+</ul>
+<h3 data-line="132" id="4-%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81-Status-Code">4) 响应状态码 (Status Code)</h3>
+<p data-line="134">访问<code>Response</code>的<code>status_code</code>属性即可得到状态码，类型是<code>int</code>。</p>
+<pre class="code CodeMirror" data-line="136">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span></span>
+        <code class="python">import requests
+
+url = &quot;http://httpbin.org/get&quot;
+headers = {
+  'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10\_12\_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36'
+}
+r = requests.get(url, headers = headers)
+
+# 状态码，int类型
+print(r.status_code)
+</code>
+      </pre><p data-line="149">一般都希望返回<code>200</code>。</p>
+<h3 data-line="151" id="5-%E5%93%8D%E5%BA%94%E5%A4%B4%E4%BF%A1%E6%81%AF-Response-Headers">5) 响应头信息 (Response Headers)</h3>
+<p data-line="153">访问<code>Response</code>的<code>headers</code>属性即可得到响应头信息，类型<strong>十分类似于</strong><code>dict</code>。</p>
+<pre class="code CodeMirror" data-line="155">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span></span>
+        <code class="python">import requests
+
+url = &quot;http://httpbin.org/get&quot;
+headers = {
+  'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10\_12\_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36'
+}
+r = requests.get(url, headers = headers)
+
+# 状态码，int类型
+print(r.status_code, end = '\n==========\n')
+# 响应头信息
+print(r.headers, end = '\n==========\n')
+</code>
+      </pre><p data-line="170">可以使用<code>[]</code>或<code>get()</code>来获取具体字段的值，例如：<code>r.headers['Content-Type']</code>和<code>r.headers.get('Content-Type')</code>等价，将返回响应头中<code>Content-Type</code>字段的值。</p>
+<p data-line="172">但是严格来讲，<code>r.headers</code>不是<code>dict</code>，因为它对大小写不敏感——可以使用任意大写形式来访问这些响应头字段，即<code>r.headers['Content-Type']</code>和<code>r.headers['content-type']</code>没差。</p>
+<h3 data-line="174" id="6-%E6%99%AE%E9%80%9A%E5%93%8D%E5%BA%94%E5%86%85%E5%AE%B9">6) 普通响应内容</h3>
+<p data-line="176">大多数情况下，我们向服务器端请求的是像html文档这样的文本内容，访问Response对象的<code>text</code>属性，便可以得到服务器端返回的文本型响应实体。如下：</p>
+<pre class="code CodeMirror" data-line="178">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span></span>
+        <code class="python">import requests
+
+url = &quot;http://httpbin.org/get&quot;
+headers = {
+  'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10\_12\_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36'
+}
+r = requests.get(url, headers = headers)
+text = r.text
+print(text)
+</code>
+      </pre><p data-line="190"><strong>关于编码</strong></p>
+<p data-line="192"><em>请求发出后，Requests 会基于 HTTP 头部对响应的编码作出有根据的推测。当你访问<code>r.text</code>之时，Requests 会使用其推测的文本编码。你可以找出 Requests 使用了什么编码，并且能够使用<code>r.encoding</code>属性来改变它。</em></p>
+<p data-line="194">例如，获取百度首页的html，如果不改变<code>r.encoding</code>，打印<code>r.text</code>会看到乱码：</p>
+<p data-line="196"><img src="attachments/b373ec34.png" alt="tu1.png" /></p>
+<p data-line="198">这是因为Requests推测文本编码为<code>ISO-8859-1</code>(可以使用<code>print(r.encoding)</code>查看)，然后就用<code>ISO-8859-1</code>解码；但是该html文档并不是用<code>ISO-8859-1</code>编码的，而是用<code>utf-8</code>：</p>
+<p data-line="200"><img src="attachments/544da6b5.png" alt="tu2.png" /></p>
+<p data-line="202">所以在<code>print(r.text)</code>前，要改变一下编码，使用<code>r.encoding='utf-8'</code>即可。</p>
+<h3 data-line="204" id="7-%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%93%8D%E5%BA%94%E5%86%85%E5%AE%B9">7) 二进制响应内容</h3>
+<p data-line="206">对于二进制响应内容，Requests提供以字节的方式访问请求响应体。对于非文本请求，如下载图片、mp3音乐等，访问<code>Response</code>的<code>content</code>属性，获取二进制响应内容，然后写入对应格式文件中即可。</p>
+<p data-line="208">例如，使用Requests下载下图中左上角的图片：</p>
+<p data-line="210"><img src="attachments/dbfad9a2.png" alt="tu3.png" /></p>
+<p data-line="212">首先拿到图片的地址，为<code>https://requests-docs-cn.readthedocs.io/zh_CN/latest/_static/requests-sidebar.png</code>，编写代码：</p>
+<pre class="code CodeMirror" data-line="214">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span></span>
+        <code class="python">import requests
+
+url = &quot;https://requests-docs-cn.readthedocs.io/zh_CN/latest/_static/requests-sidebar.png&quot;
+r = requests.get(url)
+content = r.content
+
+with open('pic1.png','wb') as f:
+	f.write(content)
+</code>
+      </pre><p data-line="225">运行后稍等一会儿，你的python脚本旁边就会出现一个png图片。</p>
+<h3 data-line="227" id="8-Json%E5%93%8D%E5%BA%94%E5%86%85%E5%AE%B9">8) Json响应内容</h3>
+<pre class="code CodeMirror" data-line="229">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span></span>
+        <code class="json">{
+  &quot;args&quot;: {}, 
+  &quot;headers&quot;: {
+    &quot;Accept&quot;: &quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&quot;, 
+    &quot;Accept-Encoding&quot;: &quot;gzip, deflate&quot;, 
+    &quot;Accept-Language&quot;: &quot;zh-CN,zh;q=0.9&quot;, 
+    &quot;Cache-Control&quot;: &quot;max-age=0&quot;, 
+    &quot;Connection&quot;: &quot;close&quot;, 
+    &quot;Host&quot;: &quot;httpbin.org&quot;, 
+    &quot;Upgrade-Insecure-Requests&quot;: &quot;1&quot;, 
+    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10\_12\_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36&quot;
+  }, 
+  &quot;origin&quot;: &quot;58.60.1.27&quot;, 
+  &quot;url&quot;: &quot;http://httpbin.org/get&quot;
+}
+</code>
+      </pre><p data-line="247">json全称为JavaScript Object Notation，是一种格式，用于存储和交换文本信息，广泛用于网络传输。</p>
+<p data-line="249">json使用JS语言的语法来描述数据对象，但其写入和读取与语言和平台无关。</p>
+<p data-line="251">简单理解，json很像python中的字典。</p>
+<p data-line="253">因此，对于为json格式字符串的响应实体，可以使用python的json标准库来将其解析为字典，然后进行操作。但是Requests贴心地为用户提供了一个内置的json解码器，让你不用<code>import json</code>——只需调用Response对象的<code>json()</code>方法：</p>
+<pre class="code CodeMirror" data-line="255">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span></span>
+        <code class="python">import requests
+
+url = &quot;http://httpbin.org/get&quot;
+r = requests.get(url)
+data = r.json()
+
+print(type(data))     # 类型是dict
+print(data)
+</code>
+      </pre><p data-line="266">当然，如果返回的响应实体不是json格式的字符串，自然无法用json解析器解析，此时<code>r.json()</code>会抛出异常。</p>
+<h3 data-line="268" id="9-POST%E8%AF%B7%E6%B1%82">9) POST请求</h3>
+<p data-line="270">POST表单(form)形式的数据，只需简单地传递一个字典给<code>post</code>方法<code>data</code>参数，这个字典在请求发出时，自动被编码为form的形式：</p>
+<pre class="code CodeMirror" data-line="272">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span></span>
+        <code class="python">import requests
+
+payload = {'key1': 'value1', 'key2': 'value2'}
+url = &quot;http://httpbin.org/post&quot;
+r = requests.post(url, data=payload)
+print(r.text)
+</code>
+      </pre><p data-line="281">可以为<code>data</code>传入一个由元组构成的列表——在form中多个元素使用同一key的时候，这种方式尤其有效：</p>
+<pre class="code CodeMirror" data-line="283">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span></span>
+        <code class="python">import requests
+
+payload = (('key1', 'value1'), ('key1', 'value2'))
+url = &quot;http://httpbin.org/post&quot;
+r = requests.post(url, data=payload)
+print(r.text)
+</code>
+      </pre><p data-line="292"><img src="attachments/ea4bd11a.png" alt="tu4.png" /></p>
+<p data-line="294">又有些时候，你并不想发送编码为表单形式的数据，例如传递json格式的字符串即可，即传递一个<code>string</code>而不是一个<code>dict</code>，可以<code>r = requests.post(url, data=json.dumps(payload))</code>，或者直接<code>r = requests.post(url, json=payload)</code></p>
+<h3 data-line="296" id="10-%E9%87%8D%E5%AE%9A%E5%90%91%E4%B8%8E%E8%AF%B7%E6%B1%82%E5%8E%86%E5%8F%B2">10) 重定向与请求历史</h3>
+<p data-line="298">默认情况下，requests会自动处理GET、POST方法的所有重定向(redirect)，即页面自动跳转，返回最终的Response对象。</p>
+<p data-line="300">可以使用响应对象的<code>history</code>方法来追踪重定向：</p>
+<pre class="code CodeMirror" data-line="302">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span></span>
+        <code class="">import requests
+
+url = &quot;http://github.com&quot;
+r = requests.get(url)
+print(r.url, end = &quot;\n============\n&quot;)
+print(r.history, end = &quot;\n============\n&quot;)
+</code>
+      </pre><p data-line="311"><img src="attachments/a4d4efa9.png" alt="tu5.png" /></p>
+<p data-line="313">上图中，我们明明访问的是<code>http://github.com</code>，但通过<code>r.url</code>，我们发现返回的是<code>https://github.com</code>(多了一个s)，这说明在请求过程中发生了<strong>重定向</strong>，“页面”自动由<code>http://github.com</code>跳转到了<code>https://github.com</code>。通过<code>r.history</code>看到，确实发生了301重定向。</p>
+<p data-line="315"><em><code>Response.history</code>是一个<code>Response</code>对象的列表，为了完成请求而创建了这些对象。这个对象列表按照从最老到最近的请求进行排序。</em></p>
+<p data-line="317">对于GET与POST请求，可以通过<code>allow_redirects</code>参数禁用重定向处理，即设置<code>allow_redirects=False</code>，如：<code>r = requests.get('http://github.com', allow_redirects=False)</code>。</p>
+<h3 data-line="319" id="11-%E8%B6%85%E6%97%B6">11) 超时</h3>
+<p data-line="321">设置<code>timeout</code>参数，告诉requests经过多少秒后停止等待响应；若超时，会抛出异常：</p>
+<pre class="code CodeMirror" data-line="323">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span></span>
+        <code class="python">import requests
+
+url = &quot;http://github.com&quot;
+r = requests.get(url, timeout = 0.01)
+
+print(r.status_code)
+</code>
+      </pre><p data-line="331"><img src="attachments/2e15886b.png" alt="tu6.png" /></p>
+<h2 data-line="333" id="4-Requests%E7%9A%84%E9%AB%98%E7%BA%A7%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">4. Requests的高级使用方法</h2>
+<h3 data-line="335" id="1-Cookie%E5%A4%84%E7%90%86">1) Cookie处理</h3>
+<p data-line="337">回顾一下Cookie：</p>
+<ul>
+<li data-line="339">发送请求时，浏览器向服务器发送Cookie；</li>
+<li data-line="340">服务器收到请求后，查看Cookie；</li>
+<li data-line="341">服务器根据查看到的Cookie的内容，决定返回给浏览器什么样的Cookie，即决定set什么样的Cookie；</li>
+<li data-line="342">总结：请求时是send Cookies，响应时是set Cookies。</li>
+</ul>
+<p data-line="344">想要在你的请求中加入cookies，只需使用<code>cookies</code>参数，传入字典：</p>
+<pre class="code CodeMirror" data-line="346">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span></span>
+        <code class="python">import requests
+
+url = &quot;http://httpbin.org/cookies&quot;
+cookies = {'name':'Serena'}
+r = requests.get(url, cookies = cookies)
+
+print(r.text)
+</code>
+      </pre><p data-line="356">访问Response对象的<code>cookies</code>属性，是截获服务器的<code>set-cookies</code>，而不是获取发送请求时附带的cookies，这一点不能混淆。</p>
+<p data-line="358"><code>r.cookies</code>返回<code>RequestsCookieJar</code>对象，其功能和行为与字典及其类似，可以<code>[]</code>也可以<code>get()</code>，使用<code>dict(r.cookies)</code>可以将其转化为真正的字典。</p>
+<p data-line="360"><code>RequestsCookieJar</code>对象的接口更为完整，适合<strong>跨域名跨路径</strong>使用。你还可以把CookieJar传到Requests中：</p>
+<pre class="code CodeMirror" data-line="362">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span></span>
+        <code class="python">jar = requests.cookies.RequestsCookieJar()
+jar.set('tasty_cookie', 'yum', domain='httpbin.org', path='/cookies')
+jar.set('gross_cookie', 'blech', domain='httpbin.org', path='/elsewhere')
+url = 'http://httpbin.org/cookies'
+r = requests.get(url, cookies=jar)
+r.text
+# '{&quot;cookies&quot;: {&quot;tasty_cookie&quot;: &quot;yum&quot;}}'
+</code>
+      </pre><h3 data-line="372" id="2-%E4%BC%9A%E8%AF%9D%E7%BB%B4%E6%8C%81-Session">2) 会话维持 (Session)</h3>
+<p data-line="374"><strong>使用场景</strong>：利用<code>requests.post()</code>登录了某个网站后，第二次想获取成功登录后的自己的个人信息，再次使用<code>requests.get()</code>——Nope，这相当于打开了两个完全不相干的对话，第二次的请求无法记住第一次的状态；要想记住第一次的状态，就必须维持这段“会话”，使用Session解决。</p>
+<p data-line="376"><em>会话对象 (Session) 让你能够跨请求保持某些参数。它也会在同一个 Session 实例发出的所有请求之间保持 cookie。</em></p>
+<p data-line="378">实例：</p>
+<pre class="code CodeMirror" data-line="380">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span></span>
+        <code class="python">import requests
+
+s = requests.Session()
+
+s.get('http://httpbin.org/cookies/set/sessioncookie/123456789')
+r = s.get(&quot;http://httpbin.org/cookies&quot;)
+
+print(r.text)
+# '{&quot;cookies&quot;: {&quot;sessioncookie&quot;: &quot;123456789&quot;}}'
+</code>
+      </pre><p data-line="392">使用Session可以做到模拟同一个会话，且不用担心Cookie问题——通常模拟登录成功之后再进行下一步的操作。</p>
+<h3 data-line="394" id="3-SSL%E8%AF%81%E4%B9%A6%E9%AA%8C%E8%AF%81">3) SSL证书验证</h3>
+<p data-line="396">requests提供证书验证功能：当一个请求是https请求时，会自动检查SSL证书，使用<code>verify</code>参数，默认是<code>True</code>——自动验证。</p>
+<p data-line="398">验证证书可能带来的问题——在请求时出现错误<code>SSLError，certificate verify failed</code>，即证书验证错误。</p>
+<p data-line="400">可以在<code>get()</code>方法中将参数<code>verify</code>设置为<code>False</code>，这样就不会验证证书，就不会出错，但是可能会收到<code>Warning</code>。使用以下代码可以忽略警告：</p>
+<pre class="code CodeMirror" data-line="402">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span></span>
+        <code class="">from requests.packages import urllib3
+
+urllib.disable_warnings()
+</code>
+      </pre><h2 data-line="408" id="5-%E5%BB%BA%E8%AE%AE">5. 建议</h2>
+<ul>
+<li data-line="410">step 1：明确需求——想要哪些数据；</li>
+<li data-line="411"><strong>step 2</strong>：探索与尝试——挖掘数据来源；</li>
+<li data-line="412">step 3：制定初步策略——描述爬取过程；</li>
+<li data-line="413"><strong>step 4</strong>：任务拆分——先爬一页或一部分；</li>
+<li data-line="414">step 5：任务合并——循环、多线程；</li>
+<li data-line="415">step 6：漫长地调bug过程……</li>
+</ul>
+<hr />
+<p data-line="419">By DraymondG</p>
+</body>
+              </html>

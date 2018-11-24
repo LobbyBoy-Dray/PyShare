@@ -1,0 +1,1098 @@
+<html>
+                 <head>
+                   <meta charset="UTF-8">
+                   <meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1">
+                   <style id="style">
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.woff') format('woff'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+body {
+  font-size: 16px;
+  padding: 15px;
+  font-family: helvetica, arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+body .katex {
+  font: 400 1.2em 'KaTeX_Main';
+  line-height: 1.2em;
+  white-space: initial;
+  text-indent: 0;
+}
+body .katex .mfrac>.vlist>span:nth-child(2) {
+  top: 0 !important;
+}
+body .katex-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  margin: -5px;
+  border-radius: 5px;
+}
+body .flowchart-error,
+body .sequence-error .chart-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-pack: left;
+  -moz-box-pack: left;
+  -o-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+}
+li label.taskListItem {
+  margin-left: -1.8em;
+}
+li label.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+li.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+div.math-rendered {
+  text-align: center;
+}
+.math-failed {
+  background-color: rgba(255,0,0,0.1);
+  color: #d90000;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+sup {
+  position: relative;
+  top: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+sub {
+  position: relative;
+  bottom: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+a {
+  color: #2bac8f;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: -5px;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -ms-transition: 0.1s;
+  transition: 0.1s;
+}
+a img {
+  vertical-align: sub;
+}
+a:hover {
+  color: #2eb899;
+  text-decoration: underline;
+  background-color: rgba(255,201,92,0.3);
+}
+a:visited {
+  color: #2bac8f;
+}
+hr {
+  border-top: none;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 15px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  word-wrap: break-word;
+}
+h1 {
+  font-size: 2.55em;
+  padding-bottom: 0.3em;
+  line-height: 1.2em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.44em;
+}
+h1:first-child {
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.75em;
+  padding-bottom: 0.3em;
+  line-height: 1.225em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.57em;
+}
+h2:first-child {
+  margin-top: 0;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.43em;
+  margin: 1em 0 0.66em;
+}
+h4 {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  margin: 1em 0 0.8em;
+}
+h5 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+}
+h6 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+  color: #777;
+}
+p {
+  line-height: 1.6em;
+  margin: 0 0 1em;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+img {
+  max-width: 100%;
+}
+strong,
+b {
+  font-weight: bold;
+}
+em,
+i {
+  font-style: italic;
+}
+s,
+del,
+strike {
+  text-decoration: line-through;
+}
+u {
+  text-decoration: underline;
+}
+blockquote {
+  border-left: solid 4px #3fb399;
+  margin: 0 0 1em;
+  padding: 0 25px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ul li {
+  display: list-item;
+}
+ul li.taskListItem {
+  list-style: none;
+}
+ul li p {
+  margin: 0;
+}
+ul>li>ul,
+ul>li>ol {
+  margin: 0;
+}
+ul>li>ul {
+  list-style-type: circle;
+}
+ul>li>ul>li>ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ol li {
+  display: list-item;
+}
+ol li p {
+  margin: 0;
+}
+ol>li>ul,
+ol>li>ol {
+  margin: 0;
+}
+code {
+  padding: 0.2em 0.4em;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  font-size: 1em;
+  text-decoration: none;
+  margin-right: 2px;
+}
+pre {
+  padding: 0.5rem !important;
+  border: solid 1px #d1d1d1;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 0 0 1rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  line-height: 1.4em;
+}
+pre code {
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+pre.CodeMirror {
+  height: initial;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.CodeMirror>code {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-x: auto;
+}
+pre.mermaid svg {
+  max-width: 100% !important;
+}
+pre>span.filename {
+  margin: -0.5rem 100% 0.5rem -0.5rem;
+  padding: 0.125rem 0.375rem;
+  background-color: #777;
+  color: #fff;
+}
+pre>span.filename:empty {
+  display: none;
+}
+pre>span.lineNumber {
+  display: none;
+  font-size: 1em;
+  padding: 0.5rem 0;
+  margin: -0.5rem 0.5rem -0.5rem -0.5rem;
+  border-right: 1px solid;
+  text-align: right;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+pre>span.lineNumber.CodeMirror-gutters {
+  position: initial;
+  top: initial;
+  left: initial;
+  min-height: 0 !important;
+}
+pre>span.lineNumber>span {
+  display: block;
+  padding: 0 0.5em 0;
+}
+table {
+  display: block;
+  width: 100%;
+  margin: 0 0 1em;
+  overflow-x: auto;
+}
+table thead tr {
+  background-color: #fff;
+}
+table thead th {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 1px 0 2px 1px;
+  border-color: #d0d0d0;
+  font-weight: bold;
+}
+table thead th:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+table tbody tr:nth-child(2n + 1) {
+  background-color: #f9f9f9;
+}
+table tbody tr:nth-child(2n) {
+  background-color: #fff;
+}
+table tbody td {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 0 0 1px 1px;
+  border-color: #d0d0d0;
+}
+table tbody td:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+kbd {
+  background-color: #fafbfc;
+  border: solid 1px #d0d0d0;
+  border-bottom-color: #888;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 0 #959da5;
+  box-shadow: inset 0 -1px 0 #959da5;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1;
+  padding: 3px 5px;
+}
+.admonition.note,
+.admonition.hint,
+.admonition.danger,
+.admonition.caution,
+.admonition.error,
+.admonition.attention {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  position: relative;
+  margin: 1.5625em 0;
+  padding: 0 1.2rem;
+  border-left: 0.4rem solid #448aff;
+  border-radius: 0.2rem;
+  overflow: auto;
+}
+html .admonition>:last-child {
+  margin-bottom: 1.2rem;
+}
+.admonition .admonition {
+  margin: 1em 0;
+}
+.admonition p {
+  margin-top: 0.5em;
+}
+.admonition.note>.admonition-title:before,
+.admonition.hint>.admonition-title:before,
+.admonition.danger>.admonition-title:before,
+.admonition.caution>.admonition-title:before,
+.admonition.error>.admonition-title:before,
+.admonition.attention>.admonition-title:before {
+  position: absolute;
+  left: 1.2rem;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+/* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+/* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+/* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+/* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.admonition.note>.admonition-title,
+.admonition.hint>.admonition-title,
+.admonition.danger>.admonition-title,
+.admonition.caution>.admonition-title,
+.admonition.error>.admonition-title,
+.admonition.attention>.admonition-title {
+  margin: 0 -1.2rem;
+  padding: 0.8rem 1.2rem 0.8rem 4rem;
+  border-bottom: 0.1rem solid rgba(68,138,255,0.1);
+  background-color: rgba(68,138,255,0.1);
+  font-weight: 700;
+}
+.admonition>.admonition-title:last-child {
+  margin-bottom: 0;
+}
+.admonition.note {
+  border-left-color: #0288d1;
+}
+.admonition.note>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(2,136,209,0.2);
+  background-color: rgba(2,136,209,0.2);
+}
+.admonition.note>.admonition-title:before {
+  color: #0288d1;
+  content: "note";
+}
+.admonition.hint {
+  border-left-color: #009688;
+}
+.admonition.hint>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(0,150,136,0.2);
+  background-color: rgba(0,150,136,0.2);
+}
+.admonition.hint>.admonition-title:before {
+  color: #009688;
+  content: "info_outline";
+}
+.admonition.danger {
+  border-left-color: #c2185b;
+}
+.admonition.danger>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(194,24,91,0.2);
+  background-color: rgba(194,24,91,0.2);
+}
+.admonition.danger>.admonition-title:before {
+  color: #c2185b;
+  content: "block";
+}
+.admonition.caution {
+  border-left-color: #ffa726;
+}
+.admonition.caution>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(255,167,38,0.2);
+  background-color: rgba(255,167,38,0.2);
+}
+.admonition.caution>.admonition-title:before {
+  color: #ffa726;
+  content: "warning";
+}
+.admonition.error {
+  border-left-color: #d32f2f;
+}
+.admonition.error>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(211,47,47,0.2);
+  background-color: rgba(211,47,47,0.2);
+}
+.admonition.error>.admonition-title:before {
+  color: #d32f2f;
+  content: "error_outline";
+}
+.admonition.attention {
+  border-left-color: #455a64;
+}
+.admonition.attention>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(69,90,100,0.2);
+  background-color: rgba(69,90,100,0.2);
+}
+.admonition.attention>.admonition-title:before {
+  color: #455a64;
+  content: "priority_high";
+}
+dl {
+  margin: 2rem 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  width: 100%;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -o-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid #d0d0d0;
+  background-color: #fff;
+}
+dt {
+  border-top: 1px solid #d0d0d0;
+  font-weight: bold;
+  text-align: right;
+  overflow: hidden;
+  -webkit-flex-basis: 20%;
+  flex-basis: 20%;
+  padding: 0.4rem 0.9rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd {
+  border-top: 1px solid #d0d0d0;
+  -webkit-flex-basis: 80%;
+  flex-basis: 80%;
+  padding: 0.4rem 0.9rem;
+  min-height: 2.5rem;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd + dd {
+  margin-left: 20%;
+}
+pre.fence {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.fence .chart,
+pre.fence .flowchart,
+pre.fence .mermaid,
+pre.fence .sequence {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #fff;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+pre.fence .chart canvas,
+pre.fence .flowchart canvas,
+pre.fence .mermaid canvas,
+pre.fence .sequence canvas,
+pre.fence .chart svg,
+pre.fence .flowchart svg,
+pre.fence .mermaid svg,
+pre.fence .sequence svg {
+  max-width: 100% !important;
+}
+body[data-theme="dark"] {
+  color: #f9f9f9;
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="dark"] a:hover {
+  background-color: rgba(90,214,186,0.2) !important;
+}
+body[data-theme="dark"] code {
+  color: #ea6730;
+  border-color: #3d4450;
+  background-color: #363a3e;
+}
+body[data-theme="dark"] pre {
+  border-color: #474f5c;
+}
+body[data-theme="dark"] pre code {
+  background-color: transparent;
+}
+body[data-theme="dark"] label.taskListItem {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table thead tr {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n) {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] kbd {
+  background-color: #444b59;
+  color: #f9f9f9;
+}
+body[data-theme="dark"] dl {
+  border-color: #444b59;
+  background-color: #282b2e;
+}
+body[data-theme="dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dark"] dd {
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="solarized-dark"] {
+  color: #93a1a1;
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table thead tr {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n) {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] dl {
+  border-color: #444b59;
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] dd {
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="monokai"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="monokai"] table thead tr {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n + 1) {
+  background-color: #272822;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n) {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="monokai"] dl {
+  border-color: #444b59;
+  background-color: #23241f;
+}
+body[data-theme="monokai"] dt {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] dd {
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="dracula"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table thead tr {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n + 1) {
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n) {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="dracula"] dl {
+  border-color: #444b59;
+  background-color: #242631;
+}
+body[data-theme="dracula"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] dd {
+  border-color: #444b59;
+  background-color: #282a36;
+}
+/*# sourceMappingURL=browser/components/markdown.css.map */
+
+body {
+  font-family: 'Lato','helvetica','arial','sans-serif';
+  font-size: 14px;
+  false
+}
+@media print {
+  body {
+    padding-bottom: initial;
+  }
+}
+code {
+  font-family: 'Monaco','Consolas','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+  background-color: rgba(0,0,0,0.04);
+}
+.lineNumber {
+  display: block !important;
+  font-family: 'Monaco','Consolas','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+}
+
+.clipboardButton {
+  color: rgba(147,147,149,0.8);;
+  fill: rgba(147,147,149,1);;
+  border-radius: 50%;
+  margin: 0px 10px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.clipboardButton:hover {
+  transition: 0.2s;
+  color: #939395;
+  fill: #939395;
+  background-color: rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  border: none;
+}
+
+h1 {
+  padding-bottom: 4px;
+  margin: 1em 0 8px;
+}
+
+h2 {
+  padding-bottom: 0.2em;
+  margin: 1em 0 0.37em;
+}
+
+body p {
+  white-space: normal;
+}
+
+@media print {
+  body[data-theme="dark"] {
+    color: #000;
+    background-color: #fff;
+  }
+  .clipboardButton {
+    display: none
+  }
+}
+
+
+</style>
+                   <link rel="stylesheet" href="css/dracula.css"><link rel="stylesheet" href="css/katex.min.css"><link rel="stylesheet" href="css/codemirror.css">
+                 </head>
+                 <body><h1 data-line="0" id="3-XPath%E8%AF%AD%E6%B3%95">3. XPath语法</h1>
+<blockquote data-line="2">
+<p data-line="2">解析html文本的三种常用方法：正则表达式，BeautifulSoup，XPath。本文介绍第三种方法，即使用lxml库配合XPath语法解析html文档。</p>
+</blockquote>
+<hr />
+<p data-line="6"><h3>目录</h3></p>
+
+<ul>
+<li data-line="10"><a href="#1-XPath%E6%A6%82%E8%BF%B0">1. XPath概述</a></li>
+<li data-line="11"><a href="#2-XPath%E8%AF%AD%E6%B3%95">2. XPath语法</a>
+<ul>
+<li data-line="12"><a href="#1-%E8%8A%82%E7%82%B9-Node">1) 节点 (Node)</a></li>
+<li data-line="13"><a href="#2-%E8%B7%AF%E5%BE%84%E8%A1%A8%E8%BE%BE%E5%BC%8F">2) 路径表达式</a></li>
+<li data-line="14"><a href="#3-%E8%B0%93%E8%AF%AD">3) 谓语</a></li>
+<li data-line="15"><a href="#4-%E9%80%9A%E9%85%8D%E7%AC%A6">4) 通配符</a></li>
+<li data-line="16"><a href="#5-%E8%BD%B4">5) 轴</a></li>
+<li data-line="17"><a href="#6-%E8%BF%90%E7%AE%97%E7%AC%A6">6) 运算符</a></li>
+</ul>
+</li>
+<li data-line="18"><a href="#3-lxml%E5%BA%93">3. lxml库</a></li>
+<li data-line="19"><a href="#4-%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1top250">4. 豆瓣电影top250</a></li>
+</ul>
+
+<hr />
+<h2 data-line="25" id="1-XPath%E6%A6%82%E8%BF%B0">1. XPath概述</h2>
+<p data-line="27">XPath的定义(From Wiki)：“XPath (XML Path Language) is a query language for selecting nodes from an XML document.”</p>
+<p data-line="29">什么是XML？XML是可扩展标记语言，是一种用于标记电子文件使其具有结构性的标记语言，例如：</p>
+<p data-line="31"><img src="attachments/3eb45743.png" alt="tu1.png" /></p>
+<p data-line="33">很像html语言，但还是略有区别。</p>
+<p data-line="35">XPath语言虽然是为在xml文档中进行搜索而设计的，但也能工作于html文档，因此常用在数据采集工作中，进行文本解析与信息提取。</p>
+<p data-line="37">一言蔽之，XPath的功能是“定位”。</p>
+<p data-line="39">例如，下图中，想要得到红框圈出的图片的位置，即相应<code>&lt;img&gt;</code>元素在该html文档中的位置，可以进行以下操作 (以Chrome浏览器为例)：</p>
+<p data-line="41"><img src="attachments/d94e0557.png" alt="tu2.png" /></p>
+<p data-line="43">第一，右击该图片的位置，选择“检查”，出现下图，红框位置 (蓝色选中区域) 即为该图片的<code>&lt;img&gt;</code>标签：</p>
+<p data-line="45"><img src="attachments/6c309314.png" alt="tu3.png" /></p>
+<p data-line="47">第二，右击默认的蓝色选中区域，点击<code>Copy</code>→<code>Copy XPath</code>，这样便复制了该<code>&lt;img&gt;</code>标签的“位置”，也就是“基于XPath语法表示的位置”：</p>
+<p data-line="49"><img src="attachments/918788a1.png" alt="tu3.png" /></p>
+<p data-line="51">第三，粘贴出来即可，如下：</p>
+<p data-line="53"><code>//*[@id=&quot;content&quot;]/div/div[1]/ol/li[1]/div/div[1]/a/img</code></p>
+<p data-line="55">上面的类似于电脑文件路径表达式的式子，就是用XPath语言书写的定位表达式，用于在html文档中 (当然初衷是解析xml文档) 实现元素的搜索、查询和定位。</p>
+<h2 data-line="57" id="2-XPath%E8%AF%AD%E6%B3%95">2. XPath语法</h2>
+<p data-line="59">下图的xml代码取自Wiki的XPath条目：</p>
+<pre class="code CodeMirror" data-line="61">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span><span class="CodeMirror-linenumber">20</span><span class="CodeMirror-linenumber">21</span><span class="CodeMirror-linenumber">22</span></span>
+        <code class="html">&lt;Wikimedia&gt;
+  &lt;projects&gt;
+    &lt;project name=&quot;Wikipedia&quot; launch=&quot;2001-01-05&quot;&gt;
+      &lt;editions&gt;
+        &lt;edition language=&quot;English&quot;&gt;en.wikipedia.org&lt;/edition&gt;
+        &lt;edition language=&quot;German&quot;&gt;de.wikipedia.org&lt;/edition&gt;
+        &lt;edition language=&quot;French&quot;&gt;fr.wikipedia.org&lt;/edition&gt;
+        &lt;edition language=&quot;Polish&quot;&gt;pl.wikipedia.org&lt;/edition&gt;
+        &lt;edition language=&quot;Spanish&quot;&gt;es.wikipedia.org&lt;/edition&gt;
+      &lt;/editions&gt;
+    &lt;/project&gt;
+    &lt;project name=&quot;Wiktionary&quot; launch=&quot;2002-12-12&quot;&gt;
+      &lt;editions&gt;
+        &lt;edition language=&quot;English&quot;&gt;en.wiktionary.org&lt;/edition&gt;
+        &lt;edition language=&quot;French&quot;&gt;fr.wiktionary.org&lt;/edition&gt;
+        &lt;edition language=&quot;Vietnamese&quot;&gt;vi.wiktionary.org&lt;/edition&gt;
+        &lt;edition language=&quot;Turkish&quot;&gt;tr.wiktionary.org&lt;/edition&gt;
+        &lt;edition language=&quot;Spanish&quot;&gt;es.wiktionary.org&lt;/edition&gt;
+      &lt;/editions&gt;
+    &lt;/project&gt;
+  &lt;/projects&gt;
+&lt;/Wikimedia&gt;
+</code>
+      </pre><h3 data-line="86" id="1-%E8%8A%82%E7%82%B9-Node">1) 节点 (Node)</h3>
+<p data-line="88">试着通过缩进，将xml文档 (或者html文档) 想象成树状结构：缩进越少越靠根部，越靠顶端；缩进越多越靠枝叶，越靠末端；相同缩进，属于同一层级。</p>
+<p data-line="90">上文代码中，一个个标签 (元素) 就是一个个节点。</p>
+<p data-line="92"><img src="attachments/853bf6a6.png" alt="tu4.png" /></p>
+<p data-line="94">上图中，仅仅关注这一部分的html代码：<code>id</code>属性为<code>content</code>的<code>div</code>元素位于根部，即最顶端；下一层有两个元素，一个是<code>h1</code>元素，另一个是<code>class</code>属性为<code>grid-16-8 clearfix</code>的<code>div</code>元素；再下一层是<code>class</code>属性为<code>article</code>的<code>div</code>元素……这些元素就是一个个节点，这些节点构成一个错落有致的树状结构。</p>
+<h3 data-line="96" id="2-%E8%B7%AF%E5%BE%84%E8%A1%A8%E8%BE%BE%E5%BC%8F">2) 路径表达式</h3>
+<p data-line="98">表达式以<code>/</code>开头，表示从根节点开始；此后的<code>/</code>，表示“逐层递进”，如：<code>/Wikimedia/projects/project</code>，表示选取从根节点，即<code>Wikimedia</code>元素开始，之后进入下一层的所有<code>projects</code>元素，再进入下一层的所有<code>project</code>元素。因此，可以选到两个结果，第一个是<code>&lt;project name=&quot;Wikipedia&quot; launch=&quot;2001-01-05&quot;&gt;...&lt;/project&gt;</code>，另一个是<code>&lt;project name=&quot;Wiktionary&quot; launch=&quot;2002-12-12&quot;&gt;...&lt;/project&gt;</code></p>
+<p data-line="100">表达式<code>/Wikimedia/project</code>将会返回无，因为<code>Wikimedia</code>元素的下一层，并没有任何<code>project</code>元素。这也是为什么<code>/</code>叫做“逐层递进”。</p>
+<p data-line="102">相比而言，表达式以<code>//</code>开头，表示从“任意位置”开始；此后出现<code>//</code>，表示“跨层递进”，如：<code>//project</code>，表示选取文档中的所有<code>project</code>元素 (不论其位置在哪里)；<code>/Wikimedia//project</code>将会返回两个<code>project</code>元素，因为<code>//</code>表示可以跨层，因此该表达式表示<code>Wikimedia</code>元素下的、不论哪一层的所有<code>project</code>元素，注意和<code>/Wikimedia/project</code>进行区分。</p>
+<p data-line="104"><code>@</code>表示获取元素相应属性的属性值。例如，我想获取所有<code>project</code>元素的<code>name</code>属性，可以这样写：<code>/Wikimedia/projects/project/@name</code>，当然也可以这样写<code>//project/@name</code>。上述两种写法也表明，善用<code>//</code>可以使表达式简化许多。</p>
+<p data-line="106">选取元素中所夹的文本，使用<code>text()</code>。例如，获取所有项目所有版本的主页，可以这样写：<code>//edition/text()&quot;</code>，将返回<code>'en.wikipedia.org'</code>, <code>'de.wikipedia.org'</code>, <code>'fr.wikipedia.org'</code>等共10个结果。</p>
+<p data-line="108">以<code>./</code>开头或者直接以无<code>/</code>开头的路径表达式，是相对路径的表示方式。表示从当前节点开始。</p>
+<h3 data-line="110" id="3-%E8%B0%93%E8%AF%AD">3) 谓语</h3>
+<p data-line="112">选取满足某个特定条件的元素，或包含某个特定属性值的元素，使用包在方括号中的谓语。</p>
+<p data-line="114"><code>//project[1]/@name</code>：选取第一个project元素的name属性的属性值，即<code>'Wikipedia'</code>(注意：XPath路径表达式中的下标索引是从<code>1</code>开始的)；<br />
+<code>//project[last()]/@name</code>：选取最后一个project元素的name属性的属性值，即<code>'Wiktionary'</code>；<br />
+<code>//project[@launch]</code>：选取含有<code>launch</code>属性的project元素，有两个；<br />
+<code>//project[@name='Wiktionary']</code>：选取含有<code>name</code>属性且<code>name</code>属性值为<code>'Wiktionary'</code>的project元素，只有一个；</p>
+<h3 data-line="119" id="4-%E9%80%9A%E9%85%8D%E7%AC%A6">4) 通配符</h3>
+<p data-line="121"><strong>子</strong>：下一层节点；<br />
+<strong>父</strong>：上一层节点；<br />
+<strong>兄弟</strong>：同一层节点；<br />
+<strong>先辈</strong>：上一层，上上层，上上上层节点……<br />
+<strong>后代</strong>：下一层，下下层，下下下层节点……</p>
+<p data-line="127"><code>/Wikimedia/*</code>表示选取根节点<code>Wikimedia</code>的所有子元素，只有一个，即<code>projects</code>元素。</p>
+<p data-line="129"><code>//project[@*]</code>表示选取所有带有属性的 (不管什么属性都可以，只要有属性) 的<code>projects</code>元素，有两个。</p>
+<h3 data-line="131" id="5-%E8%BD%B4">5) 轴</h3>
+<p data-line="133">提取到一个元素节点，想在此节点位置的基础上，提取它的子节点元素或父节点元素或兄弟节点元素的信息，就要用到轴。</p>
+<p data-line="135">常用的轴：</p>
+<ul>
+<li data-line="137"><code>child</code>：所有子节点；</li>
+<li data-line="138"><code>parent</code>：所有父节点；</li>
+<li data-line="139"><code>preceding-sibling</code>：之前的所有同级节点（兄弟节点）；</li>
+<li data-line="140"><code>following-sibling</code>：之后的所有同级节点（兄弟节点）；</li>
+</ul>
+<p data-line="142">例如，我想查找<code>'Wikipedia'</code>项目<code>language=&quot;German&quot;</code>版本之后的剩余版本的网址，可以这么写：<code>//project[@name='Wikipedia']/editions/edition[@language='German']/following-sibling::*/text()</code>，将会得到<code>['fr.wikipedia.org', 'pl.wikipedia.org', 'es.wikipedia.org']</code>。</p>
+<p data-line="144">即，完整的一步(one step)，可以写作：<code>轴名称::节点测试[谓语]</code>，即<code>axis::node-test[predicate]</code>。</p>
+<h3 data-line="146" id="6-%E8%BF%90%E7%AE%97%E7%AC%A6">6) 运算符</h3>
+<p data-line="148">暂略。在谓语中可以使用算术运算符、比较运算符等。</p>
+<h2 data-line="150" id="3-lxml%E5%BA%93">3. lxml库</h2>
+<pre class="code CodeMirror" data-line="152">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span></span>
+        <code class="python"># 从lxml库中导入etree模块
+from lxml import etree
+# 返回根节点对象
+# 对于html文档，则使用root = etree.HTML(html_str)
+root = etree.XML(xml_str)
+# 开始查询
+result = root.xpath(&quot;你的xpath路径表达式&quot;)
+</code>
+      </pre><h2 data-line="162" id="4-%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1top250">4. 豆瓣电影top250</h2>
+<p data-line="164">从<a href="https://movie.douban.com/top250">豆瓣电影 Top 250</a>上采集第一页25部电影的第一名称 + 详细页面链接：</p>
+<pre class="code CodeMirror" data-line="166">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span></span>
+        <code class="python">import requests
+from lxml import etree
+
+url      = &quot;https://movie.douban.com/top250&quot;
+res      = requests.get(url)
+html_str = res.text
+root     = etree.HTML(html_str)
+
+items = root.xpath(&quot;//div[@class='hd']&quot;)
+for item in items:
+	i_name = item.xpath(&quot;./a/span[1]/text()&quot;)[0]
+	i_url  = item.xpath(&quot;./a/@href&quot;)[0]
+	print(i_name, ': ', i_url, sep='')
+</code>
+      </pre><p data-line="182">注意：</p>
+<ul>
+<li data-line="184">for循环的使用和<code>./</code>的用法；</li>
+<li data-line="185">xpath方法返回的是一个列表，即使列表中只有一个元素；</li>
+</ul>
+<p data-line="187">结果如下：</p>
+<p data-line="189"><img src="attachments/e72cbf0c.png" alt="tu5.png" /></p>
+<hr />
+<p data-line="193">By DraymondG</p>
+</body>
+              </html>

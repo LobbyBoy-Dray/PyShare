@@ -1,0 +1,1150 @@
+<html>
+                 <head>
+                   <meta charset="UTF-8">
+                   <meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1">
+                   <style id="style">
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.woff') format('woff'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+body {
+  font-size: 16px;
+  padding: 15px;
+  font-family: helvetica, arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+body .katex {
+  font: 400 1.2em 'KaTeX_Main';
+  line-height: 1.2em;
+  white-space: initial;
+  text-indent: 0;
+}
+body .katex .mfrac>.vlist>span:nth-child(2) {
+  top: 0 !important;
+}
+body .katex-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  margin: -5px;
+  border-radius: 5px;
+}
+body .flowchart-error,
+body .sequence-error .chart-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-pack: left;
+  -moz-box-pack: left;
+  -o-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+}
+li label.taskListItem {
+  margin-left: -1.8em;
+}
+li label.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+li.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+div.math-rendered {
+  text-align: center;
+}
+.math-failed {
+  background-color: rgba(255,0,0,0.1);
+  color: #d90000;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+sup {
+  position: relative;
+  top: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+sub {
+  position: relative;
+  bottom: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+a {
+  color: #2bac8f;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: -5px;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -ms-transition: 0.1s;
+  transition: 0.1s;
+}
+a img {
+  vertical-align: sub;
+}
+a:hover {
+  color: #2eb899;
+  text-decoration: underline;
+  background-color: rgba(255,201,92,0.3);
+}
+a:visited {
+  color: #2bac8f;
+}
+hr {
+  border-top: none;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 15px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  word-wrap: break-word;
+}
+h1 {
+  font-size: 2.55em;
+  padding-bottom: 0.3em;
+  line-height: 1.2em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.44em;
+}
+h1:first-child {
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.75em;
+  padding-bottom: 0.3em;
+  line-height: 1.225em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.57em;
+}
+h2:first-child {
+  margin-top: 0;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.43em;
+  margin: 1em 0 0.66em;
+}
+h4 {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  margin: 1em 0 0.8em;
+}
+h5 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+}
+h6 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+  color: #777;
+}
+p {
+  line-height: 1.6em;
+  margin: 0 0 1em;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+img {
+  max-width: 100%;
+}
+strong,
+b {
+  font-weight: bold;
+}
+em,
+i {
+  font-style: italic;
+}
+s,
+del,
+strike {
+  text-decoration: line-through;
+}
+u {
+  text-decoration: underline;
+}
+blockquote {
+  border-left: solid 4px #3fb399;
+  margin: 0 0 1em;
+  padding: 0 25px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ul li {
+  display: list-item;
+}
+ul li.taskListItem {
+  list-style: none;
+}
+ul li p {
+  margin: 0;
+}
+ul>li>ul,
+ul>li>ol {
+  margin: 0;
+}
+ul>li>ul {
+  list-style-type: circle;
+}
+ul>li>ul>li>ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ol li {
+  display: list-item;
+}
+ol li p {
+  margin: 0;
+}
+ol>li>ul,
+ol>li>ol {
+  margin: 0;
+}
+code {
+  padding: 0.2em 0.4em;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  font-size: 1em;
+  text-decoration: none;
+  margin-right: 2px;
+}
+pre {
+  padding: 0.5rem !important;
+  border: solid 1px #d1d1d1;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 0 0 1rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  line-height: 1.4em;
+}
+pre code {
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+pre.CodeMirror {
+  height: initial;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.CodeMirror>code {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-x: auto;
+}
+pre.mermaid svg {
+  max-width: 100% !important;
+}
+pre>span.filename {
+  margin: -0.5rem 100% 0.5rem -0.5rem;
+  padding: 0.125rem 0.375rem;
+  background-color: #777;
+  color: #fff;
+}
+pre>span.filename:empty {
+  display: none;
+}
+pre>span.lineNumber {
+  display: none;
+  font-size: 1em;
+  padding: 0.5rem 0;
+  margin: -0.5rem 0.5rem -0.5rem -0.5rem;
+  border-right: 1px solid;
+  text-align: right;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+pre>span.lineNumber.CodeMirror-gutters {
+  position: initial;
+  top: initial;
+  left: initial;
+  min-height: 0 !important;
+}
+pre>span.lineNumber>span {
+  display: block;
+  padding: 0 0.5em 0;
+}
+table {
+  display: block;
+  width: 100%;
+  margin: 0 0 1em;
+  overflow-x: auto;
+}
+table thead tr {
+  background-color: #fff;
+}
+table thead th {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 1px 0 2px 1px;
+  border-color: #d0d0d0;
+  font-weight: bold;
+}
+table thead th:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+table tbody tr:nth-child(2n + 1) {
+  background-color: #f9f9f9;
+}
+table tbody tr:nth-child(2n) {
+  background-color: #fff;
+}
+table tbody td {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 0 0 1px 1px;
+  border-color: #d0d0d0;
+}
+table tbody td:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+kbd {
+  background-color: #fafbfc;
+  border: solid 1px #d0d0d0;
+  border-bottom-color: #888;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 0 #959da5;
+  box-shadow: inset 0 -1px 0 #959da5;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1;
+  padding: 3px 5px;
+}
+.admonition.note,
+.admonition.hint,
+.admonition.danger,
+.admonition.caution,
+.admonition.error,
+.admonition.attention {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  position: relative;
+  margin: 1.5625em 0;
+  padding: 0 1.2rem;
+  border-left: 0.4rem solid #448aff;
+  border-radius: 0.2rem;
+  overflow: auto;
+}
+html .admonition>:last-child {
+  margin-bottom: 1.2rem;
+}
+.admonition .admonition {
+  margin: 1em 0;
+}
+.admonition p {
+  margin-top: 0.5em;
+}
+.admonition.note>.admonition-title:before,
+.admonition.hint>.admonition-title:before,
+.admonition.danger>.admonition-title:before,
+.admonition.caution>.admonition-title:before,
+.admonition.error>.admonition-title:before,
+.admonition.attention>.admonition-title:before {
+  position: absolute;
+  left: 1.2rem;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+/* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+/* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+/* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+/* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.admonition.note>.admonition-title,
+.admonition.hint>.admonition-title,
+.admonition.danger>.admonition-title,
+.admonition.caution>.admonition-title,
+.admonition.error>.admonition-title,
+.admonition.attention>.admonition-title {
+  margin: 0 -1.2rem;
+  padding: 0.8rem 1.2rem 0.8rem 4rem;
+  border-bottom: 0.1rem solid rgba(68,138,255,0.1);
+  background-color: rgba(68,138,255,0.1);
+  font-weight: 700;
+}
+.admonition>.admonition-title:last-child {
+  margin-bottom: 0;
+}
+.admonition.note {
+  border-left-color: #0288d1;
+}
+.admonition.note>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(2,136,209,0.2);
+  background-color: rgba(2,136,209,0.2);
+}
+.admonition.note>.admonition-title:before {
+  color: #0288d1;
+  content: "note";
+}
+.admonition.hint {
+  border-left-color: #009688;
+}
+.admonition.hint>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(0,150,136,0.2);
+  background-color: rgba(0,150,136,0.2);
+}
+.admonition.hint>.admonition-title:before {
+  color: #009688;
+  content: "info_outline";
+}
+.admonition.danger {
+  border-left-color: #c2185b;
+}
+.admonition.danger>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(194,24,91,0.2);
+  background-color: rgba(194,24,91,0.2);
+}
+.admonition.danger>.admonition-title:before {
+  color: #c2185b;
+  content: "block";
+}
+.admonition.caution {
+  border-left-color: #ffa726;
+}
+.admonition.caution>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(255,167,38,0.2);
+  background-color: rgba(255,167,38,0.2);
+}
+.admonition.caution>.admonition-title:before {
+  color: #ffa726;
+  content: "warning";
+}
+.admonition.error {
+  border-left-color: #d32f2f;
+}
+.admonition.error>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(211,47,47,0.2);
+  background-color: rgba(211,47,47,0.2);
+}
+.admonition.error>.admonition-title:before {
+  color: #d32f2f;
+  content: "error_outline";
+}
+.admonition.attention {
+  border-left-color: #455a64;
+}
+.admonition.attention>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(69,90,100,0.2);
+  background-color: rgba(69,90,100,0.2);
+}
+.admonition.attention>.admonition-title:before {
+  color: #455a64;
+  content: "priority_high";
+}
+dl {
+  margin: 2rem 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  width: 100%;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -o-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid #d0d0d0;
+  background-color: #fff;
+}
+dt {
+  border-top: 1px solid #d0d0d0;
+  font-weight: bold;
+  text-align: right;
+  overflow: hidden;
+  -webkit-flex-basis: 20%;
+  flex-basis: 20%;
+  padding: 0.4rem 0.9rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd {
+  border-top: 1px solid #d0d0d0;
+  -webkit-flex-basis: 80%;
+  flex-basis: 80%;
+  padding: 0.4rem 0.9rem;
+  min-height: 2.5rem;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd + dd {
+  margin-left: 20%;
+}
+pre.fence {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.fence .chart,
+pre.fence .flowchart,
+pre.fence .mermaid,
+pre.fence .sequence {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #fff;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+pre.fence .chart canvas,
+pre.fence .flowchart canvas,
+pre.fence .mermaid canvas,
+pre.fence .sequence canvas,
+pre.fence .chart svg,
+pre.fence .flowchart svg,
+pre.fence .mermaid svg,
+pre.fence .sequence svg {
+  max-width: 100% !important;
+}
+body[data-theme="dark"] {
+  color: #f9f9f9;
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="dark"] a:hover {
+  background-color: rgba(90,214,186,0.2) !important;
+}
+body[data-theme="dark"] code {
+  color: #ea6730;
+  border-color: #3d4450;
+  background-color: #363a3e;
+}
+body[data-theme="dark"] pre {
+  border-color: #474f5c;
+}
+body[data-theme="dark"] pre code {
+  background-color: transparent;
+}
+body[data-theme="dark"] label.taskListItem {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table thead tr {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n) {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] kbd {
+  background-color: #444b59;
+  color: #f9f9f9;
+}
+body[data-theme="dark"] dl {
+  border-color: #444b59;
+  background-color: #282b2e;
+}
+body[data-theme="dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dark"] dd {
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="solarized-dark"] {
+  color: #93a1a1;
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table thead tr {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n) {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] dl {
+  border-color: #444b59;
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] dd {
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="monokai"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="monokai"] table thead tr {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n + 1) {
+  background-color: #272822;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n) {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="monokai"] dl {
+  border-color: #444b59;
+  background-color: #23241f;
+}
+body[data-theme="monokai"] dt {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] dd {
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="dracula"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table thead tr {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n + 1) {
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n) {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="dracula"] dl {
+  border-color: #444b59;
+  background-color: #242631;
+}
+body[data-theme="dracula"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] dd {
+  border-color: #444b59;
+  background-color: #282a36;
+}
+/*# sourceMappingURL=browser/components/markdown.css.map */
+
+body {
+  font-family: 'Lato','helvetica','arial','sans-serif';
+  font-size: 14px;
+  false
+}
+@media print {
+  body {
+    padding-bottom: initial;
+  }
+}
+code {
+  font-family: 'Monaco','Consolas','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+  background-color: rgba(0,0,0,0.04);
+}
+.lineNumber {
+  display: block !important;
+  font-family: 'Monaco','Consolas','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+}
+
+.clipboardButton {
+  color: rgba(147,147,149,0.8);;
+  fill: rgba(147,147,149,1);;
+  border-radius: 50%;
+  margin: 0px 10px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.clipboardButton:hover {
+  transition: 0.2s;
+  color: #939395;
+  fill: #939395;
+  background-color: rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  border: none;
+}
+
+h1 {
+  padding-bottom: 4px;
+  margin: 1em 0 8px;
+}
+
+h2 {
+  padding-bottom: 0.2em;
+  margin: 1em 0 0.37em;
+}
+
+body p {
+  white-space: normal;
+}
+
+@media print {
+  body[data-theme="dark"] {
+    color: #000;
+    background-color: #fff;
+  }
+  .clipboardButton {
+    display: none
+  }
+}
+
+
+</style>
+                   <link rel="stylesheet" href="css/dracula.css"><link rel="stylesheet" href="css/katex.min.css"><link rel="stylesheet" href="css/codemirror.css">
+                 </head>
+                 <body><h1 data-line="0" id="1-HTTP%E5%8D%8F%E8%AE%AE">1. HTTP协议</h1>
+<hr />
+<p data-line="4"><h3>目录</h3></p>
+
+<ul>
+<li data-line="8"><a href="#1-%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E8%BF%87%E7%A8%8B">1. 网络连接过程</a></li>
+<li data-line="9"><a href="#2-HTTP%E5%8D%8F%E8%AE%AE">2. HTTP协议</a>
+<ul>
+<li data-line="10"><a href="#1-%E6%A6%82%E8%BF%B0">1) 概述</a></li>
+<li data-line="11"><a href="#2-%E5%86%85%E5%AE%B9%E5%8F%8A%E7%89%B9%E6%80%A7">2) 内容及特性</a>
+<ul>
+<li data-line="12"><a href="#a-HTTP%E5%8D%8F%E8%AE%AE%E7%94%A8%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1">a. HTTP协议用于客户端和服务器端之间的通信</a></li>
+<li data-line="13"><a href="#b-%E9%80%9A%E4%BF%A1%E7%94%B1%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E6%9E%84%E6%88%90">b. 通信由请求和响应构成</a></li>
+<li data-line="14"><a href="#c-HTTP%E6%98%AF%E6%97%A0%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%8D%8F%E8%AE%AE">c. HTTP是无连接的协议</a></li>
+<li data-line="15"><a href="#d-HTTP%E6%98%AF%E6%97%A0%E7%8A%B6%E6%80%81%E7%9A%84%E5%8D%8F%E8%AE%AE">d. HTTP是无状态的协议</a></li>
+<li data-line="16"><a href="#e-HTTP%E5%9F%BA%E4%BA%8ETCP%E5%8D%8F%E8%AE%AE">e. HTTP基于TCP协议</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="17"><a href="#3-%E5%9F%BA%E4%BA%8EHTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5">3. 基于HTTP协议的网络连接</a>
+<ul>
+<li data-line="18"><a href="#1-%E8%BF%87%E7%A8%8B">1) 过程</a></li>
+<li data-line="19"><a href="#2-%E7%8A%B6%E6%80%81%E7%A0%81">2) 状态码</a></li>
+<li data-line="20"><a href="#3-%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87">3) 请求报文</a>
+<ul>
+<li data-line="21"><a href="#a-%E8%AF%B7%E6%B1%82%E8%A1%8C">a. 请求行</a></li>
+<li data-line="22"><a href="#b-%E8%AF%B7%E6%B1%82%E5%A4%B4">b. 请求头</a></li>
+<li data-line="23"><a href="#c-%E8%AF%B7%E6%B1%82%E6%AD%A3%E6%96%87">c. 请求正文</a></li>
+</ul>
+</li>
+<li data-line="24"><a href="#4-%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95">4) 请求方法</a>
+<ul>
+<li data-line="25"><a href="#a-%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90">a. 获取资源</a></li>
+<li data-line="26"><a href="#b-%E4%BC%A0%E8%BE%93%E5%AE%9E%E4%BD%93%E4%B8%BB%E4%BD%93">b. 传输实体主体</a></li>
+</ul>
+</li>
+<li data-line="27"><a href="#5-%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%B4">5) 响应报文与响应头</a>
+<ul>
+<li data-line="28"><a href="#a-%E7%8A%B6%E6%80%81%E8%A1%8C">a. 状态行</a></li>
+<li data-line="29"><a href="#b-%E5%93%8D%E5%BA%94%E5%A4%B4">b. 响应头</a></li>
+<li data-line="30"><a href="#c-%E5%93%8D%E5%BA%94%E5%AE%9E%E4%BD%93">c. 响应实体</a></li>
+</ul>
+</li>
+<li data-line="31"><a href="#6-Cookie">6) Cookie</a></li>
+</ul>
+</li>
+</ul>
+
+<hr />
+<h2 data-line="37" id="1-%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E8%BF%87%E7%A8%8B">1. 网络连接过程</h2>
+<p data-line="39"><strong>情景</strong>：</p>
+<ul>
+<li data-line="41">打开浏览器，在地址栏输入一个网址（URL），敲击回车，浏览器窗口出现相应页面。</li>
+</ul>
+<p data-line="43"><strong>发生了什么</strong>：</p>
+<ul>
+<li data-line="45">A，如自己的电脑，发送一串1和0组成的比特值，就是信息，包含head和body——head包括了本地路由的MAC地址和B，即服务器的IP地址，还有端口号，对应到具体的服务器应用，总之就是定位用的；body包括，A对B上面某个应用的请求内容，即告诉服务器及应用我要干嘛；</li>
+<li data-line="46">A的信息先到本地路由，打包一下，根据B的IP地址发到B那里；</li>
+<li data-line="47">B接到数据包，解析，拿到请求头中的端口号，找到其上的目标应用，发过去；</li>
+<li data-line="48">服务器应用从B，即服务器那里收到数据，看一看body，看A到底要啥：比如要一个index.html这个文件；</li>
+<li data-line="49">服务器应用找到这个文件，通过服务器，把这个文件发回A去；</li>
+<li data-line="50">A收到index.html，用浏览器渲染一下，显示出来，bingo！</li>
+</ul>
+<p data-line="52"><strong>简单来说</strong>：</p>
+<ul>
+<li data-line="54">一般来讲（有不一般的情况），打开一个网页，就是通过HTTP协议，向指定服务器对一个资源进行请求，服务器回应请求并返回一份HTML文档，浏览器对这个文档进行渲染，显示出来，成了我们看到的网页。</li>
+</ul>
+<h2 data-line="56" id="2-HTTP%E5%8D%8F%E8%AE%AE">2. HTTP协议</h2>
+<h3 data-line="58" id="1-%E6%A6%82%E8%BF%B0">1) 概述</h3>
+<p data-line="60">HTTP协议，全称超文本传输协议，HyperText Transfer Protocol。</p>
+<p data-line="62">HyperText，超文本，可超链接文档，该文档可以指向其他位置——当前文档中、局域网中的其他文档、全网的任何位置的文档，这些文档组成了一个杂乱的信息网。</p>
+<p data-line="64">HTTP协议，是一套关于HyperText传输规定，例如包括了客户端和服务端的数据传输格式的规定等等，用于服务器传输超文本到本地计算机（浏览器）。</p>
+<p data-line="66">HTML，HyperText Markup Language，所以HTTP协议最初建立是为传HTML的。</p>
+<h3 data-line="68" id="2-%E5%86%85%E5%AE%B9%E5%8F%8A%E7%89%B9%E6%80%A7">2) 内容及特性</h3>
+<h4 data-line="70" id="a-HTTP%E5%8D%8F%E8%AE%AE%E7%94%A8%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1">a. HTTP协议用于客户端和服务器端之间的通信</h4>
+<ul>
+<li data-line="72">本质都是计算机；</li>
+<li data-line="73">客户端：请求发起者，响应接收者，请求访问文本或图像等资源的一端；</li>
+<li data-line="74">服务器端：请求接收者，响应发出者，提供资源的一端。</li>
+</ul>
+<p data-line="76">在两台计算机间使用HTTP协议通信时，一条线路上，必有一端是客户端，另一端是服务器端，且在一次通信中角色确定。</p>
+<p data-line="78"><img src="attachments/244504ff.png" alt="1.png" /></p>
+<h4 data-line="80" id="b-%E9%80%9A%E4%BF%A1%E7%94%B1%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E6%9E%84%E6%88%90">b. 通信由请求和响应构成</h4>
+<p data-line="82">HTTP协议采用请求-响应模型，请求永远由客户端发起，响应永远由服务器端回送：</p>
+<ul>
+<li data-line="84">请求：Request</li>
+<li data-line="85">响应：Response</li>
+</ul>
+<p data-line="87"><img src="attachments/4c5bebc9.png" alt="2.png" /></p>
+<p data-line="89">请求于客户端发出，服务器端接收；服务器端只有在收到请求后才会有所动作。即，HTTP协议中，通信永远是客户端发起的，服务器端不会自己给客户端发生响应。</p>
+<p data-line="91">区别于WS协议(WebSocket)——WS同样基于TCP，是一种新的网络协议，和HTTP最大的区别在于，允许服务器端主动发送信息给客户端。</p>
+<h4 data-line="93" id="c-HTTP%E6%98%AF%E6%97%A0%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%8D%8F%E8%AE%AE">c. HTTP是无连接的协议</h4>
+<p data-line="95">即连接不具有持久性，每次连接处理一个请求，服务器端返回资源，客户端接收到资源后，连接断开。</p>
+<p data-line="97">对比WS，WS的通信管道会一直存在，相当于心脏一直在跳动。</p>
+<h4 data-line="99" id="d-HTTP%E6%98%AF%E6%97%A0%E7%8A%B6%E6%80%81%E7%9A%84%E5%8D%8F%E8%AE%AE">d. HTTP是无状态的协议</h4>
+<p data-line="101">HTTP协议本身规定，通信双方均不保存此前的通信状态，是一种即无状态(stateless) 协议。</p>
+<p data-line="103"><img src="attachments/d8b6087c.png" alt="3.png" /></p>
+<p data-line="105">但我们会发现，有时候登录过一个网址，下次打开该网站主页，发现会直接跳到登录后的界面，这不是保存了之前登录通信的状态吗？</p>
+<p data-line="107">的确，登录状态被保存，但这不是HTTP协议做的，是Cookie技术做的，Cookie+HTTP，可以保存并管理“状态”。</p>
+<h4 data-line="109" id="e-HTTP%E5%9F%BA%E4%BA%8ETCP%E5%8D%8F%E8%AE%AE">e. HTTP基于TCP协议</h4>
+<h2 data-line="111" id="3-%E5%9F%BA%E4%BA%8EHTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5">3. 基于HTTP协议的网络连接</h2>
+<h3 data-line="113" id="1-%E8%BF%87%E7%A8%8B">1) 过程</h3>
+<p data-line="115">一次HTTP通信，被称为一次<strong>事务</strong>，由四个步骤构成：</p>
+<ul>
+<li data-line="117">建立连接：例如，单击某个超连接；</li>
+<li data-line="118">客户端发送请求；</li>
+<li data-line="119">服务器端接收请求，并做出响应，回送至客户端；</li>
+<li data-line="120">客户端收到响应，如html文件，用浏览器渲染显示，然后断开连接，一次事务结束。</li>
+</ul>
+<h3 data-line="122" id="2-%E7%8A%B6%E6%80%81%E7%A0%81">2) 状态码</h3>
+<p data-line="124">状态码，status code。</p>
+<p data-line="126"><img src="attachments/40210708.png" alt="4.png" /></p>
+<p data-line="128">最常见：我们打开一个网页，显示“404 Not Found”，即404错误；这里404就是状态码，含义是：请求的资源（网页）不存在。</p>
+<p data-line="130">状态码是Response的一部分，是服务器告诉客户端此次请求的运行状态的信息。</p>
+<p data-line="132">服务器返回404状态码给客户端，也就是告诉客户端，你想拿的资源，我这里没有。</p>
+<p data-line="134">其实最常用的是200，表示请求成功。</p>
+<p data-line="136">其他常见：</p>
+<ul>
+<li data-line="138">301：Moved Permanently，永久重定向——被请求的资源已永久移动到新位置；</li>
+<li data-line="139">500：Internal Server Error，内部服务器错误——服务器的问题，不是你的问题；</li>
+</ul>
+<h3 data-line="141" id="3-%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87">3) 请求报文</h3>
+<p data-line="143"><img src="attachments/15408b86.png" alt="5.png" /></p>
+<p data-line="145">由客户端发出的关于请求的信息，称为<strong>请求报文</strong>。</p>
+<p data-line="147">请求报文由三个部分构成：</p>
+<ul>
+<li data-line="148">请求行：Request line；</li>
+<li data-line="149">请求头：Request headers；</li>
+<li data-line="150">请求正文：Request body；</li>
+</ul>
+<p data-line="152">有时候又把前两部分合称为请求的头部信息。</p>
+<h4 data-line="154" id="a-%E8%AF%B7%E6%B1%82%E8%A1%8C">a. 请求行</h4>
+<p data-line="156">包括：</p>
+<ul>
+<li data-line="157">请求方法：GET, POST……</li>
+<li data-line="158">URI：统一资源标识符，指明请求访问的资源对象（我要什么）；</li>
+<li data-line="159">协议版本：HTTP/1.1</li>
+</ul>
+<h4 data-line="161" id="b-%E8%AF%B7%E6%B1%82%E5%A4%B4">b. 请求头</h4>
+<p data-line="163">类似于字典，许多键值对构成，常见的有：</p>
+<ul>
+<li data-line="165"><code>Host</code>：指定请求资源的Internet主机和端口号；</li>
+<li data-line="166"><code>User-Agent</code>：请求发出的用户信息，包括使用的浏览器的基本信息，反爬虫第一道防线；</li>
+<li data-line="167"><code>Accept</code>：指定客户端接受哪些类型的信息，如<code>Accept: text/html</code>表示客户端希望拿到html文本，<code>Accept: image/gif</code>表示客户端希望拿到图像格式资源；</li>
+<li data-line="168"><code>Accept-Language</code>：指定客户端接受哪种语言，不设置的话，服务器默认任何语言都可以；</li>
+<li data-line="169"><code>Accept-Encoding</code>：指定客户端接受哪种内容编码，爬虫设置不当可能返回乱码。</li>
+</ul>
+<h4 data-line="171" id="c-%E8%AF%B7%E6%B1%82%E6%AD%A3%E6%96%87">c. 请求正文</h4>
+<p data-line="173">使用GET方法请求，没有请求正文；</p>
+<p data-line="175">使用POST等方法，通常需要客户端向服务器端传递数据，这些数据就储存在请求正文中。</p>
+<h3 data-line="177" id="4-%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95">4) 请求方法</h3>
+<p data-line="179">最常用的两种：GET与POST</p>
+<h4 data-line="181" id="a-%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90">a. 获取资源</h4>
+<p data-line="183">“俺要啥啥啥，快给我”</p>
+<p data-line="185">GET方法用于请求访问已被URI识别的资源：</p>
+<p data-line="187"><img src="attachments/ef36034d.png" alt="6.png" /></p>
+<p data-line="189">注意：</p>
+<ul>
+<li data-line="190">GET方法也可以提交数据，用来更好地描述自己想要什么，或者作为获取数据的验证，但这种提交数据不是GET的主要目的；</li>
+<li data-line="191">GET方法传递数据的方式不是把数据放在请求正文中，而是直接放在URL中，例如<code>http://wenshu.court.gov.cn/content/content?DocID=5e74db08-3b47-46d2-8f72-0522db986fba&amp;KeyWord=</code>，问号表示后面的内容是请求数据，请求数据是键值对的形式<code>key=value</code>，每个键值对用<code>&amp;</code>隔开；</li>
+<li data-line="192">可以在地址栏看到，不安全，所以敏感信息还是用POST方法。</li>
+</ul>
+<h4 data-line="194" id="b-%E4%BC%A0%E8%BE%93%E5%AE%9E%E4%BD%93%E4%B8%BB%E4%BD%93">b. 传输实体主体</h4>
+<p data-line="196">“我告诉你那啥，xxx”</p>
+<p data-line="198">POST主要目的不是获取响应的内容，而是为了提交信息：</p>
+<p data-line="200"><img src="attachments/ba07d763.png" alt="7.png" /></p>
+<p data-line="202">一般登录请求，都是使用POST方法，因为谁都不希望自己的账号密码以明文的形式出现在地址栏里面。</p>
+<h3 data-line="204" id="5-%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%B4">5) 响应报文与响应头</h3>
+<p data-line="206"><img src="attachments/059c62cf.png" alt="8.png" /></p>
+<p data-line="208">由服务器端回送的对于请求的响应，称为<strong>响应报文</strong>。</p>
+<p data-line="210">响应报文由三个部分构成：</p>
+<ul>
+<li data-line="211">状态行：Response line；</li>
+<li data-line="212">响应头：Response headers；</li>
+<li data-line="213">响应实体：Response body；</li>
+</ul>
+<p data-line="215">有时候又把前两部分合称为响应的头部信息。</p>
+<h4 data-line="217" id="a-%E7%8A%B6%E6%80%81%E8%A1%8C">a. 状态行</h4>
+<ul>
+<li data-line="219">协议版本；</li>
+<li data-line="220">状态码；</li>
+<li data-line="221">原因短语：对状态码的描述；</li>
+</ul>
+<h4 data-line="223" id="b-%E5%93%8D%E5%BA%94%E5%A4%B4">b. 响应头</h4>
+<p data-line="225">类似于字典，许多键值对构成，常见的有：</p>
+<ul>
+<li data-line="227"><code>Content-Type</code>：指明发送给客户端的实体正文的媒体类型，例如<code>text/html; charset=utf-8</code>表示响应实体是HTML文档，编码方式是UTF-8；</li>
+<li data-line="228"><code>Content-Length</code>：实体正文的长度；</li>
+</ul>
+<h4 data-line="230" id="c-%E5%93%8D%E5%BA%94%E5%AE%9E%E4%BD%93">c. 响应实体</h4>
+<p data-line="232">具体的响应内容。</p>
+<h3 data-line="234" id="6-Cookie">6) Cookie</h3>
+<p data-line="236">反爬另一道防线。</p>
+<p data-line="238"><strong>Cookie技术</strong>：通过在Request和Response中写入cookie信息来控制客户端的状态。</p>
+<p data-line="240"><strong>Cookie最开始由服务器端喂客户端</strong>：Cookie会根据服务器端响应报文中响应头部信息中的<code>Set-Cookie</code>字段，通知客户端保存这一段cookie。</p>
+<p data-line="242"><strong>以后每次客户端见服务器都带着</strong>：当下次客户端再与该服务器建立连接发送请求时，客户端会自动在请求报文的请求头信息中加入cookie值，即<code>cookie</code>字段；服务器拿到cookie字段后会去解析它，识别出是哪一个客户端发来的请求，然后对比其上的记录，得到此前该客户端的状态信息——比如小本本上记着该客户端此前不久登陆过了，就返回登录后界面的html。</p>
+<hr />
+<p data-line="246">By DraymondG</p>
+</body>
+              </html>

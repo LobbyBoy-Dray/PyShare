@@ -1,0 +1,1192 @@
+<html>
+                 <head>
+                   <meta charset="UTF-8">
+                   <meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1">
+                   <style id="style">
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.woff') format('woff'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+body {
+  font-size: 16px;
+  padding: 15px;
+  font-family: helvetica, arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+body .katex {
+  font: 400 1.2em 'KaTeX_Main';
+  line-height: 1.2em;
+  white-space: initial;
+  text-indent: 0;
+}
+body .katex .mfrac>.vlist>span:nth-child(2) {
+  top: 0 !important;
+}
+body .katex-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  margin: -5px;
+  border-radius: 5px;
+}
+body .flowchart-error,
+body .sequence-error .chart-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-pack: left;
+  -moz-box-pack: left;
+  -o-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+}
+li label.taskListItem {
+  margin-left: -1.8em;
+}
+li label.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+li.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+div.math-rendered {
+  text-align: center;
+}
+.math-failed {
+  background-color: rgba(255,0,0,0.1);
+  color: #d90000;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+sup {
+  position: relative;
+  top: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+sub {
+  position: relative;
+  bottom: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+a {
+  color: #2bac8f;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: -5px;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -ms-transition: 0.1s;
+  transition: 0.1s;
+}
+a img {
+  vertical-align: sub;
+}
+a:hover {
+  color: #2eb899;
+  text-decoration: underline;
+  background-color: rgba(255,201,92,0.3);
+}
+a:visited {
+  color: #2bac8f;
+}
+hr {
+  border-top: none;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 15px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  word-wrap: break-word;
+}
+h1 {
+  font-size: 2.55em;
+  padding-bottom: 0.3em;
+  line-height: 1.2em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.44em;
+}
+h1:first-child {
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.75em;
+  padding-bottom: 0.3em;
+  line-height: 1.225em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.57em;
+}
+h2:first-child {
+  margin-top: 0;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.43em;
+  margin: 1em 0 0.66em;
+}
+h4 {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  margin: 1em 0 0.8em;
+}
+h5 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+}
+h6 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+  color: #777;
+}
+p {
+  line-height: 1.6em;
+  margin: 0 0 1em;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+img {
+  max-width: 100%;
+}
+strong,
+b {
+  font-weight: bold;
+}
+em,
+i {
+  font-style: italic;
+}
+s,
+del,
+strike {
+  text-decoration: line-through;
+}
+u {
+  text-decoration: underline;
+}
+blockquote {
+  border-left: solid 4px #3fb399;
+  margin: 0 0 1em;
+  padding: 0 25px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ul li {
+  display: list-item;
+}
+ul li.taskListItem {
+  list-style: none;
+}
+ul li p {
+  margin: 0;
+}
+ul>li>ul,
+ul>li>ol {
+  margin: 0;
+}
+ul>li>ul {
+  list-style-type: circle;
+}
+ul>li>ul>li>ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ol li {
+  display: list-item;
+}
+ol li p {
+  margin: 0;
+}
+ol>li>ul,
+ol>li>ol {
+  margin: 0;
+}
+code {
+  padding: 0.2em 0.4em;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  font-size: 1em;
+  text-decoration: none;
+  margin-right: 2px;
+}
+pre {
+  padding: 0.5rem !important;
+  border: solid 1px #d1d1d1;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 0 0 1rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  line-height: 1.4em;
+}
+pre code {
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+pre.CodeMirror {
+  height: initial;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.CodeMirror>code {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-x: auto;
+}
+pre.mermaid svg {
+  max-width: 100% !important;
+}
+pre>span.filename {
+  margin: -0.5rem 100% 0.5rem -0.5rem;
+  padding: 0.125rem 0.375rem;
+  background-color: #777;
+  color: #fff;
+}
+pre>span.filename:empty {
+  display: none;
+}
+pre>span.lineNumber {
+  display: none;
+  font-size: 1em;
+  padding: 0.5rem 0;
+  margin: -0.5rem 0.5rem -0.5rem -0.5rem;
+  border-right: 1px solid;
+  text-align: right;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+pre>span.lineNumber.CodeMirror-gutters {
+  position: initial;
+  top: initial;
+  left: initial;
+  min-height: 0 !important;
+}
+pre>span.lineNumber>span {
+  display: block;
+  padding: 0 0.5em 0;
+}
+table {
+  display: block;
+  width: 100%;
+  margin: 0 0 1em;
+  overflow-x: auto;
+}
+table thead tr {
+  background-color: #fff;
+}
+table thead th {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 1px 0 2px 1px;
+  border-color: #d0d0d0;
+  font-weight: bold;
+}
+table thead th:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+table tbody tr:nth-child(2n + 1) {
+  background-color: #f9f9f9;
+}
+table tbody tr:nth-child(2n) {
+  background-color: #fff;
+}
+table tbody td {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 0 0 1px 1px;
+  border-color: #d0d0d0;
+}
+table tbody td:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+kbd {
+  background-color: #fafbfc;
+  border: solid 1px #d0d0d0;
+  border-bottom-color: #888;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 0 #959da5;
+  box-shadow: inset 0 -1px 0 #959da5;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1;
+  padding: 3px 5px;
+}
+.admonition.note,
+.admonition.hint,
+.admonition.danger,
+.admonition.caution,
+.admonition.error,
+.admonition.attention {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  position: relative;
+  margin: 1.5625em 0;
+  padding: 0 1.2rem;
+  border-left: 0.4rem solid #448aff;
+  border-radius: 0.2rem;
+  overflow: auto;
+}
+html .admonition>:last-child {
+  margin-bottom: 1.2rem;
+}
+.admonition .admonition {
+  margin: 1em 0;
+}
+.admonition p {
+  margin-top: 0.5em;
+}
+.admonition.note>.admonition-title:before,
+.admonition.hint>.admonition-title:before,
+.admonition.danger>.admonition-title:before,
+.admonition.caution>.admonition-title:before,
+.admonition.error>.admonition-title:before,
+.admonition.attention>.admonition-title:before {
+  position: absolute;
+  left: 1.2rem;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+/* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+/* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+/* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+/* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.admonition.note>.admonition-title,
+.admonition.hint>.admonition-title,
+.admonition.danger>.admonition-title,
+.admonition.caution>.admonition-title,
+.admonition.error>.admonition-title,
+.admonition.attention>.admonition-title {
+  margin: 0 -1.2rem;
+  padding: 0.8rem 1.2rem 0.8rem 4rem;
+  border-bottom: 0.1rem solid rgba(68,138,255,0.1);
+  background-color: rgba(68,138,255,0.1);
+  font-weight: 700;
+}
+.admonition>.admonition-title:last-child {
+  margin-bottom: 0;
+}
+.admonition.note {
+  border-left-color: #0288d1;
+}
+.admonition.note>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(2,136,209,0.2);
+  background-color: rgba(2,136,209,0.2);
+}
+.admonition.note>.admonition-title:before {
+  color: #0288d1;
+  content: "note";
+}
+.admonition.hint {
+  border-left-color: #009688;
+}
+.admonition.hint>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(0,150,136,0.2);
+  background-color: rgba(0,150,136,0.2);
+}
+.admonition.hint>.admonition-title:before {
+  color: #009688;
+  content: "info_outline";
+}
+.admonition.danger {
+  border-left-color: #c2185b;
+}
+.admonition.danger>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(194,24,91,0.2);
+  background-color: rgba(194,24,91,0.2);
+}
+.admonition.danger>.admonition-title:before {
+  color: #c2185b;
+  content: "block";
+}
+.admonition.caution {
+  border-left-color: #ffa726;
+}
+.admonition.caution>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(255,167,38,0.2);
+  background-color: rgba(255,167,38,0.2);
+}
+.admonition.caution>.admonition-title:before {
+  color: #ffa726;
+  content: "warning";
+}
+.admonition.error {
+  border-left-color: #d32f2f;
+}
+.admonition.error>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(211,47,47,0.2);
+  background-color: rgba(211,47,47,0.2);
+}
+.admonition.error>.admonition-title:before {
+  color: #d32f2f;
+  content: "error_outline";
+}
+.admonition.attention {
+  border-left-color: #455a64;
+}
+.admonition.attention>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(69,90,100,0.2);
+  background-color: rgba(69,90,100,0.2);
+}
+.admonition.attention>.admonition-title:before {
+  color: #455a64;
+  content: "priority_high";
+}
+dl {
+  margin: 2rem 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  width: 100%;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -o-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid #d0d0d0;
+  background-color: #fff;
+}
+dt {
+  border-top: 1px solid #d0d0d0;
+  font-weight: bold;
+  text-align: right;
+  overflow: hidden;
+  -webkit-flex-basis: 20%;
+  flex-basis: 20%;
+  padding: 0.4rem 0.9rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd {
+  border-top: 1px solid #d0d0d0;
+  -webkit-flex-basis: 80%;
+  flex-basis: 80%;
+  padding: 0.4rem 0.9rem;
+  min-height: 2.5rem;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd + dd {
+  margin-left: 20%;
+}
+pre.fence {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.fence .chart,
+pre.fence .flowchart,
+pre.fence .mermaid,
+pre.fence .sequence {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #fff;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+pre.fence .chart canvas,
+pre.fence .flowchart canvas,
+pre.fence .mermaid canvas,
+pre.fence .sequence canvas,
+pre.fence .chart svg,
+pre.fence .flowchart svg,
+pre.fence .mermaid svg,
+pre.fence .sequence svg {
+  max-width: 100% !important;
+}
+body[data-theme="dark"] {
+  color: #f9f9f9;
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="dark"] a:hover {
+  background-color: rgba(90,214,186,0.2) !important;
+}
+body[data-theme="dark"] code {
+  color: #ea6730;
+  border-color: #3d4450;
+  background-color: #363a3e;
+}
+body[data-theme="dark"] pre {
+  border-color: #474f5c;
+}
+body[data-theme="dark"] pre code {
+  background-color: transparent;
+}
+body[data-theme="dark"] label.taskListItem {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table thead tr {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n) {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] kbd {
+  background-color: #444b59;
+  color: #f9f9f9;
+}
+body[data-theme="dark"] dl {
+  border-color: #444b59;
+  background-color: #282b2e;
+}
+body[data-theme="dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dark"] dd {
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="solarized-dark"] {
+  color: #93a1a1;
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table thead tr {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n) {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] dl {
+  border-color: #444b59;
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] dd {
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="monokai"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="monokai"] table thead tr {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n + 1) {
+  background-color: #272822;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n) {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="monokai"] dl {
+  border-color: #444b59;
+  background-color: #23241f;
+}
+body[data-theme="monokai"] dt {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] dd {
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="dracula"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table thead tr {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n + 1) {
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n) {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="dracula"] dl {
+  border-color: #444b59;
+  background-color: #242631;
+}
+body[data-theme="dracula"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] dd {
+  border-color: #444b59;
+  background-color: #282a36;
+}
+/*# sourceMappingURL=browser/components/markdown.css.map */
+
+body {
+  font-family: 'Lato','helvetica','arial','sans-serif';
+  font-size: 14px;
+  false
+}
+@media print {
+  body {
+    padding-bottom: initial;
+  }
+}
+code {
+  font-family: 'Monaco','Consolas','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+  background-color: rgba(0,0,0,0.04);
+}
+.lineNumber {
+  display: block !important;
+  font-family: 'Monaco','Consolas','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+}
+
+.clipboardButton {
+  color: rgba(147,147,149,0.8);;
+  fill: rgba(147,147,149,1);;
+  border-radius: 50%;
+  margin: 0px 10px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.clipboardButton:hover {
+  transition: 0.2s;
+  color: #939395;
+  fill: #939395;
+  background-color: rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  border: none;
+}
+
+h1 {
+  padding-bottom: 4px;
+  margin: 1em 0 8px;
+}
+
+h2 {
+  padding-bottom: 0.2em;
+  margin: 1em 0 0.37em;
+}
+
+body p {
+  white-space: normal;
+}
+
+@media print {
+  body[data-theme="dark"] {
+    color: #000;
+    background-color: #fff;
+  }
+  .clipboardButton {
+    display: none
+  }
+}
+
+
+</style>
+                   <link rel="stylesheet" href="css/dracula.css"><link rel="stylesheet" href="css/katex.min.css"><link rel="stylesheet" href="css/codemirror.css">
+                 </head>
+                 <body><h1 data-line="0" id="Midterm-Review">Midterm Review</h1>
+<hr />
+<p data-line="4"><h3>目录</h3></p>
+
+<ul>
+<li data-line="8"><a href="#%E4%B8%80-python%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C">一. python程序运行</a>
+<ul>
+<li data-line="9"><a href="#1-%E4%BA%A4%E4%BA%92%E5%BC%8F%E7%8E%AF%E5%A2%83">1. 交互式环境</a></li>
+<li data-line="10"><a href="#2-%E8%84%9A%E6%9C%AC%E4%BF%9D%E5%AD%98%E4%B8%BA%E6%96%87%E4%BB%B6%E8%BF%90%E8%A1%8C">2. 脚本：保存为文件运行</a></li>
+</ul>
+</li>
+<li data-line="11"><a href="#%E4%BA%8C-Lecture-1-Hello-world">二. Lecture 1: Hello world</a>
+<ul>
+<li data-line="12"><a href="#1-%E5%8F%98%E9%87%8F">1. 变量</a></li>
+<li data-line="13"><a href="#2-%E5%8F%98%E9%87%8F%E5%90%8D">2. 变量名</a></li>
+<li data-line="14"><a href="#3-%E8%B5%8B%E5%80%BC">3. 赋值</a></li>
+<li data-line="15"><a href="#4-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">4. 基本数据类型</a></li>
+<li data-line="16"><a href="#5-%E8%BF%90%E7%AE%97%E7%AC%A6">5. 运算符</a></li>
+<li data-line="17"><a href="#6-%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0">6. 常用函数</a></li>
+</ul>
+</li>
+<li data-line="18"><a href="#%E4%B8%89-Lecture-2-Data-Structure--Control-Flow">三. Lecture 2: Data Structure &amp; Control Flow</a>
+<ul>
+<li data-line="19"><a href="#1-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">1. 数据结构</a>
+<ul>
+<li data-line="20"><a href="#1-list">1) list</a></li>
+<li data-line="21"><a href="#2-tuple">2) tuple</a></li>
+<li data-line="22"><a href="#3-str">3) str</a></li>
+<li data-line="23"><a href="#4-range">4) range</a></li>
+<li data-line="24"><a href="#5-set">5) set</a></li>
+<li data-line="25"><a href="#6-dict">6) dict</a></li>
+</ul>
+</li>
+<li data-line="26"><a href="#2-%E9%80%89%E6%8B%A9">2. 选择</a></li>
+<li data-line="27"><a href="#3-%E5%BE%AA%E7%8E%AF">3. 循环</a></li>
+</ul>
+</li>
+<li data-line="28"><a href="#%E5%9B%9B-Lecture-3-Function--OOP--Exceptions--Files">四. Lecture 3: Function &amp; OOP &amp; Exceptions &amp; Files</a>
+<ul>
+<li data-line="29"><a href="#1-%E5%87%BD%E6%95%B0">1. 函数</a></li>
+<li data-line="30"><a href="#2-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1">2. 类与对象</a></li>
+<li data-line="31"><a href="#3-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86">3. 异常处理</a></li>
+<li data-line="32"><a href="#4-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C">4. 文件操作</a></li>
+</ul>
+</li>
+</ul>
+
+<hr />
+<h2 data-line="38" id="%E4%B8%80-python%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C">一. python程序运行</h2>
+<h3 data-line="40" id="1-%E4%BA%A4%E4%BA%92%E5%BC%8F%E7%8E%AF%E5%A2%83">1. 交互式环境</h3>
+<p data-line="42">通过<strong>命令行</strong>或<strong>终端</strong>键入<strong>python</strong>并回车，即进入python的“交互式环境”，它的提示符是<code>&gt;&gt;&gt;</code>。</p>
+<p data-line="44">交互式环境有利于执行短小命令，熟悉新的语法特征，但不能保存执行过的所有代码，下次运行时还要再输入一遍代码。</p>
+<h3 data-line="46" id="2-%E8%84%9A%E6%9C%AC%EF%BC%9A%E4%BF%9D%E5%AD%98%E4%B8%BA%E6%96%87%E4%BB%B6%E8%BF%90%E8%A1%8C">2. 脚本：保存为文件运行</h3>
+<p data-line="48">为了能够永久保存程序，可以将代码写入文件中，保存为<code>.py</code>类型，这样的文件通常叫做脚本(Script)——一个包含python语句的简单文本文件。</p>
+<p data-line="50">打开命令行(终端)，<code>cd</code>到py文件所在的目录下，输入<code>python 文件名.py</code>并回车，命令电脑用python去运行这个py文件。</p>
+<h2 data-line="52" id="%E4%BA%8C-Lecture-1-Hello-world">二. Lecture 1: Hello world</h2>
+<h3 data-line="54" id="1-%E5%8F%98%E9%87%8F">1. 变量</h3>
+<p data-line="56">数学理解。</p>
+<h3 data-line="58" id="2-%E5%8F%98%E9%87%8F%E5%90%8D">2. 变量名</h3>
+<ul>
+<li data-line="60">大小写敏感；</li>
+<li data-line="61">变量名只能包含字母、数字、下划线；</li>
+<li data-line="62">变量名不能以数字开头；</li>
+<li data-line="63">保留字不能被用作变量名。</li>
+</ul>
+<h3 data-line="65" id="3-%E8%B5%8B%E5%80%BC">3. 赋值</h3>
+<ul>
+<li data-line="67">动态语言，无需类型声明；</li>
+<li data-line="68"><code>=</code>赋值；</li>
+<li data-line="69">赋值是一个从右往左的过程；</li>
+<li data-line="70">序列赋值：<code>a,b,c = 1,2,3</code>；</li>
+<li data-line="71">交换赋值：<code>x,y = y,x</code></li>
+</ul>
+<h3 data-line="73" id="4-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">4. 基本数据类型</h3>
+<p data-line="75"><code>x = 6</code>，这里<code>x</code>叫做变量，<code>6</code>叫做字面量。说“变量是什么什么类型的”，等价于说“变量所指向的字面量是什么什么类型的”。</p>
+<ul>
+<li data-line="77">数值类型：<code>int</code>, <code>float</code>；</li>
+<li data-line="78">布尔类型：<code>True</code>, <code>False</code>；</li>
+<li data-line="79">字符串：
+<ul>
+<li data-line="80">表示</li>
+<li data-line="81">转义字符</li>
+<li data-line="82">序列操作</li>
+</ul>
+</li>
+<li data-line="83">列表：
+<ul>
+<li data-line="84">表示</li>
+<li data-line="85">序列操作 + <code>append</code>等</li>
+</ul>
+</li>
+</ul>
+<h3 data-line="87" id="5-%E8%BF%90%E7%AE%97%E7%AC%A6">5. 运算符</h3>
+<ul>
+<li data-line="89">算术运算符</li>
+<li data-line="90">比较运算符</li>
+<li data-line="91">赋值运算符</li>
+<li data-line="92">逻辑运算符</li>
+<li data-line="93">成员运算符</li>
+</ul>
+<p data-line="95">运算符的优先级：<code>and</code>先运算，<code>or</code>后运算。</p>
+<h3 data-line="97" id="6-%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0">6. 常用函数</h3>
+<ul>
+<li data-line="99"><code>help()</code></li>
+<li data-line="100"><code>print()</code></li>
+<li data-line="101"><code>type()</code></li>
+<li data-line="102"><code>len()</code></li>
+<li data-line="103"><code>input()</code></li>
+<li data-line="104"><code>int()</code></li>
+<li data-line="105"><code>float()</code></li>
+<li data-line="106"><code>eval()</code></li>
+</ul>
+<h2 data-line="108" id="%E4%B8%89-Lecture-2-Data-Structure-Control-Flow">三. Lecture 2: Data Structure &amp; Control Flow</h2>
+<h3 data-line="110" id="1-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">1. 数据结构</h3>
+<p data-line="112">4+1+1:</p>
+<ul>
+<li data-line="114">4种序列类型：list, tuple, str, range</li>
+<li data-line="115">1种集合类型：set</li>
+<li data-line="116">1种映射类型：dict</li>
+</ul>
+<p data-line="118">3+3:</p>
+<ul>
+<li data-line="120">mutable：list, dict, set</li>
+<li data-line="121">immutable：tuple, range, str</li>
+</ul>
+<h4 data-line="123" id="1-list">1) list</h4>
+<ul>
+<li data-line="125">创建</li>
+<li data-line="126">序列操作</li>
+<li data-line="127">特有操作
+<ul>
+<li data-line="128"><code>append(value)</code></li>
+<li data-line="129"><code>pop(index)</code></li>
+<li data-line="130"><code>insert(index,value)</code></li>
+<li data-line="131"><code>del</code></li>
+<li data-line="132"><code>clear()</code></li>
+<li data-line="133"><code>sort()</code></li>
+<li data-line="134"><code>reverse()</code></li>
+</ul>
+</li>
+<li data-line="135">嵌套</li>
+</ul>
+<h4 data-line="137" id="2-tuple">2) tuple</h4>
+<ul>
+<li data-line="139">创建：注意单个元素的元组；</li>
+<li data-line="140">特有操作
+<ul>
+<li data-line="141"><code>index()</code></li>
+<li data-line="142"><code>count()</code></li>
+</ul>
+</li>
+</ul>
+<h4 data-line="144" id="3-str">3) str</h4>
+<ul>
+<li data-line="146">方法：
+<ul>
+<li data-line="147"><code>find(A)</code></li>
+<li data-line="148"><code>replace(A,B)</code></li>
+<li data-line="149"><code>split(A)</code></li>
+<li data-line="150"><code>join()</code></li>
+<li data-line="151"><code>strip()</code></li>
+</ul>
+</li>
+<li data-line="152">格式化操作：
+<ul>
+<li data-line="153">表达式形式</li>
+<li data-line="154">方法形式</li>
+</ul>
+</li>
+</ul>
+<h4 data-line="156" id="4-range">4) range</h4>
+<p data-line="158"><code>range(start, end, step)</code></p>
+<h4 data-line="160" id="5-set">5) set</h4>
+<ul>
+<li data-line="162">去重的用途；</li>
+<li data-line="163">集合运算：运算符或方法；</li>
+</ul>
+<h4 data-line="165" id="6-dict">6) dict</h4>
+<ul>
+<li data-line="167">创建</li>
+<li data-line="168">访问</li>
+<li data-line="169">方法：
+<ul>
+<li data-line="170"><code>.keys()</code></li>
+<li data-line="171"><code>.values()</code></li>
+<li data-line="172"><code>.items()</code></li>
+</ul>
+</li>
+</ul>
+<h3 data-line="174" id="2-%E9%80%89%E6%8B%A9">2. 选择</h3>
+<ul>
+<li data-line="176">if语句；</li>
+<li data-line="177">if-else语句；</li>
+<li data-line="178">嵌套if语句；</li>
+<li data-line="179">elif语句；</li>
+<li data-line="180">三元表达式，赋值；</li>
+</ul>
+<h3 data-line="182" id="3-%E5%BE%AA%E7%8E%AF">3. 循环</h3>
+<ul>
+<li data-line="184">while循环</li>
+<li data-line="185">for循环</li>
+<li data-line="186"><code>break</code> &amp; <code>continue</code></li>
+<li data-line="187">列表解析</li>
+</ul>
+<h2 data-line="189" id="%E5%9B%9B-Lecture-3-Function-OOP-Exceptions-Files">四. Lecture 3: Function &amp; OOP &amp; Exceptions &amp; Files</h2>
+<h3 data-line="191" id="1-%E5%87%BD%E6%95%B0">1. 函数</h3>
+<ul>
+<li data-line="193">定义函数；</li>
+<li data-line="194">函数参数；</li>
+<li data-line="195">变量作用域；</li>
+<li data-line="196">传递引用；</li>
+<li data-line="197">lambda函数；</li>
+</ul>
+<h3 data-line="199" id="2-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1">2. 类与对象</h3>
+<ul>
+<li data-line="201">概念；</li>
+<li data-line="202">定义类（注意构造函数）；</li>
+<li data-line="203">私有数据域和方法；</li>
+</ul>
+<h3 data-line="205" id="3-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86">3. 异常处理</h3>
+<ul>
+<li data-line="207"><code>try/except/else/finally</code></li>
+</ul>
+<h3 data-line="209" id="4-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C">4. 文件操作</h3>
+<ul>
+<li data-line="211">绝对路径，相对路径；</li>
+<li data-line="212">文件对象；</li>
+<li data-line="213">写入：
+<ul>
+<li data-line="214"><code>write()</code></li>
+</ul>
+</li>
+<li data-line="215">读取：
+<ul>
+<li data-line="216"><code>read(size)</code></li>
+<li data-line="217"><code>readlines()</code></li>
+</ul>
+</li>
+</ul>
+<hr />
+<p data-line="222">By DraymondG</p>
+</body>
+              </html>
