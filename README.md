@@ -5,12 +5,11 @@
     * 简介，语法，编辑器推荐
     * 参考材料：[Mastering Markdown from Github](https://guides.github.com/features/mastering-markdown/)
 * ### [Git & Github](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Git%20%26%20github)
-    * Git与Github的基本使用方法
+    * Git与Github的概念，基本使用方法
     * 参考视频：[DANIEL SHIFFMAN](https://www.bilibili.com/video/av4857819?from=search&seid=5402638418024823626)
 
-## Lecture 1: Hello world
-
-* **Lecture_1.pdf**：笔记
+## Lecture 1: [Hello world](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Lecture1)
+* __Lecture_1.pdf__：笔记
 * **Lecture-1.ipynb**：讲座上用的notebook代码
 * **pre_lecture.pdf**：讲座开始前的ppt
 * **anaconda_install.pdf**：Win安装Anaconda的坑
