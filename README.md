@@ -52,6 +52,10 @@
 * ### 阅读材料与补充内容
     * __Spider_examples__：爬虫实例，包括亚马逊评论爬虫与cms课件自动下载器
     * __IntroCharles.pdf__：抓包工具Charles介绍（App爬虫）
-    * __MySQL__：
+    * __「数据库」MySQL__：
         * [MySQL入门笔记(一)：数据库与MySQL](https://mp.weixin.qq.com/s/1rOGCuxqO9Axp7YT_97Wkw)
+        * [MySQL入门笔记(二)：数据表的创建与删除](https://mp.weixin.qq.com/s/LLomFYpeUznFZ79maPO5Fw)
+        * [MySQL入门笔记(三)：数据修改语言DML](https://mp.weixin.qq.com/s/q6NIk_dIi-zpFXL--eZ2bQ)
+        * [MySQL入门笔记(四)：数据检索语言DQL](https://mp.weixin.qq.com/s/gYB7LovyrDJYChPRsVcvuw)
+        * [MySQL入门笔记(五)：外键](https://mp.weixin.qq.com/s/HgqiaX1fgdpyVWbSenPrnA)
     
