@@ -52,4 +52,6 @@
 * ### 阅读材料与补充内容
     * __Spider_examples__：爬虫实例，包括亚马逊评论爬虫与cms课件自动下载器
     * __IntroCharles.pdf__：抓包工具Charles介绍（App爬虫）
+    * __MySQL__：
+        * [MySQL入门笔记(一)：数据库与MySQL](https://mp.weixin.qq.com/s/1rOGCuxqO9Axp7YT_97Wkw)
     
