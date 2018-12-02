@@ -1,11 +1,11 @@
 # PyShare: We need Python!
 
 ## Lecture 0: Prerequisites
-* ### Markdown
+* ### [Markdown](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Markdown)
     * 简介，语法，编辑器推荐
     * 参考材料：[Mastering Markdown from Github](https://guides.github.com/features/mastering-markdown/)
-* ### Git & Github
-    * Git与github的基本使用方法
+* ### [Git & Github](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Git%20%26%20github)
+    * Git与Github的基本使用方法
     * 参考视频：[DANIEL SHIFFMAN](https://www.bilibili.com/video/av4857819?from=search&seid=5402638418024823626)
 
 ## Lecture 1: Hello world
