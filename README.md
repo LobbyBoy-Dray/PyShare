@@ -28,26 +28,22 @@
 * ### 练习
     * __L2_Exercises__：L2习题
     * __L2_Solution__：L2习题参考答案
-    * __在线练习__：
-        * [List](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=10)
-        * [Tuples, Sets, and Dictionaries](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=14)
-        * [Selections](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=4)
-        * [Loops](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=5)
-* ### 阅读材料与补充内容
+    * __在线练习__：[List](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=10)，[Tuples, Sets, and Dictionaries](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=14)，[Selections](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=4)，[Loops](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=5)
     * __Lecture_2_online_quiz.pdf__：在线练习-重点梳理
+* ### 阅读材料与补充内容
     * __Python官方文档__：[数据结构](https://docs.python.org/3.6/tutorial/datastructures.html)，[控制流程](https://docs.python.org/3.6/tutorial/controlflow.html)
 
-## Lecture 3: Function & OOP & Exceptions & Files
+## Lecture 3: [Function & OOP & Exceptions & Files](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Lecture3)
+* ### 讲座笔记
+    * **Lecture_3.pdf**：笔记
+* ### 练习
+    * **L3_Exercises**：习题
+    * **在线练习**：[Functions](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=6)，[Objects and Classes](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=7)，[Files and Exception Handling](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=13)
+* ### 阅读材料与补充内容
+    * Loading...
 
-* **Lecture_3.pdf**：笔记
-* **L3_Exercises**：习题
-* **在线练习**：
-	* [Functions](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=6)
-	* [Objects and Classes](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=7)
-	* [Files and Exception Handling](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=13)
-
-## Lecture 4: Mid-review & Html & XPath & Requests
-
-* **Mid_review**：前三章回顾
-* **Supplement**：补充内容，包括“生成器与迭代器”、“函数式编程”
-* **Web_crawler**：爬虫相关，包括“HTTP协议、“HTML初步”、“XPath语法”、“Requests库”
+## Lecture 4: [Mid-review & Html & XPath & Requests](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Lecture4)
+* ### 讲座笔记
+    * **Mid_review**：前三章回顾
+    * **Supplement**：补充内容，包括“生成器与迭代器”、“函数式编程”
+    * **Web_crawler**：爬虫相关，包括“HTTP协议、“HTML初步”、“XPath语法”、“Requests库”
