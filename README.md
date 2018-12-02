@@ -10,16 +10,16 @@
 
 ## Lecture 1: [Hello world](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Lecture1)
 * ### 笔记
-* __Lecture_1.pdf__：L1笔记
-* __Lecture-1.ipynb__：讲座上使用的jupyter代码
-* __pre_lecture.pdf__：讲座开始前的ppt
-* __anaconda_install.pdf__：Anaconda安装说明(for Win)
-* __python_run.pdf__：python交互式环境和脚本运行介绍
-* __(9.28) Lecture_1_revised.pdf__：笔记修订版，增加“`int()`与`eval()`比较”、“继续符号”、“科学计数法”的内容
+    * __Lecture_1.pdf__：L1笔记
+    * __Lecture-1.ipynb__：讲座上使用的jupyter代码
+    * __pre_lecture.pdf__：讲座开始前的ppt
+    * __anaconda_install.pdf__：Anaconda安装说明(for Win)
+    * __python_run.pdf__：python交互式环境和脚本运行介绍
+    * __(9.28) Lecture_1_revised.pdf__：笔记修订版，增加“`int()`与`eval()`比较”、“继续符号”、“科学计数法”的内容
 * ### 练习
-* __(9.28) L1_Exercises__：L1习题
-* __(10.11) L1_Solution__：L1习题参考答案
-* __在线练习__：[Click here](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=2)
+    * __(9.28) L1_Exercises__：L1习题
+    * __(10.11) L1_Solution__：L1习题参考答案
+    * __在线练习__：[Click here](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=2)
 
 ## Lecture 2: [Data Structures & Control Flow](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Lecture2)
 * __Lecture_2.pdf__：L2笔记
