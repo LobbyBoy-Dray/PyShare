@@ -35,15 +35,21 @@
 
 ## Lecture 3: [Function & OOP & Exceptions & Files](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Lecture3)
 * ### 讲座笔记
-    * **Lecture_3.pdf**：笔记
+    * __Lecture_3.pdf__：笔记
 * ### 练习
-    * **L3_Exercises**：习题
-    * **在线练习**：[Functions](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=6)，[Objects and Classes](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=7)，[Files and Exception Handling](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=13)
+    * __L3_Exercises__：习题
+    * __在线练习__：[Functions](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=6)，[Objects and Classes](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=7)，[Files and Exception Handling](https://liveexample-ppe.pearsoncmg.com/selftest/selftestpy?chapter=13)
 * ### 阅读材料与补充内容
     * Loading...
 
 ## Lecture 4: [Mid-review & Html & XPath & Requests](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Lecture4)
 * ### 讲座笔记
-    * **Mid_review**：前三章回顾
-    * **Supplement**：补充内容，包括“生成器与迭代器”、“函数式编程”
-    * **Web_crawler**：爬虫相关，包括“HTTP协议、“HTML初步”、“XPath语法”、“Requests库”
+    * __Mid_review__：前三章回顾
+    * __Supplement__：补充内容，包括“生成器与迭代器”、“函数式编程”
+    * __Web_crawler__：爬虫相关，包括“HTTP协议、“HTML初步”、“XPath语法”、“Requests库”
+* ### 练习
+    * 暂无
+* ### 阅读材料与补充内容
+    * __Spider_examples__：爬虫实例，包括亚马逊评论爬虫与cms课件自动下载器
+    * __IntroCharles.pdf__：抓包工具Charles介绍（App爬虫）
+    
