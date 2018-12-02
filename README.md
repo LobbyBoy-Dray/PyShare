@@ -1,6 +1,8 @@
-# PyShare
+# PyShare: We need Python!
 
-## Markdown
+## Lecture 0: Prerequisites
+
+### Markdown
 
 * 简介
 * 语法
@@ -8,7 +10,7 @@
 
 参考材料：[Mastering Markdown from Github](https://guides.github.com/features/mastering-markdown/)
 
-## Git & Github
+### Git & Github
 
 * Git与github的基本使用方法
 
