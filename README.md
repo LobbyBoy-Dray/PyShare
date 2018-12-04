@@ -50,7 +50,10 @@
 * ### 练习
     * 暂无
 * ### 阅读材料与补充内容
-    * __Spider_examples__：爬虫实例，包括亚马逊评论爬虫与cms课件自动下载器
+    * __Spider_examples__：爬虫实例
+        * 亚马逊评论爬虫
+        * cms课件自动下载器
+        * 知乎话题热门评论爬虫
     * __IntroCharles.pdf__：抓包工具Charles介绍（App爬虫）
     * __「数据库」MySQL__：
         * [MySQL入门笔记(一)：数据库与MySQL](https://mp.weixin.qq.com/s/1rOGCuxqO9Axp7YT_97Wkw)
