@@ -1,5 +1,7 @@
 # PyShare: We need Python!
 
+hhhhhh！
+
 ## Lecture 0: Prerequisites
 * ### [Markdown](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Markdown)
     * 简介，语法，编辑器推荐
