@@ -1,6 +1,4 @@
-# PyShare: We need Python!
-
-hhhhhh！
+# PyShare: 北京大学金融科技协会Python系列讲座
 
 ## Lecture 0: Prerequisites
 * ### [Markdown](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Markdown)
