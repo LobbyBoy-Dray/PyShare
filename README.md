@@ -7,7 +7,8 @@
 * ### [Git & Github](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Git%20%26%20github)
     * Git与Github的概念，基本使用方法
     * 参考视频：[DANIEL SHIFFMAN](https://www.bilibili.com/video/av4857819?from=search&seid=5402638418024823626)
-
+    * 参考slide：[19级何金泽学长slide]（）
+    
 ## Lecture 1: [Hello world](https://github.com/LobbyBoy-Dray/PyShare/tree/master/Lecture1)
 * ### 讲座笔记
     * __Lecture_1.pdf__：L1笔记
