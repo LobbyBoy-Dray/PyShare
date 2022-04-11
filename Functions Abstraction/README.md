@@ -16,7 +16,7 @@
 
 **Call Expressions**
 
-- 形为$f(x)$的expressions.
+- 形为f(x)的expressions.
 - All expressions can use function call notation.
 - 不需要运算优先级——全凭nesting structure.
 
@@ -62,9 +62,9 @@ def <name>(<formal parameters>):
 
 **def statement执行的规则：**
 
-1. Create a function with signature \<name>(<formal parameters\>)
+1. Create a function with signature *\<name>(<formal parameters\>)*  
 2. Set the body of that function to be everything indented after the first line
-3. Bind *<name>* to that function in the current frame
+3. Bind *\<name>* to that function in the current frame
 
 <div align="middle"><img src="./img/2_1.png" width="60%"></div>
 
@@ -72,8 +72,8 @@ def <name>(<formal parameters>):
 * A def statement binds a name to a user-defined function created by the definition. 
 * Each function is a line that starts with func, followed by the function name and formal params. 
 * Built-in functions such as mul don't have formal param names, and so ... is always used instead.
-* The name appearing in the function is called the intrinsic name.
-* The name in a frame is a bound name.
+* The name appearing in the function is called the ***intrinsic name***.
+* The name in a frame is a ***bound name***.
 * Different names may refer to the same func, but that func itself has only one intrinsic name.
 
 ### 2.2 Call a User-Defined Function
@@ -85,12 +85,6 @@ def <name>(<formal parameters>):
 1. Add a local frame, forming a new environment(local frame的名字一般就用函数的名字).
 2. Bind the function's formal parameters to its argument values in that frame.
 3. Execute the body of the function in that new environment.
-
-**Looking up names in environments**
-
-- An environment = a sequence of frames
-    - 目前current environment要么就是global frame，要么是一个local frame后面跟着一个global frame
-- 一个name，在current environment中，最先找到bind的那个frame
 
 ### 2.3 Non-pure Functions
 
@@ -110,7 +104,27 @@ def <name>(<formal parameters>):
 
 ### 2.4 Multiple Environment: An Example
 
-暂略。
+<div align="middle"><img src="./img/2_4.png" width="70%"></div>
+
+上图中有3个different environments：
+
+* Global frame
+* Global frame + f1 frame
+* Global frame + f2 frame
+
+**Looking up names in environments**
+
+- An environment = a sequence of frames
+- 一个name，在current environment中，最先找到bind的那个frame
+
+**Review: def statement执行的规则>>>画diagram**
+
+1. 定位当前的frame
+2. 在该frame里写出function name
+3. 在该frame外创建function object
+    * *func \<name>(<formal parameters\>) [parent=当前frame]*
+    * 若是lambda函数，这里的\<name>写λ
+4. 箭头从frame里的function name指向frame外的function object
 
 ## 3. Control Flow
 
