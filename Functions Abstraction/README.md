@@ -199,7 +199,7 @@ then return to step.
 
 - 暂无
 
-### 3.3 Testing
+### 3.4 Testing
 
 "Testing a function" is the act of verifying that the function's behavior matches expectations. 
 
@@ -244,7 +244,7 @@ When writing Python in files, all doctests in a file can be run by starting Pyth
 
 ## 4. Higher-Order Functions
 
-*What is a Higher-Order Functions?* A function that takes a function as an argument value or returns a function as a return value. 使用它的好处：
+*What is a Higher-Order Functions?* A function that takes a function as an argument value or returns a function as a return value. 优点：
 
 1. Express general methods of computation
 2. Remove repetition from programs
@@ -262,15 +262,15 @@ When writing Python in files, all doctests in a file can be run by starting Pyth
 
 > 一个函数的返回值可以是另一个函数；function composition；self-reference
 
-### 4.4 Application 1: Currying
+### 4.4 「Application 1」Currying
 
 > 将一个「多参数函数」转换为一个等价的「单参数高阶函数」，即f(x,y)-\>g(x)(y)
 
-### 4.5 Application 2: Lambda Expressions
+### 4.5 「Application 2」Lambda Expressions
 
 > 什么是lambda函数？与def statements的区别？什么时候用它更好？
 
-### 4.6 Application 3: Decorators
+### 4.6 「Application 3」Decorators
 
 > 本质是一个高阶函数；吃一个函数，吐出该函数的另一个版本——装饰版本
 
