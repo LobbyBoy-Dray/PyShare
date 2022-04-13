@@ -254,13 +254,103 @@ When writing Python in files, all doctests in a file can be run by starting Pyth
 
 > 将函数作为参数；计算黄金分割比
 
+迭代法逼近黄金分割比：
+* guess >>> 一开始瞎猜的数，但随着后来的更新，会逐渐逼近黄金分割
+* update >>> 更新函数，按一定规则将guess更新为更接近目标值的数
+* close >>> 判断guess和黄金分割是否足够近，以决定是否继续更新
+
+```python
+def improve(update, close, guess=1):
+    while not close(guess):
+        guess = update(guess)
+    return guess
+```
+
+以上的代码框架，让我们先撇开细节，注重问题的解决逻辑。下面我们再具体实现update和close函数：
+
+```python
+def golden_update(guess):
+    return 1/guess + 1
+
+# check是否逼近x^2 - x - 1 = 0的根——黄金分割
+def square_close_to_successor(guess):
+    return approx_eq(guess * guess, guess + 1)
+
+# 判断两个数是否足够近
+def approx_eq(x, y, tolerance=1e-15):
+    return abs(x - y) < tolerance
+
+# >>> improve(golden_update, square_close_to_successor)
+# 1.6180339887498951
+```
+
+上面的例子反映了两件事：
+1. Naming and functions allow us to abstract away a vast amount of complexity.
+2. It is only by virtue of the fact that we have an extremely general evaluation procedure for the Python language that small components can be composed into complex processes.
+
 ### 4.2 Nested Definitions
 
 > 在一个函数体中定义另一个函数；考察其间的environments
 
+Motivation: 在global frame里定义一堆函数的缺点
+1. The global frame becomes cluttered with names of small functions, **which must all be unique**.
+2. We are constrained by particular function signatures: the `update` argument to `improve` must take exactly one argument——如果某个update函数要吃两个参数，就会出问题。
+
+\>>> 因此，提出Nested function definitions，解决上述两个问题。
+
+```python
+def average(x, y):
+    return (x + y)/2
+
+def sqrt_update(x, a):
+    return average(x, a/x)
+
+def sqrt(a):
+    def sqrt_update(x):
+        return average(x, a/x)
+    def sqrt_close(x):
+        return approx_eq(x * x, a)
+    return improve(sqrt_update, sqrt_close)
+```
+
+↑↑↑ local def statements only affect the current local frame \>>> **Locally Defined Functions**.
+
+<div align="middle"><img src="./img/4_1.png" width="80%"></div>
+
+
+↑↑↑ 对environments的影响（environment = a series of frames）
+1. 每个user-defined function都有一个parent frame：就是该函数定义时所在的frame；
+2. 当user-defined function被调用时会创建一个parent frame为该function的parent的local frame；
+3. 因此：内嵌的函数have access to the names in the environment where they are defined (not where they are called).
+
+
+<div align="middle"><img src="./img/4_2.png" width="80%"></div>
+
+↑↑↑ 以上图中的environment diagram为例：调用inner function sqrt_close的时候，它的local frame只能访问到它的上一级函数的local frame(f1)中的东西和global frame中的东西，而并不可以访问到调用它的函数的local frame(f2)中的东西。
+
+因此优点为：The names of a local function do not interfere with names external to the function in which it is defined —— because the local function name will be bound in the current local environment in which it was defined, rather than the global environment.
+
+【小结】
+1. 一个function被define的时候，会发生↓↓↓
+   * 一定是在一个frame里被define的
+   * 该frame成为该function的parent
+2. 一个function被call的时候，会发生↓↓↓
+   * 创建一个local frame
+   * 该local frame的parent是这个function的parent
+
 ### 4.3 Functions as Returned Values
 
 > 一个函数的返回值可以是另一个函数；function composition；self-reference
+
+牛逼的地方在于，locally defined functions maintain their parent-frame environment when they are returned.
+
+<div align="middle"><img src="./img/4_3.png" width="80%"></div>
+
+上图中，即使adder已经被return了，后面调用它的时候依然可以追溯到它的environment（f1已经灰了）。
+
+**Self-Reference**
+
+……
 
 ### 4.4 「Application 1」Currying
 
