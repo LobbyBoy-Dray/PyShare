@@ -350,18 +350,77 @@ def sqrt(a):
 
 **Self-Reference**
 
-……
+The function could refer to its own name within its body.
+
+(简单理解：在function内部可以访问到global frame中的names)
+
+<div align="middle"><img src="./img/4_4.png" width="80%"></div>
+
+
 
 ### 4.4 「Application 1」Currying
 
 > 将一个「多参数函数」转换为一个等价的「单参数高阶函数」，即f(x,y)-\>g(x)(y)
 
+函数的科里化：Transforming a multi-argument function into a single-argument, higher-order function.
+
+例如，下面的make_adder就是add的科里化：
+
+```python
+>>> make_adder(2)(3)
+5
+>>> add(2,3)
+5
+```
+
+如何进行函数的科里化呢？
+
+```python
+def curry2(f):
+    """
+    f is a function with 2 arguments.
+    """
+    def g(x):
+        def h(y):
+            return f(x,y)
+        return h
+    return g
+```
+
+这样的话：
+
+```python
+make_adder = curry2(add)
+
+# make_adder(2)(3)就等价于add(2,3)
+# curry2(add)返回的是g，且”记住了“add
+# curry2(add)(2)返回的是h，且”记住了“add、x=2
+# curry2(add)(2)(3)返回的是f(x,y) <<< ”记住了“add、x=2，还要传入的y=3
+```
+
 ### 4.5 「Application 2」Lambda Expressions
 
-> 什么是lambda函数？与def statements的区别？什么时候用它更好？
+> 什么是lambda函数？与def statements的区别？什么时候用它更好？、
+
+* lambda expression evaluates to a function.
+* 如：`square = lambda x: x * x`——`square` is a function！
+
+*Lambda expressions VS Def statements*
+
+- 一样的domain、range、behavior
+- 一样的parent frame——当他们defined时所在的frame
+- 只有def statement会给function一个「intrinsic name」（下图中红色框的部分）
+
+<div align="middle"><img src="./img/4_5.png" width="80%"></div>
+
+<div align="middle"><img src="./img/4_6.png" width="80%"></div>
 
 ### 4.6 「Application 3」Decorators
 
 > 本质是一个高阶函数；吃一个函数，吐出该函数的另一个版本——装饰版本
+
+<div align="middle"><img src="./img/4_7.png" width="80%"></div>
+
+【例题】[Natural Chain](https://inst.eecs.berkeley.edu/~cs61a/fa21/disc/disc02/#q10-natural-chain)：利用higher-order function记忆状态的经典案例。
 
 ## 5. Recursion
