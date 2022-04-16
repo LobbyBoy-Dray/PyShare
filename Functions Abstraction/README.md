@@ -356,8 +356,6 @@ The function could refer to its own name within its body.
 
 <div align="middle"><img src="./img/4_4.png" width="80%"></div>
 
-
-
 ### 4.4 「Application 1」Currying
 
 > 将一个「多参数函数」转换为一个等价的「单参数高阶函数」，即f(x,y)-\>g(x)(y)
@@ -424,3 +422,103 @@ make_adder = curry2(add)
 【例题】[Natural Chain](https://inst.eecs.berkeley.edu/~cs61a/fa21/disc/disc02/#q10-natural-chain)：利用higher-order function记忆状态的经典案例。
 
 ## 5. Recursion
+
+### 5.1 Recursion Functions
+
+**Def(Recursive function)**: A function is called recursive if the body of that function calls itself, either directly or indirectly.
+
+递归函数的「套路/模式」：
+
+- 函数体一开始有一个conditional statement，用于检查base cases——very very simple versions of the problem that can be solved without recursive calls.
+- 其余部分是recursive case——evaluated with recursive calls.
+
+基于上述「套路/模式」，检查一个递归函数是否正确的流程（以递归求阶乘函数`fact`为例）：
+
+1. Verify the base case.
+2. Treat cfact` as a functional abstraction !
+3. Assume that `fact(n-1)` is correct.
+4. Verify that `fact(n)` is correct, assuming that `fact(n-1)` correct.
+
+### 5.2 Mutual Recursion
+
+> Two functions call each other.
+
+**Example: Is Even and Is Odd**
+
+* A number is even if it's one more than an odd number.
+* A number is odd if it's one more than an even number.
+* 0 is a even number.
+
+```python
+def is_even(n):
+	if n == 0:
+		return True
+	return is_odd(n-1)
+
+
+def is_odd(n):
+	if n == 0:
+		return False
+	return is_even(n-1)
+```
+
+【附】上述例子的讲解视频：[CS 61A Departmental](https://www.youtube.com/watch?v=YIQpxztgsy8)
+
+### 5.3 Tree Recursion
+
+**Def (tree recursion)**: Tree-shaped processes arise whenever executing the body of a recursive function makes more than one call to that function.
+
+**Example: Fibonacci Numbers**
+
+```python
+def fib(n):
+    if n==0:
+        return 0
+    elif n==1:
+        return 1
+    else:
+        return fib(n-2) + fib(n-1)
+```
+
+<div align="middle"><img src="./img/5_1.png" width="80%"></div>
+
+* 蓝色点：在计算fib(5)过程中第一个到达的return value
+* 发现：重复计算
+  - 计算`fib(35)`很慢了！
+  - 可以使用`@trace`来看
+  - 加速：记忆
+
+### 5.4 Example: Counting Partitions
+
+**Function description**: Count the ways to partition n using parts up to m.
+  * input: n和m
+    * n表示要被partition的数字
+    * m表示partition中最大的那个数字
+  * output: `count_partitions(n,m)`
+    * 返回partition的数量。一个例子(分解数字6，组分中最大值不超过4) ↓↓↓
+
+<div align="middle"><img src="./img/5_2.png" width="80%"></div>
+
+首先容易想到递推关系：
+* 所有分割方法可以划分为互斥的两类
+* ①至少使用一个m的：count_partitions(n-m, m)
+* ②一个m都没有使用的：count_partitions(n, m-1)
+* 因此有：count_partitions(n, m) = count_partitions(n-m, m) + count_partitions(n, m-1)
+
+其次再想base cases
+* n == 0 >>> There is one way to partition 0: include no parts >>> return 1
+* n < 0 >>> return 0
+* m == 0 >>> return 0
+
+```python
+def count_partitions(n, m):
+    """Count the ways to partition n using parts up to m."""
+    if n == 0:
+        return 1
+    elif n < 0:
+        return 0
+    elif m == 0:
+        return 0
+    else:
+        return count_partitions(n-m, m) + count_partitions(n, m-1)
+```
