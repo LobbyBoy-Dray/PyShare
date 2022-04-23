@@ -252,6 +252,8 @@ String字面量的语法
 
 ### 2.4 Tree
 
+> Lecture Note: [13-Trees.pdf](https://inst.eecs.berkeley.edu/~cs61a/fa21/assets/slides/13-Trees.pdf)
+
 #### 2.4.1 Two Descriptions
 
 *Recursive description（递归视角）*
