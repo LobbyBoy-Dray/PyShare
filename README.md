@@ -19,5 +19,5 @@
 
 本节旨在Phase A的基础上，构建Programmer的抽象思维，使其能够利用函数式编程、数据抽象、面向对象编程等一系列技术，控制程序的复杂度，避免其陷入对某些实现细节的纠结之中。如之前所言，本节主要由两大部分组成：
 
-* Part 1: [Functions Abstractions](/Functions%20Abstraction/)
-* Part 2: [Data Abstractions](/Data%20Abstraction/)
+* Part 1: [Abstractions with Functions](https://lobbyboy-dray.github.io/posts/python-func-abstract/)
+* Part 2: [Abstractions with Data](https://lobbyboy-dray.github.io/posts/python-data-abstract/)
